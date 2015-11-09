@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
-<!--<link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/Admin/formbuild/demo.css">-->
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/Admin/formbuild/demo.css"> -->
 <link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/Admin/formbuild/form-builder.css">
 
 <div class="demo-wrap">
@@ -24,12 +24,14 @@
 <script src="__PUBLIC__/Admin/formbuild/form-builder.min.js"></script>
 <script src="__PUBLIC__/Admin/formbuild/form-render.min.js"></script>
 <script>
-    jQuery(document).ready(function($) {
-        'use strict'; 
+
+    $(document).ready(function($) {
+        'use strict';
+        alert("应该是Ajax加载之间时间有差错,页面未加载完下面就执行了.找不到ID标签什么的无法重绘界面.这里加弹消息等一下就可以了.明天继续改")
         var template = document.getElementById('form-builder-template'),
                 formContainer = document.getElementById('rendered-form'),
                 renderBtn = document.getElementById('render-form-button');
-        $(template).formBuilder();
+                $(template).formBuilder();
 
         $(renderBtn).click(function() {
             $(template).formRender({
@@ -37,20 +39,4 @@
             });
         });
     });
-</script>
-<script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-4784386-21', 'auto');
-    ga('send', 'pageview');
 </script>
