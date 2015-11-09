@@ -84,17 +84,21 @@
 <!-- dragsort -->
 <script src="__PUBLIC__/Admin/BJUI/plugins/dragsort/jquery.dragsort-0.5.1.min.js"></script>
 <!-- HighCharts -->
-<script src="__PUBLIC__/Admin/BJUI/plugins/highcharts/highcharts.js"></script>
+<!--<script src="__PUBLIC__/Admin/BJUI/plugins/highcharts/highcharts.js"></script>
 <script src="__PUBLIC__/Admin/BJUI/plugins/highcharts/highcharts-3d.js"></script>
-<script src="__PUBLIC__/Admin/BJUI/plugins/highcharts/themes/gray.js"></script>
+<script src="__PUBLIC__/Admin/BJUI/plugins/highcharts/themes/gray.js"></script>-->
 <!-- ECharts -->
-<script src="__PUBLIC__/Admin/BJUI/plugins/echarts/echarts.js"></script>
+<!--<script src="__PUBLIC__/Admin/BJUI/plugins/echarts/echarts.js"></script>-->
 <!-- other plugins -->
-<script src="__PUBLIC__/Admin/BJUI/plugins/other/jquery.autosize.js"></script>
+<!--<script src="__PUBLIC__/Admin/BJUI/plugins/other/jquery.autosize.js"></script>
 <link href="__PUBLIC__/Admin/BJUI/plugins/uploadify/css/uploadify.css" rel="stylesheet">
 <script src="__PUBLIC__/Admin/BJUI/plugins/uploadify/scripts/jquery.uploadify.min.js"></script>
-<script src="__PUBLIC__/Admin/BJUI/plugins/download/jquery.fileDownload.js"></script>
+<script src="__PUBLIC__/Admin/BJUI/plugins/download/jquery.fileDownload.js"></script>-->
 <!-- init -->
+
+<!--动态创建表单插件-->
+
+
 <script type="text/javascript">
 $(function() {
     BJUI.init({
@@ -198,7 +202,7 @@ function MainMenuClick(event, treeId, treeNode) {
             <button type="button" class="bjui-navbar-toggle btn-default" data-toggle="collapse" data-target="#bjui-navbar-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="bjui-navbar-logo" href="#"><img src="__PUBLIC__/Admin/BJUI/images/logo.png"></a>
+            <a class="bjui-navbar-logo" href="#"><img src="__PUBLIC__/Admin/images/logo.png"></a>
         </div>
         <nav id="bjui-navbar-collapse">
             <ul class="bjui-navbar-right">
@@ -232,8 +236,7 @@ function MainMenuClick(event, treeId, treeNode) {
                         <div class="items hide" data-noinit="true">
                             <ul id="bjui-hnav-tree1" class="ztree ztree_main" data-toggle="ztree" data-on-click="MainMenuClick" data-expand-all="true" data-faicon="check-square-o">
                                 <li data-id="1" data-pid="0" data-faicon="folder-open-o" data-faicon-close="folder-o">表单元素</li>
-                                <li data-id="10" data-pid="1" data-url="form-button.html" data-tabid="form-button" data-faicon="hand-o-up">按钮</li>
-                                <li data-id="11" data-pid="1" data-url="form-input.html" data-tabid="form-input" data-faicon="terminal">文本框</li>
+                                <li data-id="10" data-pid="1" data-url="{:U('Admin/Form/lst')}" data-tabid="form-button" data-faicon="hand-o-up">表单列表</li>
                                 <li data-id="12" data-pid="1" data-url="form-select.html" data-tabid="form-select" data-faicon="caret-square-o-down">下拉选择框</li>
                                 <li data-id="13" data-pid="1" data-url="form-checkbox.html" data-tabid="table" data-faicon="check-square-o">复选、单选框</li>
                                 <li data-id="14" data-pid="1" data-url="form.html" data-tabid="form" data-faicon="list">表单综合演示</li>
