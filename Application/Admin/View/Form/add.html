@@ -1,37 +1,23 @@
+<link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/Admin/formbuilder/form-builder.css">
 
-<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
-<!-- <link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/Admin/formbuild/demo.css"> -->
-<link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/Admin/formbuild/form-builder.css">
 
-<div class="demo-wrap">
-    <div id="main_content_wrap" class="outer">
-        <section id="main_content" class="inner">
+<form action="demo.php" method="post">
+    <textarea name="form-builder-template" id="form-builder-template" cols="30" rows="10"></textarea>
+    <input type="submit" value="submit">
+</form>
 
-            <div class="build-form">
-                <h2><strong>Build The Form</strong></h2>
-                <form action="">
-                    <textarea name="form-builder-template" id="form-builder-template" cols="30" rows="10"></textarea>
-                </form>
-                <br style="clear:both">
-            </div>
-            <br style="clear:both">
-        </section>
-    </div>
 
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script src="__PUBLIC__/Admin/formbuild/form-builder.min.js"></script>
-<script src="__PUBLIC__/Admin/formbuild/form-render.min.js"></script>
+
+<script src="__PUBLIC__/Admin/formbuilder/jquery-ui.min.js"></script>
+<script src="__PUBLIC__/Admin/formbuilder/form-builder.min.js"></script>
+<script src="__PUBLIC__/Admin/formbuilder/form-render.min.js"></script>
 <script>
-
-    $(document).ready(function($) {
+    jQuery(document).ready(function($) {
         'use strict';
-        alert("应该是Ajax加载之间时间有差错,页面未加载完下面就执行了.找不到ID标签什么的无法重绘界面.这里加弹消息等一下就可以了.明天继续改")
         var template = document.getElementById('form-builder-template'),
                 formContainer = document.getElementById('rendered-form'),
                 renderBtn = document.getElementById('render-form-button');
-                $(template).formBuilder();
+        $(template).formBuilder();
 
         $(renderBtn).click(function() {
             $(template).formRender({
@@ -40,3 +26,4 @@
         });
     });
 </script>
+
