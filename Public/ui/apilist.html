@@ -12,13 +12,15 @@
         <script src="js/frozen.js"></script>
     </head>
     
-    <body ontouchstart style="display: none;">
+    <body ontouchstart>
 		<div class="ui-loading-block show" id="onloading">
 			<div class="ui-loading-cnt">
 				<i class="ui-loading-bright"></i>
 				<p>正在加载中...</p>
 			</div>
 		</div>
+
+        <div id="conts" style="display: none">
 		
         <header class="ui-header ui-header-positive ui-border-b">
 			<h1>xx调查表</h1>
@@ -141,9 +143,10 @@
         <footer class="">
            
         </footer>
+        </div>
 		<script>
 			function hideonload (){
-                    document.getElementsByTagName("body").style.display="block"
+                    document.getElementsById("conts").style.display="block"
 					document.getElementById("onloading").style.display="none"
 				}
 			window.onload = function(){
