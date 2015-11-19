@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fff;
+}
+body > a {
+    display: none;
+}
+.page-desc {
+    color: #7cae23;
+    font-size: 16px;
+    padding: 10px;
+}
+.page-block {
+    position: relative;
+}
+.page-block .ui-header, .page-block .ui-footer {
+    position: absolute;
+}
+.ui-tab-nav {
+    top: 45px;
+}
+.ui-tab-content {
+    margin-top: 45px;
+}
+.page-block > .ui-list, .page-block > .ui-form, .page-block > .ui-tooltips {
+    margin-bottom: 20px;
+}
+.content h3 {
+    font-size: 15px;
+    line-height: 44px;
+    padding: 0 15px;
+}
+.border-list {
+    background-color: #fff;
+}
+.border-list li {
+    margin: 10px auto;
+    text-align: center;
+    width: 100px;
+}
+.ui-btn-group-bottom {
+    bottom: 56px;
+}
+.ui-table {
+    background-color: #fff;
+    line-height: 40px;
+    text-align: center;
+}
+.ui-scroller {
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    padding: 10px;
+    width: auto;
+}
+.ui-scroller li {
+    margin-bottom: 10px;
+}
+.ui-notice {
+    height: 400px;
+    top: 0;
+    z-index: -1;
+}
+.icon-lists li {
+    float: left;
+    height: 100px;
+    text-align: center;
+    width: 103px;
+}
+.icon-lists li i {
+    font-size: 32px;
+    line-height: 44px;
+}
+.icon-lists .ui-icon, .icon-lists [class^="ui-icon-"] {
+    color: #000;
+    margin: 10px 0;
+}
+.code, .fontclass {
+    font-size: 12px;
+}
+.ui-col {
+    background: #777 none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+}
+.ui-flex {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    min-height: 80px;
+}
+.ui-flex-ver {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    min-height: 80px;
+}
+.ui-row-flex-ver {
+    border: 1px solid #ddd;
+    min-height: 100px;
+}
+.page-img {
+    background: #777 none repeat scroll 0 0;
+    height: 50px;
+    width: 50px;
+}
