@@ -221,7 +221,6 @@ class Curl_Manager {
 		$errno = curl_errno ( $this->_ch );
 		
 		if ($errno > 0) {
-			echo 111;die;
 			throw new Curl_Manager_Exception ( curl_error ( $this->_ch ), $errno );
 		}
 		
@@ -236,6 +235,6 @@ class Curl_Manager {
 	}
 }
 
-/*class Curl_Manager_Exception extends \Think\Exception {
+class Curl_Manager_Exception extends Exception {
 
-}*/
+}
