@@ -5,6 +5,7 @@
  * @author hackerone
  * https://github.com/hackerone/curl/blob/master/Curl.php
  */
+namespace Common\lib\curl;
 class Curl2
 {
 
