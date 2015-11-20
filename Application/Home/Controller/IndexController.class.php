@@ -33,8 +33,9 @@ class IndexController extends Controller {
             'method'=>'get'
         );
         $res = send($arr);
-        var_dump($res);
+        
         $res = json_decode($res);
+        var_dump($res);
         print_r($res);die;
     }
 }
