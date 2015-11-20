@@ -235,6 +235,6 @@ class Curl_Manager {
 	}
 }
 
-class Curl_Manager_Exception extends \Exception {
+class Curl_Manager_Exception extends \Think\Exception {
 
 }
