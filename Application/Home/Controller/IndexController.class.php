@@ -1,6 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+use Common\lib\Curl_Manager;
 /**
  * 首页
  */
@@ -18,6 +19,10 @@ class IndexController extends Controller {
      * @return [type] [description]
      */
     public function getUserInfo() {
-    	echo 111;die;
+    	$curl = new Curl_Manager();
+        $appId = C('APP_ID');
+        $appSecret = C('APP_SECRET');
+        $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET';
+        var_dump($curl);die;
     }
 }
