@@ -1,0 +1,37 @@
+<div class="pageContent">
+
+	<form method="post" action="<{:U('<?php echo $moduleName; ?>/<?php echo $mvcName; ?>/add')}>" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone)">
+		
+		<div class="pageFormContent" layoutH="58">
+			<?php 
+				foreach ($fields as $k => $v):
+					if($v['Key'] == 'PRI')
+						continue;
+			?>
+			<div class="unit">
+				<label><?php echo $v['Comment'];?>：</label>
+				<?php 
+					if(strpos($v['Type'], 'enum') === 0):
+					$_value = str_replace('enum(\'', '', $v['Type']);
+                	$_value = str_replace('\')', '', $_value);
+                	$_value = explode('\',\'', $_value);
+					foreach ($_value as $k1 => $v1):
+				?>
+				<input <?php if($k1 == 0) echo 'checked="checked"';?> type="radio" name="<?php echo $v['Field']?>" value="<?php echo $v1; ?>" ><?php echo $v1; ?>
+				<?php endforeach;else: ?>
+				<input type="text" name="<?php echo $v['Field']?>" class="<?php if($v['Null'] == 'NO' && $v['Default'] == NULL): ?>required<?php endif;?>" size="40">
+				<?php endif;?>
+			</div>
+			<?php endforeach;?>
+
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>

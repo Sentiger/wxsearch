@@ -9,6 +9,9 @@ function p($data) {
     echo '</pre>';
 }
 
+
+
+
 /**
  * 将xml转换成数组
  * @param $xmlstring

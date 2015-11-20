@@ -18,6 +18,8 @@ class IndexController extends Controller {
      * @return [type] [description]
      */
     public function getUserInfo() {
+        gs();die;
+
         $appId = C('APP_ID');
         $appSecret = C('APP_SECRET');
         $options = array(
