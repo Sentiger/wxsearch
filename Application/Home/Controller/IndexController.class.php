@@ -29,6 +29,6 @@ class IndexController extends Controller {
         // $url = 'http://baidu.com';
         $res = cUrl($url,$options,2);
         $res = json_decode($res);
-        var_dump($res);die;
+        print_r($res);die;
     }
 }
