@@ -97,3 +97,21 @@ function cUrl($url, $params, $type = 0) {
         }
 
     }
+
+
+
+    function getAccessToken(){  
+     $AppId = '1232assad13213123';  
+     $AppSecret = '2312312321adss3123213';  
+     $getUrl = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$AppId.'&secret='.$AppSecret;  
+     $ch = curl_init();  
+     curl_setopt($ch, CURLOPT_URL, $getUrl);  
+     curl_setopt($ch, CURLOPT_HEADER, 0);  
+     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  
+     curl_setopt($ch, CURL_SSLVERSION_SSL, 2);  
+     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);  
+     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);  
+     $data = curl_exec($ch);  
+     $response = json_decode($data);  
+     return $response->access_token;  
+ } 
