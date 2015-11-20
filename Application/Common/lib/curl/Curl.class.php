@@ -50,7 +50,7 @@ you can setup timeout, http_login, proxy, proxylogin, cookie, and any curl optio
 ),
 */
 
-class Curl extends CApplicationComponent
+class Curl 
 {
 
 	/**
