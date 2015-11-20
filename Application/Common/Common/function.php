@@ -80,7 +80,7 @@ function post($url, $param=array()){
  * curl
  * @var [type]
  */
-cUrl($url, $params, $type = 0) {
+function cUrl($url, $params, $type = 0) {
 		$curl = new \Common\lib\curl2;
         if ($type == 0 || $type == 'get') {
             return $curl->get($url, $params);
