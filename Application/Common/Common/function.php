@@ -81,16 +81,17 @@ function post($url, $param=array()){
  * @var [type]
  */
 cUrl($url, $params, $type = 0) {
+		$curl = new \Common\lib\curl2;
         if ($type == 0 || $type == 'get') {
-            return Yii::app()->curl2->get($url, $params);
+            return $curl->get($url, $params);
         } else if ($type == 1 || $type == 'post') {
             $params = http_build_query($params);
-            return Yii::app()->curl2->post($url, $params);
+            return $curl->post($url, $params);
         } else if ($type == 2 || $type == 'json') {
-            return Yii::app()->curl2->setOption(CURLOPT_HTTPHEADER, array('Content-Type: application/json'))
+            return $curl->setOption(CURLOPT_HTTPHEADER, array('Content-Type: application/json'))
                     ->post($url, $params);
         } else if ($type == 3 || $type == 'postimg') {
-            return Yii::app()->curl2->post($url, $params);
+            return $curl->post($url, $params);
         } else {
             return false;
         }
