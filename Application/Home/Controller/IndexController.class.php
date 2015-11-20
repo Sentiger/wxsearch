@@ -6,6 +6,18 @@ use Think\Controller;
  */
 class IndexController extends Controller {
     public function index(){
+
+
+
         $this->display();
+    }
+
+
+    /**
+     * 获取用户详细信息
+     * @return [type] [description]
+     */
+    public function getUserInfo() {
+    		
     }
 }
