@@ -30,7 +30,7 @@ class IndexController extends Controller {
         $url = 'https://api.weixin.qq.com/cgi-bin/token';
         $url = 'http://baidu.com';
         $curl->open();
-        $res = $curl->get($url,$options);
+        $res = $curl->get($url);
         var_dump($res);die;
     }
 }
