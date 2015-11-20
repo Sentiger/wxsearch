@@ -62,12 +62,12 @@ function post($url, $param=array()){
 		throw new Exception("参数必须为array");
 	}
 	$httph =curl_init($url);
-	curl_setopt($ch, CURLOPT_URL, $getUrl);  
-     curl_setopt($ch, CURLOPT_HEADER, 0);  
-     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  
-     curl_setopt($ch, CURL_SSLVERSION_SSL, 2);  
-     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);  
-     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);  
+	curl_setopt($httph, CURLOPT_URL, $url);  
+     curl_setopt($httph, CURLOPT_HEADER, 0);  
+     curl_setopt($httph, CURLOPT_RETURNTRANSFER, 1);  
+     curl_setopt($httph, CURL_SSLVERSION_SSL, 2);  
+     curl_setopt($httph, CURLOPT_SSL_VERIFYPEER, FALSE);  
+     curl_setopt($httph, CURLOPT_SSL_VERIFYHOST, FALSE);
 	$rst=curl_exec($httph);
 	curl_close($httph);
 	return $rst;
