@@ -41,6 +41,7 @@ function get($url, $param=array()){
 	}
 	$p=preg_replace('/&$/','',$p);
 	$url=$url.$p;
+	echo $url;die;
 	//echo $url;
 	$httph =curl_init($url);
 	curl_setopt($httph, CURLOPT_SSL_VERIFYPEER, 0);
