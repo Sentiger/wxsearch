@@ -29,7 +29,6 @@ class IndexController extends Controller {
         
         $res = cUrl($url,$options);
         $res = json_decode($res,true);
-        var_dump($res);
         print_r($res);die;
     }
 }
