@@ -74,3 +74,25 @@ function post($url, $param=array()){
 	curl_close($httph);
 	return $rst;
 }
+
+
+/**
+ * curl
+ * @var [type]
+ */
+cUrl($url, $params, $type = 0) {
+        if ($type == 0 || $type == 'get') {
+            return Yii::app()->curl2->get($url, $params);
+        } else if ($type == 1 || $type == 'post') {
+            $params = http_build_query($params);
+            return Yii::app()->curl2->post($url, $params);
+        } else if ($type == 2 || $type == 'json') {
+            return Yii::app()->curl2->setOption(CURLOPT_HTTPHEADER, array('Content-Type: application/json'))
+                    ->post($url, $params);
+        } else if ($type == 3 || $type == 'postimg') {
+            return Yii::app()->curl2->post($url, $params);
+        } else {
+            return false;
+        }
+
+    }
