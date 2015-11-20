@@ -14,4 +14,9 @@ return array(
     'DEFAULT_MODULE' => 'Admin',
 //    'DEFAULT_CONTROLLER' => 'Index', // 默认控制器名称
     'DEFAULT_ACTION' => 'index', // 默认操作名称
+
+
+    //微信配置
+    'APP_ID' => 'wxb383ceff8cdf7068',
+    'APP_SECRET' => '219f2567cc628f344a37812957aee96a',
 );
