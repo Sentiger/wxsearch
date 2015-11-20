@@ -28,6 +28,7 @@ class IndexController extends Controller {
             'secret' => $appSecret
         );
         $url = 'https://api.weixin.qq.com/cgi-bin/token';
+        $url = 'http://baidu.com';
         $curl->open();
         $res = $curl->get($url,$options);
         var_dump($res);die;
