@@ -22,7 +22,14 @@ class IndexController extends Controller {
     	$curl = new Curl_Manager();
         $appId = C('APP_ID');
         $appSecret = C('APP_SECRET');
-        $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET';
-        var_dump($curl);die;
+        $options = array(
+            'grant_type' => 'client_credential',
+            'appid' => $appId,
+            'secret' => $appSecret
+        );
+        $url = 'https://api.weixin.qq.com/cgi-bin/token';
+        $curl->open();
+        $res = $curl->get($url,$options);
+        var_dump($res);die;
     }
 }
