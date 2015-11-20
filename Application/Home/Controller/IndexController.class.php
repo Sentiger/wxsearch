@@ -28,7 +28,7 @@ class IndexController extends Controller {
         $url = 'https://api.weixin.qq.com/cgi-bin/token';
         // $url = 'http://baidu.com';
         $res = get($url,$options);
-        $res = json_decode($res);
+        $res = json_decode($res,true);
         var_dump($res);die;
     }
 }
