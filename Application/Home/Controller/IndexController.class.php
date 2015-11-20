@@ -25,10 +25,15 @@ class IndexController extends Controller {
             'appid' => $appId,
             'secret' => $appSecret
         );
-        $url = 'https://api.weixin.qq.com/cgi-bin/token';
+        $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appId.'&secret='.$appSecret;
         // $url = 'http://baidu.com';
-        $res = get($url,$options);
-        print_r($res);
+        // $res = get($url,$options);
+        $arr = array(
+            'url'=>$url,
+            'method'=>'get'
+        );
+        $res = send($arr);
+        var_dump($res);
         $res = json_decode($res);
         print_r($res);die;
     }
