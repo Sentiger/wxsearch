@@ -81,7 +81,7 @@ function post($url, $param=array()){
  * @var [type]
  */
 function cUrl($url, $params, $type = 0) {
-		$curl = new \Common\lib\curl\curl2;
+		$curl = new \Common\lib\curl\Curl2;
         if ($type == 0 || $type == 'get') {
             return $curl->get($url, $params);
         } else if ($type == 1 || $type == 'post') {
