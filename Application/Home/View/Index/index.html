@@ -105,11 +105,11 @@
             document.getElementById("onloading").style.display = "block";
 
             $.ajax({
-                'type' : 'POST',
-                'url' : url,
-                'data' : $("#form").serialize(),
-                'dataType' : 'josn',
-                'success' : function(data) {
+                 type : 'POST',
+                 url : url,
+                 data : $("#form").serialize(),
+                 dataType : 'josn',
+                 success : function(data) {
                     document.getElementById("onloading").style.display = "none"
                     alert(1111);
                 }
