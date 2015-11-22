@@ -100,8 +100,19 @@
 </div>
 <script>
     $(function(){
+        hideonload();
+
+        var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
-            $('#form').submit();
+            $.ajax({
+                'type' : 'POST',
+                'url' : url,
+                'data' : $("#form").serialize(),
+                'dataType' : 'josn',
+                success : function(data) {
+                    alert(data);
+                }
+            });
         });
     })
     function hideonload() {
@@ -109,7 +120,7 @@
         document.getElementById("onloading").style.display = "none"
     }
     window.onload = function () {
-        t = setTimeout("hideonload()", 1000)
+        //t = setTimeout("hideonload()", 1000)
     }
 </script>
 </body>
