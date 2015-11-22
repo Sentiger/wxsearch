@@ -34,7 +34,7 @@
 
             <div class="page-block">
                 <div class="ui-form ui-border-t">
-                    <form action="{:U('Home/Index/addInfo')}" method="post">
+                    <form action="{:U('Home/Index/addInfo')}" method="post" id="form">
                         <div class="ui-form-item ui-border-b">
                             <label>
                                 公司名称
@@ -70,7 +70,7 @@
         </div>
 
         <div class="ui-btn-wrap">
-            <button class="ui-btn-lg ui-btn-primary">
+            <button class="ui-btn-lg ui-btn-primary" id="submit_btn">
                 确定
             </button>
         </div>
@@ -99,6 +99,11 @@
     </footer>
 </div>
 <script>
+    $(function(){
+        $('#submit_btn').click(function(){
+            $('#form').submit();
+        });
+    })
     function hideonload() {
         document.getElementById("conts").style.display = "block"
         document.getElementById("onloading").style.display = "none"
