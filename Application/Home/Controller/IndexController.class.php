@@ -10,7 +10,7 @@ class IndexController extends CommonController {
         $res = $this->getCodeAccessToken($code);
         $userInfo = $this->getUserInfo($res);
         echo '<pre>';
-        print_r($res);die;
+        print_r($userInfo);die;
         $this->display();
     }
 
