@@ -6,7 +6,6 @@ use Think\Controller;
  */
 class IndexController extends CommonController {
     public function index(){
-        echo urlencode('http://wxsearch.sentiger.com/index.php/Home/Index/index');die;
         $this->display();
     }
 
