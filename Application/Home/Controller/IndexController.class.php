@@ -24,7 +24,7 @@ class IndexController extends CommonController {
         sleep(2);
         $data = array(
             'status' => 1,
-            'msg' => '成功';
+            'msg' => '成功'
         );
 
         echo json_encode($data);
