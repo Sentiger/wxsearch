@@ -101,7 +101,7 @@
 <script>
     $(function(){
         var url = "{:U('Home/Index/addInfo')}";
-
+        document.getElementById("conts").style.display = "block"
         $('#submit_btn').click(function(){
             document.getElementById("conts").style.display = "block"
 
@@ -122,7 +122,7 @@
         document.getElementById("onloading").style.display = "none"
     }
     window.onload = function () {
-        t = setTimeout("hideonload()", 1000)
+//        t = setTimeout("hideonload()", 1000)
     }
 </script>
 </body>
