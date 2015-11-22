@@ -4,7 +4,7 @@ use Think\Controller;
 /**
  * 首页
  */
-class IndexController extends Controller {
+class IndexController extends CommonController {
     public function index(){
 
 
@@ -18,7 +18,9 @@ class IndexController extends Controller {
      * @return [type] [description]
      */
     public function getUserInfo() {
-        $appId = C('APP_ID');
+        $ass = $this->getAccessToken();
+       echo $ass;
+       /* $appId = C('APP_ID');
         $appSecret = C('APP_SECRET');
         $options = array(
             'grant_type' => 'client_credential',
@@ -28,7 +30,7 @@ class IndexController extends Controller {
         $url = 'https://api.weixin.qq.com/cgi-bin/token';
         
         $res = cUrl($url,$options);
-        $res = json_decode($res,true);
-        print_r($res);die;
+        $res = json_decode($res,true);*/
+
     }
 }
