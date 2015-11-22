@@ -3,10 +3,10 @@ return array(
 	//'配置项'=>'配置值'
     /* 数据库配置 */
     'DB_TYPE' => 'mysql', // 数据库类型
-    'DB_HOST' => 'localhost',
+    'DB_HOST' => 'www.sentiger.com',
     'DB_NAME' => 'wxsearch',
-    'DB_USER' => 'root',
-    'DB_PWD' => '',
+    'DB_USER' => 'wxsearch',
+    'DB_PWD' => 'wxsearch',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'wx_',
 
