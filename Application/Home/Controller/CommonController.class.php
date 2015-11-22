@@ -14,6 +14,7 @@ class CommonController extends Controller {
      * @return mixed|string
      */
     public function getAccessToken() {
+        S('access_token', null);
         if(S('access_token')) return S('access_token');
         $appId = C('APP_ID');
         $appSecret = C('APP_SECRET');
