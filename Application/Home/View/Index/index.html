@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="__PUBLIC__/Home/ui/css/frozen.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/ui/css/style.css">
     <script src="__PUBLIC__/Home/ui/lib/zepto.min.js"></script>
+    <script src="__PUBLIC__/Home/ui/lib/zepto.min.js"></script>
     <script src="__PUBLIC__/Home/ui/js/frozen.js"></script>
 </head>
 
@@ -33,12 +34,12 @@
 
             <div class="page-block">
                 <div class="ui-form ui-border-t">
-                    <form action="#">
+                    <form action="{:U('Home/Index/addInfo')}" method="post">
                         <div class="ui-form-item ui-border-b">
                             <label>
                                 公司名称
                             </label>
-                            <input type="text" placeholder="公司名字">
+                            <input type="text" name="company_name" placeholder="公司名字">
                             <a class="ui-icon-close" href="#">
                             </a>
                         </div>
@@ -46,108 +47,27 @@
                             <label>
                                 详细地址
                             </label>
-                            <textarea placeholder="街道等详细地址"></textarea>
+                            <textarea name="address" placeholder="街道等详细地址"></textarea>
                         </div>
                         <div class="ui-form-item ui-form-item-l ui-border-b">
                             <label class="ui-border-r">
                                 中国 +86
                             </label>
-                            <input type="text" placeholder="请输入手机号码">
+                            <input type="text" name="mobile" placeholder="请输入手机号码">
                             <a class="ui-icon-close" href="#">
                             </a>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
 
-        <div class="page-item">
-            <p class="page-desc">填写内容1</p>
-
-            <div class="page-block">
-                <div class="ui-form ui-border-t">
-                    <form action="#">
-                        <div class="ui-form-item ui-form-item-pure ui-border-b">
-                            <input type="text" placeholder="你的名字命名">
-                            <a class="ui-icon-close" href="#"></a>
-                        </div>
-                        <div class="ui-form-item ui-form-item-pure ui-border-b">
-                            <input type="password" placeholder="密码">
-                            <a class="ui-icon-close" href="#"></a>
+                        <div class="ui-form-item ui-form-item-textarea ui-border-b">
+                            <label>
+                                反馈内容
+                            </label>
+                            <textarea name="info" placeholder="街道等详细地址"></textarea>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
-        <div class="page-item">
-            <p class="page-desc">单选表单</p>
-
-            <div class="page-block">
-                <div class="ui-form ui-border-t">
-                    <form action="#">
-                        <div class="ui-form-item ui-form-item-radio ui-border-b">
-
-                            <label class="ui-radio" for="radio">
-                                <input type="radio" name="radio">
-                            </label>
-
-                            <p>表单中用于单选操作</p>
-                        </div>
-                        <div class="ui-form-item ui-form-item-radio ui-border-b">
-
-                            <label class="ui-radio" for="radio">
-                                <input type="radio" checked="" name="radio">
-                            </label>
-
-                            <p>表单中用于单选操作</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-item">
-            <p class="page-desc">多选表单</p>
-
-            <div class="page-block">
-                <div class="ui-form ui-border-t">
-                    <form action="#">
-                        <div class="ui-form-item ui-form-item-checkbox ui-border-b">
-                            <label class="ui-checkbox">
-                                <input type="checkbox">
-                            </label>
-
-                            <p>表单中用于多选操作</p>
-                        </div>
-                        <div class="ui-form-item ui-form-item-checkbox ui-border-b">
-                            <label class="ui-checkbox">
-                                <input type="checkbox" checked="">
-                            </label>
-
-                            <p>表单中用于多选操作</p>
-                        </div>
-                    </form>
-                    <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b">
-                        <li class="ui-border-t">
-                            <label class="ui-checkbox">
-                                <input type="checkbox">
-                            </label>
-
-                            <p>普通列表ui-list中用于多选操作</p>
-                        </li>
-                        <li class="ui-border-t">
-                            <label class="ui-checkbox">
-                                <input type="checkbox" checked="">
-                            </label>
-
-                            <p>普通列表中用于多选操作</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
 
         <div class="ui-btn-wrap">
             <button class="ui-btn-lg ui-btn-primary">
