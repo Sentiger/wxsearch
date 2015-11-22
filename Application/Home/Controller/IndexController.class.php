@@ -9,7 +9,19 @@ class IndexController extends CommonController {
         $code = I('code');
         $res = $this->getCodeAccessToken($code);
         $userInfo = $this->getUserInfo($res);
+        $info = M('wx_user')->where(array('openid'=>$userInfo['openid']))->find();
+
+        $this->code = $code;
+        $this->info = $info;
+
         $this->display();
+    }
+
+    /**
+     * 添加反馈信息
+     */
+    public function addInfo() {
+
     }
 
 
