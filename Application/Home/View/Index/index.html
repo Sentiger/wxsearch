@@ -102,15 +102,14 @@
     $(function(){
         var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
-            alert(222)
             $.ajax({
                  type : 'POST',
                  url : url,
                  data : $("#form").serialize(),
-                 dataType : 'josn',
+//                 dataType : 'josn',
                  success : function(a) {
-                    alert(1111);
-                }
+                     alert(222)
+                 }
             });
         });
     })
