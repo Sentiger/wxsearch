@@ -19,4 +19,12 @@ return array(
     //微信配置
     'APP_ID' => 'wxb383ceff8cdf7068',
     'APP_SECRET' => '219f2567cc628f344a37812957aee96a',
+
+    //获取用户基本信息code的url
+    'ACCESS_USER_INFO_URL' => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index&response_type=code&scope=snsapi_base &state=STATE#wechat_redirect',
+    //获取网页授权确认code
+    'ACCESS_FULL_USER_INFO_URL' => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect',
+
+
+
 );
