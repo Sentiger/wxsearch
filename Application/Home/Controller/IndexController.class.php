@@ -8,6 +8,7 @@ class IndexController extends CommonController {
     public function index(){
         $code = I('code');
         $res = $this->getCodeAccessToken($code);
+        $userInfo = $this->getUserInfo($res);
         echo '<pre>';
         print_r($res);die;
         $this->display();
