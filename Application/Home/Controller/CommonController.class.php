@@ -9,7 +9,7 @@ use Think\Controller;
  */
 class CommonController extends Controller {
     const ACCESS_TOKEN_URL = 'https://api.weixin.qq.com/cgi-bin/token'; //获取微信access_token
-    const ACCESS_CODE_URL = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect';  //获取微信授权code
+    const ACCESS_CODE_TOKEN_URL = 'https://api.weixin.qq.com/sns/oauth2/access_token';
 
     /**
      * 获取微信token
@@ -31,22 +31,19 @@ class CommonController extends Controller {
         return S('access_token');
     }
 
-   /* public function getWXCode() {
 
-        $url = self::ACCESS_CODE_URL;
-        $appId = C('APP_ID');
-        $appSecret = C('APP_SECRET');
-        $redirectUri = 'http://wxsearch.sentiger.com/index.php/Home/Index/index';
-        $scope = 'snsapi_base';
+    public function getCodeAccessToken($code) {
+       $url = self::ACCESS_CODE_TOKEN_URL;
         $options = array(
-            'appid' => $appId,
-            'redirect_uri' => $redirectUri,
-            'response_type' => 'code',
-            'scope' => $scope,
-            '#wechat_redirect'=>''
+            'appid' => C('APP_ID'),
+            'secret' => C('APP_SECRET'),
+            'code' => $code,
+            'grant_type' => 'authorization_code'
         );
-
-    }*/
+        $res = cUrl($url,$options);
+        $res = json_decode($res,true);
+        return $res;
+    }
 
 
 }
