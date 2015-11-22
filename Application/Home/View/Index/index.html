@@ -102,7 +102,6 @@
     $(function(){
         var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
-            document.getElementById("onloading").style.display = "block";
 
             $.ajax({
                  type : 'POST',
@@ -110,7 +109,6 @@
                  data : $("#form").serialize(),
                  dataType : 'josn',
                  success : function(data) {
-                    document.getElementById("onloading").style.display = "none"
                     alert(1111);
                 }
             });
