@@ -21,7 +21,13 @@ class IndexController extends CommonController {
      * 添加反馈信息
      */
     public function addInfo() {
+        sleep(2);
+        $data = array(
+            'status' => 1,
+            'msg' => '成功';
+        );
 
+        echo json_encode($data);
     }
 
 
