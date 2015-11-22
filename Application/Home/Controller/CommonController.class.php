@@ -26,6 +26,7 @@ class CommonController extends Controller {
         $res = cUrl($url,$options);
         $res = json_decode($res,true);
         S('access_token', $res['access_token'], 7000);
+        echo 111;
         return S('access_token');
     }
 
