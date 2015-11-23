@@ -49,7 +49,7 @@ class FormController extends CommonController {
                     }elseif($v['@attributes']['type'] == 'select') {
                         $comment = "array(\"label\"=>\"{$label}\",\"type\"=>\"select\",\"option\"=>{$options})";
                     }
-
+echo $comment;die;
                     if($v['@attributes']['required']){
                         $sql .= "{$v['@attributes']['name']} varchar(255) not null default '' COMMENT '{$comment}',";
                     } else {
