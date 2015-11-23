@@ -74,6 +74,7 @@ class FormController extends CommonController {
             $sql = rtrim($sql, ',');
             $sql .= ")";
 
+            $sql .= "ENGINE=MyISAM  CHARSET=utf8 COMMENT=''";
             echo $sql;
             print_r($arr);die;
             $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
