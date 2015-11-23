@@ -21,6 +21,8 @@ class IndexController extends CommonController {
      * 添加反馈信息
      */
     public function addInfo() {
+        $data = I('post.');
+
         $data = array(
             'status' => 1,
             'msg' => '成功'
