@@ -50,7 +50,7 @@ class FormController extends CommonController {
                     }
 
                     if($v['@attributes']['required']){
-                        $sql .= "{$v['@attributes']['name']} varchar(255) not null default '' COMMENT \"{$comment}\"";
+                        $sql .= "{$v['@attributes']['name']} varchar(255) not null default '' COMMENT \"{$comment}\",";
                     } else {
                         $sql .= "{$v['@attributes']['name']} varchar(255) COMMENT \"{$comment}\",";
                     }
