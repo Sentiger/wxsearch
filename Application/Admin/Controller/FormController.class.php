@@ -25,7 +25,7 @@ class FormController extends CommonController {
             $arr = $arr['fields']['field'];
 
             $tableName = 'test';
-            $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',";
+            $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
             foreach($arr as $k=>$v) {
                 $v['@attributes']['name'] = str_replace('-','',$v['@attributes']['name']);
