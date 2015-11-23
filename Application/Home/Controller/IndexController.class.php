@@ -22,7 +22,7 @@ class IndexController extends CommonController {
      */
     public function addInfo() {
         $data = I('post.');
-
+        print_r($data);die;
         $data = array(
             'status' => 1,
             'msg' => '成功'
