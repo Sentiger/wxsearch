@@ -49,9 +49,9 @@ class FormController extends CommonController {
                     }
 
                     if($v['@attributes']['required']){
-                        $sql .= "{$v['@attributes']['name']} varchar(255) not null default '' COMMENT '{$comment}'";
+                        $sql .= "{$v['@attributes']['name']} varchar(255) not null default '' COMMENT \"{$comment}\"";
                     } else {
-                        $sql .= "{$v['@attributes']['name']} varchar(255) COMMENT '{$comment}',";
+                        $sql .= "{$v['@attributes']['name']} varchar(255) COMMENT \"{$comment}\",";
                     }
 
 
@@ -59,9 +59,9 @@ class FormController extends CommonController {
                     $comment = "array('label'=>'{$v['@attributes']['label']}')";
 
                     if($v['@attributes']['required']){
-                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null default '' COMMENT '{$comment}',";
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null default '' COMMENT \"{$comment}\",";
                     } else {
-                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENT '{$comment}',";
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENT \"{$comment}\",";
                     }
 
                 }
