@@ -12,9 +12,9 @@ class IndexController extends CommonController {
         $info = M('user')->where(array('openid'=>$userInfo['openid']))->find();
 
         $this->code = $code;
-        $this->info = $info; 
+        $this->info = $info;
         $this->userInfo = $userInfo;
-
+        echo 111;die;
         $this->display();
     }
 
