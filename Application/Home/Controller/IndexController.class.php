@@ -9,6 +9,7 @@ class IndexController extends CommonController {
         $code = I('code');
         $res = $this->getCodeAccessToken($code);
         $userInfo = $this->getUserInfo($res);
+        echo 111;die;
         $info = M('user')->where(array('openid'=>$userInfo['openid']))->find();
 
         $this->code = $code;
