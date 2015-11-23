@@ -43,12 +43,11 @@ class FormController extends CommonController {
                     $options .= ")";
 
                     if($v['@attributes']['type'] == 'checkbox-group') {
-
-                        $comment = "array('label'=>'{$label}','type'=>'checkbox','option'=>{$options})";
+                        $comment = "array(\"label\"=>\"{$label}\",\"type\"=>\"checkbox\",\"option\"=>{$options})";
                     } elseif($v['@attributes']['type'] == 'radio-group'){
-                        $comment = "array('label'=>'{$label}','type'=>'radio','option'=>{$options})";
+                        $comment = "array(\"label\"=>\"{$label}\",\"type\"=>\"radio\",\"option\"=>{$options})";
                     }elseif($v['@attributes']['type'] == 'select') {
-                        $comment = "array('label'=>'{$label}','type'=>'select','option'=>{$options})";
+                        $comment = "array(\"label\"=>\"{$label}\",\"type\"=>\"select\",\"option\"=>{$options})";
                     }
 
                     if($v['@attributes']['required']){
