@@ -24,7 +24,7 @@ class FormController extends CommonController {
             $arr = simplest_xml_to_array($xml);
             $arr = $arr['fields']['field'];
 
-            $tableName = 'test';
+            $tableName = Pinyin($_POST['table_name']);
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
             foreach($arr as $k=>$v) {
@@ -72,7 +72,7 @@ class FormController extends CommonController {
             }
             $sql = rtrim($sql, ',');
             $sql .= ")";
-            $sql .= "ENGINE=MyISAM  CHARSET=utf8 COMMENT=''";
+            $sql .= "ENGINE=MyISAM  CHARSET=utf8 COMMENT='{$_POST['table_name']}'";
 
             print_r($_POST);
 
