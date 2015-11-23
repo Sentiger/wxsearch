@@ -22,7 +22,7 @@ class IndexController extends CommonController {
      */
     public function addInfo() {
         $data = I('post.');
-        if($data['is_new']) {
+        if($data['is_new']==0) {
             $uid = M('user')->add($data);
         } else {
             $uid = $data['is_new'];
