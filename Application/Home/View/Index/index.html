@@ -39,7 +39,7 @@
                             <label>
                                 公司名称
                             </label>
-                            <input type="text" name="company_name" placeholder="公司名字">
+                            <input type="text" name="company_name" value="<if condition='isset($info[company_name])'>{$info[company_name]}</if>" placeholder="公司名字">
                             <a class="ui-icon-close" href="#">
                             </a>
                         </div>
@@ -47,13 +47,13 @@
                             <label>
                                 详细地址
                             </label>
-                            <textarea name="address" placeholder="街道等详细地址"></textarea>
+                            <textarea name="address" placeholder="街道等详细地址"><if condition='isset($info[address])'>{$info[address]}</if></textarea>
                         </div>
                         <div class="ui-form-item ui-form-item-l ui-border-b">
                             <label class="ui-border-r">
                                 中国 +86
                             </label>
-                            <input type="text" name="mobile" placeholder="请输入手机号码">
+                            <input type="text" name="mobile" placeholder="请输入手机号码" value="<if condition='isset($info[mobile])'>{$info[mobile]}</if>">
                             <a class="ui-icon-close" href="#">
                             </a>
                         </div>
@@ -62,8 +62,10 @@
                             <label>
                                 反馈内容
                             </label>
-                            <textarea name="info" placeholder="街道等详细地址"></textarea>
+                            <textarea name="info" placeholder="反馈内容"><if condition='isset($info[info])'>{$info[info]}</if></textarea>
                         </div>
+                        <input type="hidden" name="code" value="{$code}">
+                        <input type="hidden" name="openid" value="{$userInfo['openid']}">
                     </form>
                 </div>
             </div>

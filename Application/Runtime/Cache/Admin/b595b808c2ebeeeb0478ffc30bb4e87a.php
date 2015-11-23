@@ -23,14 +23,14 @@
 <script src="/Public/Admin/jui/uploadify/scripts/jquery.uploadify.js" type="text/javascript"></script>
 
 <!-- svg图表  supports Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+ -->
-<script type="text/javascript" src="/Public/Admin/jui/chart/raphael.js"></script>
+<!--<script type="text/javascript" src="/Public/Admin/jui/chart/raphael.js"></script>
 <script type="text/javascript" src="/Public/Admin/jui/chart/g.raphael.js"></script>
 <script type="text/javascript" src="/Public/Admin/jui/chart/g.bar.js"></script>
 <script type="text/javascript" src="/Public/Admin/jui/chart/g.line.js"></script>
 <script type="text/javascript" src="/Public/Admin/jui/chart/g.pie.js"></script>
-<script type="text/javascript" src="/Public/Admin/jui/chart/g.dot.js"></script>
+<script type="text/javascript" src="/Public/Admin/jui/chart/g.dot.js"></script>-->
 
-<script src="/Public/Admin/jui/js/dwz.core.js" type="text/javascript"></script>
+<!--<script src="/Public/Admin/jui/js/dwz.core.js" type="text/javascript"></script>
 <script src="/Public/Admin/jui/js/dwz.util.date.js" type="text/javascript"></script>
 <script src="/Public/Admin/jui/js/dwz.validate.method.js" type="text/javascript"></script>
 <script src="/Public/Admin/jui/js/dwz.barDrag.js" type="text/javascript"></script>
@@ -60,12 +60,13 @@
 <script src="/Public/Admin/jui/js/dwz.checkbox.js" type="text/javascript"></script>
 <script src="/Public/Admin/jui/js/dwz.history.js" type="text/javascript"></script>
 <script src="/Public/Admin/jui/js/dwz.combox.js" type="text/javascript"></script>
-<script src="/Public/Admin/jui/js/dwz.print.js" type="text/javascript"></script>
+<script src="/Public/Admin/jui/js/dwz.print.js" type="text/javascript"></script>-->
 
 
 <!-- 可以用dwz.min.js替换前面全部dwz.*.js (注意：替换是下面dwz.regional.zh.js还需要引入)
 <script src="bin/dwz.min.js" type="text/javascript"></script>
 -->
+    <script src="/Public/Admin/jui/bin/dwz.min.js" type="text/javascript"></script>
 <script src="/Public/Admin/jui/js/dwz.regional.zh.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -138,8 +139,8 @@ $(function(){
 						<ul class="tree treeFolder">
 							<li><a>常用组件</a>
 								<ul>
-									<li><a href="<?php echo U('Admin/Form/lst');?>" target="navTab" rel="w_panel">表单列表</a></li>
-									<li><a href="" target="navTab" rel="w_tabs">选项卡面板</a></li>
+									<li><a href="<?php echo U('Admin/Form/lst');?>" target="navTab" rel="Admin_Form_lst">表单列表</a></li>
+									<li><a href="" target="navTab" rel="Admin_Search_lst">用户信息反馈</a></li>
 								</ul>
 							</li>
 

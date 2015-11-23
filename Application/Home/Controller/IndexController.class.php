@@ -13,6 +13,7 @@ class IndexController extends CommonController {
 
         $this->code = $code;
         $this->info = $info;
+        $this->userInfo = $userInfo;
 
         $this->display();
     }
@@ -25,7 +26,6 @@ class IndexController extends CommonController {
             'status' => 1,
             'msg' => '成功'
         );
-echo 111;die;
         echo json_encode($data);
     }
 
