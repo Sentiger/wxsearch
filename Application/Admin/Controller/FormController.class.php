@@ -12,9 +12,63 @@ class FormController extends CommonController {
     }
     public function add() {
         if(IS_POST) {
+
+            $type = array(
+                'autocomplete'=>'varchar(200)',
+                'date' => 'timestamp',
+                'rich-text' => 'text',
+                'text' => 'varchar(200)'
+            );
+
             $xml = $_POST['form-builder-template'];
             $arr = simplest_xml_to_array($xml);
             $arr = $arr['fields']['field'];
+
+            $tableName = 'test';
+            $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',";
+
+            foreach($arr as $k=>$v) {
+
+                if(isset($v['option'])) {
+                    $comment = '';
+
+                    $options = "";
+
+                    foreach($v['option'] as $k1=>$v1) {
+                        $options .= "'{$k1}'" . "=>" . "'{$v1}'";
+                    }
+
+                    if($v['@attributes']['type'] == 'checkbox-group') {
+
+                        $comment = "array('label'=>{$v['@attributes']['label']},'type'=>'checkbox','option'=>{$options})";
+                    } elseif($v['@attributes']['type'] == 'radio-group'){
+                        $comment = "array('label'=>{$v['@attributes']['label']},'type'=>'radio','option'=>{$options})";
+                    }elseif($v['@attributes']['type'] == 'select') {
+                        $comment = "array('label'=>{$v['@attributes']['label']},'type'=>'select','option'=>{$options})";
+                    }
+
+                    if($v['@attributes']['required']){
+                        $sql .= "{$v['@attributes']['name']} varchar(255) not null default '' COMMENT '{$comment}'";
+                    } else {
+                        $sql .= "{$v['@attributes']['name']} varchar(255) COMMENT '{$comment}',";
+                    }
+
+
+                } else {
+                    if($v['@attributes']['required']){
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null default '' COMMENT '{$v['@attributes']['label']}',";
+                    } else {
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENT '{$v['@attributes']['label']}',";
+                    }
+
+                }
+
+            }
+
+            $sql = rtrim($sql, ',');
+            $sql .= ")";
+
+            echo $sql;
             print_r($arr);die;
             $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
         }
