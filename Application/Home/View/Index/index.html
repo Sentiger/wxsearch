@@ -111,7 +111,9 @@
                  data : $("#form").serialize(),
                  dataType : 'json',
                  success : function(data) {
-
+                    if(data.status==1) {
+                        alert('反馈成功');
+                    }
                  }
             });
         });
