@@ -36,9 +36,11 @@ class FormController extends CommonController {
                     $options = "";
 
                     $label = "{$v['@attributes']['label']}";
+                    $options .= "array(";
                     foreach($v['option'] as $k1=>$v1) {
                         $options .= "'{$k1}'" . "=>" . "'{$v1}',";
                     }
+                    $options .= ")";
 
                     if($v['@attributes']['type'] == 'checkbox-group') {
 
@@ -60,7 +62,7 @@ class FormController extends CommonController {
                     $comment = "array('label'=>'{$v['@attributes']['label']}')";
 
                     if($v['@attributes']['required']){
-                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null default NULL COMMENT \"{$comment}\",";
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null  COMMENT \"{$comment}\",";
                     } else {
                         $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENT \"{$comment}\",";
                     }
