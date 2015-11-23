@@ -28,6 +28,10 @@ class FormController extends CommonController {
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
             foreach($arr as $k=>$v) {
+
+                if($v['@attributes']['type'] == 'checkbox' ) continue;
+
+
                 $v['@attributes']['name'] = str_replace('-','',$v['@attributes']['name']);
 
                 if(isset($v['option'])) {
