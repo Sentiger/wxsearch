@@ -55,7 +55,7 @@ class FormController extends CommonController {
 
 
                 } else {
-                    $comment = "array('label'=>'{$v[@attributes][label]}')";
+                    $comment = "array('label'=>'{$v['@attributes']['label']}')";
 
                     if($v['@attributes']['required']){
                         $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null default '' COMMENT '{$comment}',";
