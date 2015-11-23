@@ -34,17 +34,18 @@ class FormController extends CommonController {
 
                     $options = "";
 
+                    $label = "{$v['@attributes']['label']}";
                     foreach($v['option'] as $k1=>$v1) {
                         $options .= "'{$k1}'" . "=>" . "'{$v1}',";
                     }
 
                     if($v['@attributes']['type'] == 'checkbox-group') {
 
-                        $comment = "array('label'=>'{$v[@attributes][label]}','type'=>'checkbox','option'=>{$options})";
+                        $comment = "array('label'=>'{$label}','type'=>'checkbox','option'=>{$options})";
                     } elseif($v['@attributes']['type'] == 'radio-group'){
-                        $comment = "array('label'=>'{$v[@attributes][label]}','type'=>'radio','option'=>{$options})";
+                        $comment = "array('label'=>'{$label}','type'=>'radio','option'=>{$options})";
                     }elseif($v['@attributes']['type'] == 'select') {
-                        $comment = "array('label'=>'{$v[@attributes][label]}','type'=>'select','option'=>{$options})";
+                        $comment = "array('label'=>'{$label}','type'=>'select','option'=>{$options})";
                     }
 
                     if($v['@attributes']['required']){
