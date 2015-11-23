@@ -14,7 +14,6 @@ class IndexController extends CommonController {
         $this->code = $code;
         $this->info = $info;
         $this->userInfo = $userInfo;
-        echo 111;die;
         $this->display();
     }
 
