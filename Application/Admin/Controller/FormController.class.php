@@ -28,6 +28,7 @@ class FormController extends CommonController {
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',";
 
             foreach($arr as $k=>$v) {
+                $v['@attributes']['name'] = str_replace('-','',$v['@attributes']['name']);
 
                 if(isset($v['option'])) {
                     $comment = '';
