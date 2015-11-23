@@ -15,7 +15,7 @@ class FormController extends CommonController {
 
             $type = array(
                 'autocomplete'=>'varchar(200)',
-                'date' => 'timestamp',
+                'date' => 'timestamp NULL DEFAULT NULL',
                 'rich-text' => 'text',
                 'text' => 'varchar(200)'
             );
