@@ -22,11 +22,19 @@ class IndexController extends CommonController {
      */
     public function addInfo() {
         $data = I('post.');
-        print_r($data);die;
-        $data = array(
-            'status' => 1,
-            'msg' => '成功'
-        );
+        $uid = M('user')->add($data);
+        $data['uid'] = $uid;
+        $infoid = M('info')->add($data);
+        if($infoid && $uid)
+            $data = array(
+                'status' => 1,
+                'msg' => '成功'
+            );
+        else
+            $data = array(
+                'status' => 0,
+                'msg' => '失败'
+            );
         echo json_encode($data);
     }
 
