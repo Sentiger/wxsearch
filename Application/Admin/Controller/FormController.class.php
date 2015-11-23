@@ -24,7 +24,7 @@ class FormController extends CommonController {
             $arr = simplest_xml_to_array($xml);
             $arr = $arr['fields']['field'];
 
-            $tableName = Pinyin($_POST['table_name']);
+            $tableName = C('DB_PREFIX') . Pinyin($_POST['table_name']);
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
             foreach($arr as $k=>$v) {
