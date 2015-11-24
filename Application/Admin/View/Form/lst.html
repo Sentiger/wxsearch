@@ -35,25 +35,37 @@
         <thead>
         <tr>
             <th width="22"><input type="checkbox" group="ids[]" class="checkboxCtrl"></th>
-            <th>用户号</th>
-            <th>用户名称</th>
-            <th>所属角色</th>
+            <th>id</th>
+            <th>表明</th>
+            <th>说明</th>
             <th width="70">操作</th>
         </tr>
         </thead>
         <tbody>
-        <tr target="sid" rel="1">
 
-            <td><input name="ids[]" value="1" type="checkbox"></td>
-            <td>222222222222</td>
-            <td>3333333333333</td>
-            <td>44444444444</td>
+        <?php foreach($data['data'] as $v): ?>
+        <tr target="sid" rel="<?php echo $v['id'];?>">
+
+            <td><?php if($v['id'] != 1):?><input name="ids[]" value="<?php echo $v['id'];?>" type="checkbox"><?php endif;?></td>
+
+            <td><?php echo $v['id']; ?></td>
+            <td><?php echo $v['table_name']; ?></td>
+            <td><?php echo $v['comment']; ?></td>
 
             <td>
+                <?php if(in_array('Admin/Admin/del',session('privilege')) || session('privilege')=='*'): ?>
+                <?php if(($v['id'] != 1) && session('id')!=$v['id']):?>
                 <a title="你确定要删除吗？" target="ajaxTodo" href="<{:U('Admin/Admin/del',array('id'=>$v['id']))}>" class="btnDel">删除</a>
+                <?php endif ?>
+                <?php endif ?>
+                <?php if(in_array('Admin/Admin/edit',session('privilege')) || session('privilege')=='*'): ?>
                 <a title="编辑" target="dialog" href="<{:U('Admin/Admin/edit',array('id'=>$v['id']))}>" mask="true" class="btnEdit">编辑</a>
+                <?php endif; ?>
             </td>
         </tr>
+        <?php endforeach;?>
+
+
         <tr target="sid" rel="1">
 
             <td><input name="ids[]" value="1" type="checkbox"></td>
