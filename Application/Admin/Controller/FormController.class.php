@@ -13,6 +13,7 @@ class FormController extends CommonController {
         $tableArr = array();
         if(!empty($tables)){
             foreach($tables as $k=>$v) {
+                echo array_keys($v);die;
                 $tableArr[] = array_keys($v);
             }
         }
