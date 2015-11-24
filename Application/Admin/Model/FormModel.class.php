@@ -29,7 +29,7 @@ class FormModel extends Model
 
         $page = new \Think\Page($totalRecord, $perpage);
         return  array(
-            'data' => $this->field('a.*,b.role_name')->alias('a')->join('LEFT JOIN sh_role b ON a.role_id=b.id')->where($where)->limit($page->firstRow, $page->listRows)->order($order)->select(),
+            'data' => $this->field('a.*')->where($where)->limit($page->firstRow, $page->listRows)->order($order)->select(),
             'page' => $page->show(), // 翻页的字符串
             'currentPage' => $currentPage,
             'total' => $totalRecord,
