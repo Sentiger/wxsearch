@@ -103,10 +103,6 @@
 </div>
 <script>
     $(function(){
-    	var sub_done = "'<div class="ui-tips ui-tips-success">' +
-            '<i></i><span>操作成功的提示</span>' +
-        '</div>';"
-        var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
             $.ajax({
                  type : 'POST',
@@ -116,7 +112,7 @@
                  success : function(data) {
                     if(data.status==1) {
                         // alert('反馈成功');
-                        document.getElementsByTagName("body").innerHTML("sub_done")
+                        document.getElementsByTagName("body").innerHTML("sub")
                     }
                  }
             });
