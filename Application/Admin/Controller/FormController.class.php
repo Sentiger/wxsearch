@@ -11,6 +11,8 @@ class FormController extends CommonController {
         $model = D('Form');
         $data = $model->lst();
         $this->data = $data;
+
+
         $this->display();
     }
     public function add() {
@@ -106,10 +108,23 @@ class FormController extends CommonController {
                 }
             }
 
-
-
         }
         $this->display();
+    }
+
+    /**
+     * 删除表
+     */
+    public function del() {
+        $id = I('get.id',0,'intval');
+        $tableName = I('get.table_name');
+        if(($id>1) && M('Tables')->delete($id)) {
+            $sql = "drop table {$$tableName}";
+            M()->execute($sql);
+            $this->ajax(200, '删除成功！', 'Admin_Form_lst');
+        }else{
+            $this->ajax(200, '删除失败！', 'Admin_Form_lst');
+        }
     }
 
 
