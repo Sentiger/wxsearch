@@ -10,7 +10,7 @@ class FormController extends CommonController {
     public function lst(){
         $sql = "SHOW TABLES LIKE '".C('DB_PREFIX') . 'form_%'."'";
         $tables = M()->query($sql);
-        print_r($tables);die;
+        p($tables);die;
         $this->display();
     }
     public function add() {
