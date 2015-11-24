@@ -32,6 +32,10 @@ class FormController extends CommonController {
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
 
+            if(empty($_POST['table_name'])) {
+                $this->ajax(300, '表单名称不能为空', 'Admin_Form_lst', 'closeCurrent');
+            }
+
             if(count($arr) < 1) {
                 $this->ajax(300, '至少选择一个表单组件', 'Admin_Form_lst', 'closeCurrent');
             }
