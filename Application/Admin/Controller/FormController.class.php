@@ -28,7 +28,8 @@ class FormController extends CommonController {
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
             if(count($arr) == 1) {
-                $arr[] = $arr;
+                $temp_arr[] = $arr;
+                $arr = $temp_arr;
             }
             print_r($arr);
 
