@@ -121,7 +121,7 @@ class FormController extends CommonController {
 
     public function info() {
         $id = I('get.id',0,'intval');
-        $this->info = M('Tables')->find($id);
+        $this->data = M('Tables')->find($id);
         $this->display();
     }
 
