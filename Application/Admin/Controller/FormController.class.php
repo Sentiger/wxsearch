@@ -76,11 +76,19 @@ class FormController extends CommonController {
             $sql = rtrim($sql, ',');
             $sql .= ")";
             $sql .= "ENGINE=MyISAM  CHARSET=utf8 COMMENT='{$_POST['table_name']}'";
-            if(M()->execute($sql) !== false) {
-                $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
-            }else{
-                $this->ajax(300, '添加失败', 'Admin_Form_lst', 'closeCurrent');
+
+            $table_sql = "SHOW TABLES LIKE '{$tableName}'";
+            if(M()->query($table_sql)) {
+                $this->ajax(300, '表单名字已经存在，请重新填写', 'Admin_Form_lst', 'closeCurrent');
+            }else {
+                if(M()->execute($sql) !== false) {
+                    $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
+                }else{
+                    $this->ajax(300, '添加失败', 'Admin_Form_lst', 'closeCurrent');
+                }
             }
+
+
 
         }
         $this->display();
