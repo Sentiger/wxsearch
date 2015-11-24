@@ -13,6 +13,8 @@ class FormController extends CommonController {
     public function add() {
         if(IS_POST) {
 
+
+
             $type = array(
                 'autocomplete'=>'varchar(200)',
                 'date' => 'timestamp',
@@ -27,11 +29,16 @@ class FormController extends CommonController {
             $tableName = C('DB_PREFIX') . 'form_' . Pinyin($_POST['table_name']);
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
+
+            if(count($arr) < 1) {
+                $this->ajax(300, '至少选择一个表单组件', 'Admin_Form_lst', 'closeCurrent');
+            }
+
             if(count($arr) == 1) {
                 $temp_arr[] = $arr;
                 $arr = $temp_arr;
             }
-            print_r($arr);
+
 
             foreach($arr as $k=>$v) {
 
