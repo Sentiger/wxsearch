@@ -26,7 +26,7 @@ class FormController extends CommonController {
 
             $tableName = C('DB_PREFIX') . 'form_' . Pinyin($_POST['table_name']);
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
-
+            print_r($arr);
             foreach($arr as $k=>$v) {
 
                 if($v['@attributes']['type'] == 'checkbox' ) continue;
