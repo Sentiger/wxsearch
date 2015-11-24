@@ -24,7 +24,7 @@ class FormController extends CommonController {
             $arr = simplest_xml_to_array($xml);
             $arr = $arr['fields']['field'];
 
-            $tableName = C('DB_PREFIX') . Pinyin($_POST['table_name']);
+            $tableName = C('DB_PREFIX') . 'form_' . Pinyin($_POST['table_name']);
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
 
             foreach($arr as $k=>$v) {
@@ -76,10 +76,12 @@ class FormController extends CommonController {
             $sql = rtrim($sql, ',');
             $sql .= ")";
             $sql .= "ENGINE=MyISAM  CHARSET=utf8 COMMENT='{$_POST['table_name']}'";
-            echo 111;
-echo $sql;die;
-            M()->execute($sql);die;
-            $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
+            if(M()->execute($sql)) {
+                $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
+            }else{
+                $this->ajax(300, '添加失败', 'Admin_Form_lst', 'closeCurrent');
+            }
+
         }
         $this->display();
     }
