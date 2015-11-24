@@ -119,7 +119,7 @@ class FormController extends CommonController {
         $id = I('get.id',0,'intval');
         $tableName = I('get.table_name');
         if((M('Tables')->delete($id))) {
-            $sql = "drop table {$$tableName}";
+            $sql = "drop table {$tableName}";
             M()->execute($sql);
             $this->ajax(200, '删除成功！', 'Admin_Form_lst');
         }else{
