@@ -1,4 +1,4 @@
-<form id="pagerForm" method="post" action="<{:U('Admin/Admin/lst')}>">
+<form id="pagerForm" method="post" action="<{:U('Admin/Form/lst')}>">
     <input type="hidden" name="pageNum" value="1" />
     <input type="hidden" name="numPerPage" value="<?php echo $data['perpage'];?>" />
     <input type="hidden" name="orderField" value="<?php echo $data['orderField'];?>" />
@@ -9,7 +9,7 @@
         <div class="searchBar">
             <ul class="searchContent">
                 <li>
-                    <label>用户名：</label>
+                    <label>表明注释：</label>
                     <input type="text" name="keywords" value="<?php echo $data['keywords'];?>"/>
                 </li>
             </ul>
