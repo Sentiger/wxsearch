@@ -103,7 +103,18 @@
 </div>
 <script>
     $(function(){
-    	var sub_success = "ss"
+    	function sub_success(text){
+    		a ="<div class=\"ui-tips ui-tips-success\">" + "<i></i><span>" + text +"</span></span>"
+    		return (a)
+    	}
+    	function sub_error(text){
+    		a ="<div class=\"ui-tips ui-tips-warn\">" + "<i></i><span>" + text +"</span></span>"
+    		return (a)
+    	}
+    	function sub_info(text){
+    		a ="<div class=\"ui-tips ui-tips-info\">" + "<i></i><span>" + text +"</span></span>"
+    		return (a)
+    	}
         var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
             $.ajax({
@@ -113,8 +124,7 @@
                  dataType : 'json',
                  success : function(data) {
                     if(data.status==1) {
-                        // alert('反馈成功');
-                     	document.getElementsByTagName("body").innerHTML = "sub_success"
+                     	$('body').replaceWith(sub_success("反馈成功"))
                     }
                  }
             });
