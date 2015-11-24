@@ -42,7 +42,7 @@ class FormController extends CommonController {
                     $label = "{$v['@attributes']['label']}";
                     $options .= "array(";
                     foreach($v['option'] as $k1=>$v1) {
-                        $options .= "'{$k1}'" . "=>" . "'{$v1}',";
+                        $options .= "\"{$k1}\"" . "=>" . "\"{$v1}\",";
                     }
                     $options .= ")";
 
@@ -76,7 +76,6 @@ class FormController extends CommonController {
             $sql = rtrim($sql, ',');
             $sql .= ")";
             $sql .= "ENGINE=MyISAM  CHARSET=utf8 COMMENT='{$_POST['table_name']}'";
-            echo $sql;die;
             if(M()->execute($sql)) {
                 $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
             }else{
