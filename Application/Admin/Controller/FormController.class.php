@@ -100,9 +100,11 @@ class FormController extends CommonController {
                 $this->ajax(300, '表单名字已经存在，请重新填写', 'Admin_Form_lst', 'closeCurrent');
             }else {
                 if(M()->execute($sql) !== false) {
+                    $uri = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri="."http://wxsearch.sentiger.com"."/index.php/Home/Index/index/table_name/".$tableName."&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
                    $data = array(
                        'table_name'=>$tableName,
-                       'comment'=>$_POST['table_name']
+                       'comment'=>$_POST['table_name'],
+                       'url'=> $uri
                    );
                     M('tables')->add($data);
 
