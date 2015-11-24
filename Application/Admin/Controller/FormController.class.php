@@ -19,6 +19,13 @@ class FormController extends CommonController {
         }
 
 
+        $_sql = "SHOW FULL FIELDS FROM {}"
+        if(!empty($tableArr)) {
+            foreach($tableArr as $k1=>$v1) {
+                $sql = "show create table "
+            }
+        }
+
         p($tableArr);die;
         $this->display();
     }
@@ -106,6 +113,12 @@ class FormController extends CommonController {
                 $this->ajax(300, '表单名字已经存在，请重新填写', 'Admin_Form_lst', 'closeCurrent');
             }else {
                 if(M()->execute($sql) !== false) {
+                   $data = array(
+                       'table_name'=>$tableName,
+                       'comment'=>$_POST['table_name']
+                   );
+                    M('tables')->add($data);
+
                     $this->ajax(200, '添加成功', 'Admin_Form_lst', 'closeCurrent');
                 }else{
                     $this->ajax(300, '添加失败', 'Admin_Form_lst', 'closeCurrent');
