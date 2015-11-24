@@ -123,7 +123,7 @@ class FormController extends CommonController {
             M()->execute($sql);
             $this->ajax(200, '删除成功！', 'Admin_Form_lst');
         }else{
-            $this->ajax(200, '删除失败！', 'Admin_Form_lst');
+            $this->ajax(300, '删除失败！', 'Admin_Form_lst');
         }
     }
 
