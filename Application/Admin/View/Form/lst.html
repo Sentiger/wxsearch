@@ -48,7 +48,7 @@
             <td><?php echo $v['comment']; ?></td>
 
             <td>
-                <a title="你确定要删除吗？" target="ajaxTodo" href="<{:U('Admin/Form/del',array('id'=>$v['id']))}>" class="btnDel">删除</a>
+                <a title="你确定要删除吗？" target="ajaxTodo" href="<{:U('Admin/Form/del',array('id'=>$v['id'],'table_name'=>$v['table_name']))}>" class="btnDel">删除</a>
             </td>
         </tr>
         <?php endforeach;?>
