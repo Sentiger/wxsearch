@@ -118,6 +118,13 @@ class FormController extends CommonController {
         $this->display();
     }
 
+
+    public function info() {
+        $id = I('get.id',0,'intval');
+        $this->info = M('Tables')->find($id);
+        $this->display();
+    }
+
     /**
      * 删除表
      */
