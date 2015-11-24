@@ -46,7 +46,7 @@
         <?php foreach($data['data'] as $v): ?>
         <tr target="sid" rel="<?php echo $v['id'];?>">
 
-            <td><?php if($v['id'] != 1):?><input name="ids[]" value="<?php echo $v['id'];?>" type="checkbox"><?php endif;?></td>
+            <td><input name="ids[]" value="<?php echo $v['id'];?>" type="checkbox"></td>
 
             <td><?php echo $v['id']; ?></td>
             <td><?php echo $v['table_name']; ?></td>
