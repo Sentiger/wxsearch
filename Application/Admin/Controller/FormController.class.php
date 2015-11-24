@@ -8,25 +8,9 @@ use Think\Controller;
  */
 class FormController extends CommonController {
     public function lst(){
-        $sql = "SHOW TABLES LIKE '".C('DB_PREFIX') . 'form_%'."'";
-        $tables = M()->query($sql);
-        $tableArr = array();
-        if(!empty($tables)){
-            foreach($tables as $k=>$v) {
-                $temp = array_keys($v);
-                $tableArr[] = $v[$temp[0]];
-            }
-        }
-
-
-        $_sql = "SHOW FULL FIELDS FROM {}"
-        if(!empty($tableArr)) {
-            foreach($tableArr as $k1=>$v1) {
-                $sql = "show create table "
-            }
-        }
-
-        p($tableArr);die;
+        $model = D('Form');
+        $data = $model->lst();
+        $this->data = $data;
         $this->display();
     }
     public function add() {
