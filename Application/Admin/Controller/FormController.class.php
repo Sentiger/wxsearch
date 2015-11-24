@@ -124,7 +124,11 @@ class FormController extends CommonController {
         $tableName = I('get.table_name');
         if((M('Tables')->delete($id))) {
             $sql = "drop table {$tableName}";
-            M()->execute($sql);
+            $table_sql = "SHOW TABLES LIKE '{$tableName}'";
+            if(M()->query($table_sql)) {
+                M()->execute($sql);
+            }
+
             $this->ajax(200, '删除成功！', 'Admin_Form_lst');
         }else{
             $this->ajax(300, '删除失败！', 'Admin_Form_lst');
