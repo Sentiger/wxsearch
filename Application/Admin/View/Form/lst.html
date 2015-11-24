@@ -66,18 +66,6 @@
         <?php endforeach;?>
 
 
-        <tr target="sid" rel="1">
-
-            <td><input name="ids[]" value="1" type="checkbox"></td>
-            <td>222222222222</td>
-            <td>3333333333333</td>
-            <td>44444444444</td>
-
-            <td>
-                <a title="你确定要删除吗？" target="ajaxTodo" href="<{:U('Admin/Admin/del',array('id'=>$v['id']))}>" class="btnDel">删除</a>
-                <a title="编辑" target="dialog" href="<{:U('Admin/Admin/edit',array('id'=>$v['id']))}>" mask="true" class="btnEdit">编辑</a>
-            </td>
-        </tr>
         </tbody>
     </table>
     <div class="panelBar">
