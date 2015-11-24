@@ -15,9 +15,6 @@ class FormController extends CommonController {
     }
     public function add() {
         if(IS_POST) {
-
-
-
             $type = array(
                 'autocomplete'=>'varchar(200)',
                 'date' => 'timestamp',
