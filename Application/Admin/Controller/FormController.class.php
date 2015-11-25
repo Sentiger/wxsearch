@@ -30,7 +30,7 @@ class FormController extends CommonController {
 
             $tableName = C('DB_PREFIX') . 'form_' . Pinyin($_POST['table_name']);
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
-            $sql .= " id int(10) unsigned ,";
+            $sql .= "uid int(10) unsigned ,";
 
 
             if(empty($_POST['table_name'])) {
