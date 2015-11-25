@@ -6,6 +6,7 @@ use Think\Controller;
  */
 class IndexController extends CommonController {
     public function index(){
+        die;
         $code = I('code');
         $tableName = I('table_name');   
         
