@@ -22,6 +22,12 @@ class IndexController extends CommonController {
         $userInfo = $this->getUserInfo($res);
         $info = M('user')->where(array('openid'=>$userInfo['openid'],'table_name'=>$tableName))->find();
 
+
+        //
+        $ticketArr = $this->getSignPackage();
+
+        p($ticketArr);die;
+
         $this->code = $code;
         $this->info = $info;
         $this->userInfo = $userInfo;
