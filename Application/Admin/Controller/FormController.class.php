@@ -59,11 +59,12 @@ class FormController extends CommonController {
                     $options = "";
 
                     $label = "{$v['@attributes']['label']}";
-                    $options .= "array(";
+                    $options .= "｛";
                     foreach($v['option'] as $k1=>$v1) {
-                        $options .= "\"{$k1}\"" . "=>" . "\"{$v1}\",";
+                        $options .= "\"{$k1}\"" . ":" . "\"{$v1}\",";
                     }
-                    $options .= ")";
+                    $options = rtrim($options,',');
+                    $options .= "}";
 
                     if($v['@attributes']['type'] == 'checkbox-group') {
                         $comment = "{\"label\":\"{$label}\",\"type\":\"checkbox\",\"option\":{$options}}";
