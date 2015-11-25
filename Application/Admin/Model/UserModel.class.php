@@ -2,7 +2,7 @@
 namespace Admin\Model;
 use Think\Model;
 
-class FormModel extends Model
+class AdminModel extends Model
 {
     protected $tableName = 'User';
 
