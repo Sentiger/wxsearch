@@ -146,6 +146,16 @@
         <input type="hidden" name="openid" value="{$userInfo.openid}">
         <input type="hidden" name="table_name" value="{$tableName}">
     </form>
+        <!--下面的用于提交后的提示页面-->
+        <div id="info_box" class="ui-tips ui-tips-info" style="display: none;">
+            <i></i><span id="info_text">一般提示</span>
+        </div>
+        <div id="warn_box" class="ui-tips ui-tips-warn" style="display: none;">
+            <i></i><span id="warn_text">警告提示</span>
+        </div>
+        <div id="success_box" class="ui-tips ui-tips-success" style="display: none;">
+            <i></i><span id="success_text">操作成功的提示</span>
+        </div>
 
         <div class="ui-btn-wrap">
             <button class="ui-btn-lg ui-btn-primary" id="submit_btn">
@@ -159,16 +169,7 @@
         </div>
 
 
-        <!--下面的用于提交后的提示页面-->
-        <div id="info_box" class="ui-tips ui-tips-info" style="display: none;">
-            <i></i><span id="info_text">一般提示</span>
-        </div>
-        <div id="warn_box" class="ui-tips ui-tips-warn" style="display: none;">
-            <i></i><span id="warn_text">警告提示</span>
-        </div>
-        <div id="success_box" class="ui-tips ui-tips-success" style="display: none;">
-            <i></i><span id="success_text">操作成功的提示</span>
-        </div>
+
 
     </div><!-- cont end -->
 
