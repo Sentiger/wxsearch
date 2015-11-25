@@ -25,15 +25,7 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<?php if(in_array('Admin/Admin/add',session('privilege')) || session('privilege')=='*'): ?>
 			<li><a class="add" href="<{:U('Admin/Admin/add')}>" target="dialog" mask="true"><span>添加</span></a></li>
-			<?php endif; ?>
-			<?php if(in_array('Admin/Admin/bdel',session('privilege')) || session('privilege')=='*'): ?>
-			<li><a title="确实要删除这些吗?" target="selectedTodo" rel="ids[]" href="<{:U('Admin/Admin/bdel')}>" class="delete"><span>批量删除</span></a></li>
-			<?php endif; ?>
-			<?php if(in_array('Admin/Admin/edit',session('privilege')) || session('privilege')=='*'): ?>
-			<li><a class="edit" href="<{:U('Admin/Admin/edit',array('id'=>'{sid}'))}>" mask="true" target="dialog" warn="请选择一个用户"><span>修改</span></a></li>
-			<?php endif; ?>
 			<li class="line">line</li>
 		</ul>
 	</div>
