@@ -69,7 +69,7 @@
                     <div class="page-block">
                         <div class="ui-form ui-border-t">
                             <div class="ui-form-item ui-form-item-pure ui-border-b ">
-                                <input type="text" name="<?php echo $v['field'];?>" required="true" placeholder="<?php echo $v['comment']['label'];?>">
+                                <input type="text" name="<?php echo $v['field'];?>" required="required"  placeholder="<?php echo $v['comment']['label'];?>">
                                 <a class="ui-icon-close" href="#"></a>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                     <div class="page-block">
                         <div class="ui-form ui-border-t">
                             <div class="ui-form-item ui-form-item-pure ui-border-b ui-form-item-textarea">
-                                <textarea name="<?php echo $v['field'];?>" required="true" placeholder="<?php echo $v['comment']['label'];?>"></textarea>
+                                <textarea name="<?php echo $v['field'];?>" required="required"  placeholder="<?php echo $v['comment']['label'];?>"></textarea>
                                 <a class="ui-icon-close" href="#"></a>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                                 <?php foreach($v['comment']['option'] as $k1=>$v1):?>
                                 <li class="ui-border-t">
                                     <label class="ui-checkbox">
-                                        <input type="checkbox" required="true" name="<?php echo $v['field'];?>[]" value="<?php echo $k1;?>">
+                                        <input type="checkbox" required="required"  name="<?php echo $v['field'];?>[]" value="<?php echo $k1;?>">
                                     </label>
                                     <p><?php echo $v1;?></p>
                                 </li>
@@ -128,7 +128,7 @@
                             <?php foreach($v['comment']['option'] as $k2=>$v2):?>
                             <div class="ui-form-item ui-form-item-radio ui-border-b">
                                 <label class="ui-radio" for="radio">
-                                    <input type="radio" value="<?php echo $k2;?>" name="<?php echo $v['field'];?>">
+                                    <input type="radio" required="required"  value="<?php echo $k2;?>" name="<?php echo $v['field'];?>">
                                 </label>
                                 <p><?php echo $v2;?></p>
                             </div>
