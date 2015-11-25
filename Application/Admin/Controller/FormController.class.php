@@ -59,7 +59,7 @@ class FormController extends CommonController {
                     $options = "";
 
                     $label = "{$v['@attributes']['label']}";
-                    $options .= "｛";
+                    $options .= "{";
                     foreach($v['option'] as $k1=>$v1) {
                         $options .= "\"{$k1}\"" . ":" . "\"{$v1}\",";
                     }
