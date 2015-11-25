@@ -25,7 +25,7 @@
     <header class="ui-header ui-header-positive ui-border-b">
         <h1>xx调查表</h1>
     </header>
-    <form>
+    <form action="{:U('Home/Index/addInfo')}" method="post" id="form">
     <div class="ui-container"><!-- cont -->
 
         <div class="page-item">
@@ -173,6 +173,35 @@
     </footer>
 </div>
 <script>
+
+    $(function(){
+        function sub_success(text){
+            a ="<div class=\"ui-tips ui-tips-success\">" + "<i></i><span>" + text +"</span></span>"
+            return (a)
+        }
+        function sub_error(text){
+            a ="<div class=\"ui-tips ui-tips-warn\">" + "<i></i><span>" + text +"</span></span>"
+            return (a)
+        }
+        function sub_info(text){
+            a ="<div class=\"ui-tips ui-tips-info\">" + "<i></i><span>" + text +"</span></span>"
+            return (a)
+        }
+        var url = "{:U('Home/Index/addInfo')}";
+        $('#submit_btn').click(function(){
+            $.ajax({
+                 type : 'POST',
+                 url : url,
+                 data : $("#form").serialize(),
+                 dataType : 'json',
+                 success : function(data) {
+                    if(data.status==1) {
+                        $('body').replaceWith(sub_success("反馈成功"))
+                    }
+                 }
+            });
+        });
+    })
     function hideonload() {
         document.getElementById("conts").style.display = "block"
         document.getElementById("onloading").style.display = "none"
