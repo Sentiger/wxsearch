@@ -26,6 +26,7 @@ class IndexController extends CommonController {
         $this->info = $info;
         $this->userInfo = $userInfo;
         $this->fields = $fields;
+        $this->tableName = $tableName;
 
         $this->display();
     }
