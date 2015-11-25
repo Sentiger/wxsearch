@@ -7,6 +7,15 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
         $code = I('code');
+        $tableName = I('table_name');
+
+        $noPreTable = substr($tableName, 2);
+
+        $tableInfo = M('tables')->find($noPreTable);
+
+        p($tableInfo);die;
+
+
         $res = $this->getCodeAccessToken($code);
         $userInfo = $this->getUserInfo($res);
         $info = M('user')->where(array('openid'=>$userInfo['openid']))->find();
