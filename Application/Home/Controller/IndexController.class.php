@@ -11,7 +11,7 @@ class IndexController extends CommonController {
 
         $noPreTable = substr($tableName, 2);
 
-        $tableInfo = M('tables')->find($noPreTable);
+        $tableInfo = M('tables')->where(array('table_name'=>$tableName))->find();
 
         p($tableInfo);die;
 
