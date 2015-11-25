@@ -202,7 +202,10 @@
                     if(data.status==1) {
                         $('body').replaceWith(sub_success("反馈成功"))
                     }
-                 }
+                 },
+                error: function(){
+                    $('body').replaceWith(sub_error("网络错误"));
+                }
             });
         });
     })
