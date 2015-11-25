@@ -94,7 +94,8 @@
                 </div>
             <?php endif;?>
             <!-- 文本域结束 -->
-
+            
+            <!-- 多选框开始 -->
             <?php if($v['comment']['type']=='checkbox'): ?>
                 <div class="page-item">
                     <p class="page-desc"><?php echo $v['comment']['label'];?></p>
@@ -105,7 +106,7 @@
                                 <?php foreach($v['comment']['option'] as $k1=>$v1):?>
                                 <li class="ui-border-t">
                                     <label class="ui-checkbox">
-                                        <input type="checkbox" name="<?php echo $v['field'];?>" value="<?php echo $k1;?>">
+                                        <input type="checkbox" name="<?php echo $v['field'];?>[]" value="<?php echo $k1;?>">
                                     </label>
                                     <p><?php echo $v1;?></p>
                                 </li>
@@ -115,62 +116,32 @@
                     </div>
                 </div>
             <?php endif;?>  
+            <!-- 多选框结束 -->
+
+            <!-- 单选框开始 -->
+            <?php if($v['comment']['type']=='radio'): ?>
+                <div class="page-item">
+                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+
+                    <div class="page-block">
+                        <div class="ui-form ui-border-t">
+                            <?php foreach($v['comment']['option'] as $k2=>$v2):?>
+                            <div class="ui-form-item ui-form-item-radio ui-border-b">
+                                <label class="ui-radio" for="radio">
+                                    <input type="radio" value="<?php echo $k2;?>" name="<?php echo $v['field'];?>">
+                                </label>
+                                <p><?php echo $v2;?></p>
+                            </div>
+                            <?php endforeach;?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif;?>  
+            <!-- 单选框结束 -->
 
         <?php endforeach;?>
 
         
-
-        <div class="page-item">
-            <p class="page-desc">性别</p>
-
-            <div class="page-block">
-                <div class="ui-form ui-border-t">
-                    <form action="#">
-                        <div class="ui-form-item ui-form-item-radio ui-border-b">
-
-                            <label class="ui-radio" for="radio">
-                                <input type="radio" name="radio">
-                            </label>
-
-                            <p>男</p>
-                        </div>
-                        <div class="ui-form-item ui-form-item-radio ui-border-b">
-
-                            <label class="ui-radio" for="radio">
-                                <input type="radio" checked="" name="radio">
-                            </label>
-
-                            <p>女</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-item">
-            <p class="page-desc">多选表单</p>
-
-            <div class="page-block">
-                <div class="ui-form ui-border-t">
-                    <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b">
-                        <li class="ui-border-t">
-                            <label class="ui-checkbox">
-                                <input type="checkbox">
-                            </label>
-
-                            <p>普通列表ui-list中用于多选操作</p>
-                        </li>
-                        <li class="ui-border-t">
-                            <label class="ui-checkbox">
-                                <input type="checkbox" checked="">
-                            </label>
-
-                            <p>普通列表中用于多选操作</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
         <div class="ui-btn-wrap">
             <button class="ui-btn-lg ui-btn-primary">
