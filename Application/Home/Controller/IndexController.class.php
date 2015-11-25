@@ -7,15 +7,17 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
         $code = I('code');
-        $tableName = I('table_name');
-
-        $noPreTable = substr($tableName, 2);
+        $tableName = I('table_name');   
+        
+        if(empty($tableName)) die('非法操作！');
 
         $tableInfo = M('tables')->where(array('table_name'=>$tableName))->find();
 
-        p($tableInfo);die;
-
-
+        $fields = M()->query('SHOW FULL FIELDS FROM '.$tableName);
+        foreach ($fields as $k => $v) {
+            $fields[$k]['comment'] = json_decode($v['comment'],true);
+        }
+        // p($fields);die;
         $res = $this->getCodeAccessToken($code);
         $userInfo = $this->getUserInfo($res);
         $info = M('user')->where(array('openid'=>$userInfo['openid']))->find();
@@ -23,6 +25,8 @@ class IndexController extends CommonController {
         $this->code = $code;
         $this->info = $info;
         $this->userInfo = $userInfo;
+        $this->fields = $fields;
+
         $this->display();
     }
 
