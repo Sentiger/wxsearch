@@ -4,26 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>用户反馈信息填写</title>
+    <title>标题</title>
     <link rel="stylesheet" href="__PUBLIC__/Home/ui/css/frozen.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/ui/css/style.css">
-    <script src="__PUBLIC__/Home/ui/js/jquery.min.js"></script>
     <script src="__PUBLIC__/Home/ui/lib/zepto.min.js"></script>
     <script src="__PUBLIC__/Home/ui/js/frozen.js"></script>
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
-<script>
-var times = Date.parse(new Date())/1000;
-
-wx.config({
-    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-    appId: 'wxb383ceff8cdf7068', // 必填，公众号的唯一标识
-    timestamp: times, // 必填，生成签名的时间戳
-    nonceStr: '', // 必填，生成签名的随机串
-    signature: '',// 必填，签名，见附录1
-    jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-});
-</script>
 
 <body ontouchstart>
 <div class="ui-loading-block show" id="onloading">
@@ -33,12 +19,13 @@ wx.config({
         <p>正在加载中...</p>
     </div>
 </div>
+
 <div id="conts" style="display: none">
 
     <header class="ui-header ui-header-positive ui-border-b">
         <h1>xx调查表</h1>
     </header>
-
+    <form>
     <div class="ui-container"><!-- cont -->
 
         <div class="page-item">
@@ -46,46 +33,147 @@ wx.config({
 
             <div class="page-block">
                 <div class="ui-form ui-border-t">
-                    <form action="{:U('Home/Index/addInfo')}" method="post" id="form">
-                        <div class="ui-form-item ui-border-b">
-                            <label>
-                                公司名称
-                            </label>
-                            <input type="text" name="company_name" value="<if condition='isset($info[company_name])'>{$info[company_name]}</if>" placeholder="公司名字">
-                            <a class="ui-icon-close" href="#">
-                            </a>
-                        </div>
-                        <div class="ui-form-item ui-form-item-textarea ui-border-b">
-                            <label>
-                                详细地址
-                            </label>
-                            <textarea name="address" placeholder="街道等详细地址"><if condition='isset($info[address])'>{$info[address]}</if></textarea>
-                        </div>
-                        <div class="ui-form-item ui-form-item-l ui-border-b">
-                            <label class="ui-border-r">
-                                中国 +86
-                            </label>
-                            <input type="text" name="mobile" placeholder="请输入手机号码" value="<if condition='isset($info[mobile])'>{$info[mobile]}</if>">
-                            <a class="ui-icon-close" href="#">
-                            </a>
-                        </div>
+                    <div class="ui-form-item ui-border-b">
+                        <label>
+                            公司名称
+                        </label>
+                        <input type="text" placeholder="公司名字">
+                        <a class="ui-icon-close" href="#">
+                        </a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-textarea ui-border-b">
+                        <label>
+                            详细地址
+                        </label>
+                        <textarea placeholder="街道等详细地址"></textarea>
+                    </div>
+                    <div class="ui-form-item ui-form-item-l ui-border-b">
+                        <label class="ui-border-r">
+                            中国 +86
+                        </label>
+                        <input type="text" placeholder="请输入手机号码">
+                        <a class="ui-icon-close" href="#">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <div class="ui-form-item ui-form-item-textarea ui-border-b">
-                            <label>
-                                反馈内容
-                            </label>
-                            <textarea name="info" placeholder="反馈内容"><if condition='isset($info[info])'>{$info[info]}</if></textarea>
+
+        <?php foreach($fields as $k=>$v):?>
+            <?php if(empty($v['comment'])) continue;?>
+            <!-- 文本框开始 -->
+            <?php if($v['comment']['type']=='autocomplete' || $v['comment']['type']=='text'  || $v['comment']['type']=='date') : ?>
+                <div class="page-item">
+                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+                    <div class="page-block">
+                        <div class="ui-form ui-border-t">
+                            <div class="ui-form-item ui-form-item-pure ui-border-b ">
+                                <input type="text" name="<?php echo $v['field'];?>" placeholder="<?php echo $v['comment']['label'];?>">
+                                <a class="ui-icon-close" href="#"></a>
+                            </div>
                         </div>
-                        <input type="hidden" name="code" value="{$code}">
-                        <input type="hidden" name="openid" value="{$userInfo['openid']}">
-                        <input type="hidden" name="is_new" value="<if condition='isset($info[id]) && !empty($info)'>0<else/>{$info['id']}</if>">
+                    </div>
+                </div>
+            <?php endif;?>  
+            <!-- 文本框结束 -->
+
+
+            <!-- 文本域开始 -->
+            <?php if($v['comment']['type']=='rich-text'): ?>
+               <div class="page-item">
+                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+                    <div class="page-block">
+                        <div class="ui-form ui-border-t">
+                            <div class="ui-form-item ui-form-item-pure ui-border-b ui-form-item-textarea">
+                                <textarea name="<?php echo $v['field'];?>" placeholder="<?php echo $v['comment']['label'];?>"></textarea>
+                                <a class="ui-icon-close" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endif;?>
+            <!-- 文本域结束 -->
+
+            <?php if($v['comment']['type']=='checkbox'): ?>
+                <div class="page-item">
+                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+
+                    <div class="page-block">
+                        <div class="ui-form ui-border-t">
+                            <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b">
+                                <?php foreach($v['comment']['option'] as $k1=>$v1):?>
+                                <li class="ui-border-t">
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" name="<?php echo $v['field'];?>" value="<?php echo $k1;?>">
+                                    </label>
+                                    <p><?php echo $v1;?></p>
+                                </li>
+                                <?php endforeach;?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <?php endif;?>  
+
+        <?php endforeach;?>
+
+        
+
+        <div class="page-item">
+            <p class="page-desc">性别</p>
+
+            <div class="page-block">
+                <div class="ui-form ui-border-t">
+                    <form action="#">
+                        <div class="ui-form-item ui-form-item-radio ui-border-b">
+
+                            <label class="ui-radio" for="radio">
+                                <input type="radio" name="radio">
+                            </label>
+
+                            <p>男</p>
+                        </div>
+                        <div class="ui-form-item ui-form-item-radio ui-border-b">
+
+                            <label class="ui-radio" for="radio">
+                                <input type="radio" checked="" name="radio">
+                            </label>
+
+                            <p>女</p>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
 
+        <div class="page-item">
+            <p class="page-desc">多选表单</p>
+
+            <div class="page-block">
+                <div class="ui-form ui-border-t">
+                    <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b">
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox">
+                            </label>
+
+                            <p>普通列表ui-list中用于多选操作</p>
+                        </li>
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox" checked="">
+                            </label>
+
+                            <p>普通列表中用于多选操作</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="ui-btn-wrap">
-            <button class="ui-btn-lg ui-btn-primary" id="submit_btn">
+            <button class="ui-btn-lg ui-btn-primary">
                 确定
             </button>
         </div>
@@ -108,46 +196,18 @@ wx.config({
         </div>
 
     </div><!-- cont end -->
-
+    </form>
     <footer class="">
 
     </footer>
 </div>
 <script>
-    $(function(){
-    	function sub_success(text){
-    		a ="<div class=\"ui-tips ui-tips-success\">" + "<i></i><span>" + text +"</span></span>"
-    		return (a)
-    	}
-    	function sub_error(text){
-    		a ="<div class=\"ui-tips ui-tips-warn\">" + "<i></i><span>" + text +"</span></span>"
-    		return (a)
-    	}
-    	function sub_info(text){
-    		a ="<div class=\"ui-tips ui-tips-info\">" + "<i></i><span>" + text +"</span></span>"
-    		return (a)
-    	}
-        var url = "{:U('Home/Index/addInfo')}";
-        $('#submit_btn').click(function(){
-            $.ajax({
-                 type : 'POST',
-                 url : url,
-                 data : $("#form").serialize(),
-                 dataType : 'json',
-                 success : function(data) {
-                    if(data.status==1) {
-                     	$('body').replaceWith(sub_success("反馈成功"))
-                    }
-                 }
-            });
-        });
-    })
     function hideonload() {
         document.getElementById("conts").style.display = "block"
         document.getElementById("onloading").style.display = "none"
     }
     window.onload = function () {
-        t = setTimeout("hideonload()", 500)
+        t = setTimeout("hideonload()", 1000)
     }
 </script>
 </body>
