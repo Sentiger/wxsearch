@@ -23,10 +23,10 @@ class IndexController extends CommonController {
         $info = M('user')->where(array('openid'=>$userInfo['openid'],'table_name'=>$tableName))->find();
 
 
-        //
-        $ticketArr = $this->getSignPackage();
+        //获取jssdk信息
+        $this->ticketArr = $this->getSignPackage();
 
-        p($ticketArr);die;
+
 
         $this->code = $code;
         $this->info = $info;
