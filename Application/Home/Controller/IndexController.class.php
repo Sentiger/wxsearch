@@ -24,7 +24,7 @@ class IndexController extends CommonController {
 
 
         //获取jssdk信息
-        $this->ticketArr = $this->getSignPackage();
+        $this->signPackage = $this->getSignPackage();
         p($this->ticketArr);die;
 
 
