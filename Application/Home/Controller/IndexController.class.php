@@ -36,18 +36,24 @@ class IndexController extends CommonController {
      */
     public function addInfo() {
         $data = I('post.');
+        $tableName = substr($data['table_name'],3);
 
-        print_r($data);die;
-
-
-        if($data['is_new']==0) {
-            $uid = M('user')->add($data);
-        } else {
-            $uid = $data['is_new'];
+        if(!empty($data)) {
+            foreach($data as $k=>$v) {
+                if(is_array($v)) {
+                    $data[$k] = implode('|,|', $v);
+                }
+            }
         }
 
+        if(empty($data['uid'])) {
+            $uid = M('user')->add($data);
+        } else {
+            $uid = $data['uid'];
+        }
         $data['uid'] = $uid;
-        $infoid = M('info')->add($data);
+
+        $infoid = M($tableName)->add($data);
         if($infoid && $uid)
             $data = array(
                 'status' => 1,
@@ -58,7 +64,7 @@ class IndexController extends CommonController {
                 'status' => 0,
                 'msg' => '失败'
             );
-        echo json_encode($data);
+        die(json_encode($data));
     }
 
 
