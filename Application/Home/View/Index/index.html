@@ -37,7 +37,7 @@
                         <label>
                             公司名称
                         </label>
-                        <input type="text" name="company_name" value="{$info.company_name}"  placeholder="公司名字">
+                        <input type="text" name="company_name" id="company_name" value="{$info.company_name}"  placeholder="公司名字">
                         <a class="ui-icon-close" href="#">
                         </a>
                     </div>
@@ -45,13 +45,13 @@
                         <label>
                             详细地址
                         </label>
-                        <textarea placeholder="街道等详细地址" name="address">{$info.address}</textarea>
+                        <textarea placeholder="街道等详细地址" id="address" name="address">{$info.address}</textarea>
                     </div>
                     <div class="ui-form-item ui-form-item-l ui-border-b">
                         <label class="ui-border-r">
                             中国 +86
                         </label>
-                        <input  type="text" name="mobile" value="{$info.mobile}" placeholder="请输入手机号码">
+                        <input  type="text" name="mobile" id="mobile" value="{$info.mobile}" placeholder="请输入手机号码">
                         <a class="ui-icon-close" href="#">
                         </a>
                     </div>
@@ -160,14 +160,14 @@
 
 
         <!--下面的用于提交后的提示页面-->
-        <div class="ui-tips ui-tips-info" style="display: none;">
-            <i></i><span>一般提示</span>
+        <div id="info_box" class="ui-tips ui-tips-info" style="display: none;">
+            <i></i><span id="info_text">一般提示</span>
         </div>
-        <div class="ui-tips ui-tips-warn" style="display: none;">
-            <i></i><span>警告提示</span>
+        <div id="warn_box" class="ui-tips ui-tips-warn" style="display: none;">
+            <i></i><span id="warn_text">警告提示</span>
         </div>
-        <div class="ui-tips ui-tips-success" style="display: none;">
-            <i></i><span>操作成功的提示</span>
+        <div id="success_box" class="ui-tips ui-tips-success" style="display: none;">
+            <i></i><span id="success_text">操作成功的提示</span>
         </div>
 
     </div><!-- cont end -->
@@ -193,6 +193,38 @@
         }
         var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
+
+            var company_name = $('#company_name').val();
+            var mobile = $('#mobile').val();
+            var address = $('#address').val();
+
+            if(company_name == '') {
+                $('#info_box').show();
+                $('#info_text').text('公司名称不能为空');
+                return false;
+            }
+
+            if(mobile == '') {
+                $('#info_box').show();
+                $('#info_text').text('手机不能为空');
+                return false;
+            }
+
+            if(address == '') {
+                $('#info_box').show();
+                $('#info_text').text('地址能为空');
+                return false;
+            }
+
+            if(!mobile.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/)) {
+                $('#info_box').show();
+                $('#info_text').text('手机号错误');
+                return false;
+            }
+
+            $('#info_box').hide();
+
+
             $.ajax({
                  type : 'POST',
                  url : url,
@@ -202,11 +234,19 @@
                     if(data.status==1) {
                         $('body').replaceWith(sub_success("反馈成功"))
                     }
+                     if(data.status==0) {
+                         $('#info_box').show();
+                         $('#info_text').text('错误');
+                     }
                  },
                 error: function(){
                     $('body').replaceWith(sub_error("网络错误"));
                 }
             });
+
+
+
+
         });
     })
     function hideonload() {
