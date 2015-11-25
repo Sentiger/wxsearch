@@ -29,7 +29,7 @@ class FormModel extends Model
 
         $page = new \Think\Page($totalRecord, $perpage);
         return  array(
-            'data' => $this->field('*')->where($where)->limit($page->firstRow, $page->listRows)->order($order)->select(),
+            'data' => $this->field('*')->where($where)->group('openid')->limit($page->firstRow, $page->listRows)->order($order)->select(),
             'page' => $page->show(), // 翻页的字符串
             'currentPage' => $currentPage,
             'total' => $totalRecord,
