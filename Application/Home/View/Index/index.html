@@ -25,9 +25,9 @@
     <header class="ui-header ui-header-positive ui-border-b">
         <h1>xx调查表</h1>
     </header>
-    <form action="{:U('Home/Index/addInfo')}" method="post" id="form">
-    <div class="ui-container"><!-- cont -->
 
+    <div class="ui-container"><!-- cont -->
+        <form  id="form">
         <div class="page-item">
             <p class="page-desc">基本信息</p>
 
@@ -141,10 +141,14 @@
 
         <?php endforeach;?>
 
-        
+        <input type="hidden" name="uid" value="{$info.id}">
+        <input type="hidden" name="nickname" value="{$userInfo.nickname}">
+        <input type="hidden" name="openid" value="{$userInfo.openid}">
+        <input type="hidden" name="table_name" value="{$tableName}">
+    </form>
 
         <div class="ui-btn-wrap">
-            <button class="ui-btn-lg ui-btn-primary">
+            <button class="ui-btn-lg ui-btn-primary" id="submit_btn">
                 确定
             </button>
         </div>
@@ -167,11 +171,7 @@
         </div>
 
     </div><!-- cont end -->
-    <input type="hidden" name="uid" value="{$info.id}">
-    <input type="hidden" name="nickname" value="{$userInfo.nickname}">
-    <input type="hidden" name="openid" value="{$userInfo.openid}">
-    <input type="hidden" name="table_name" value="{$tableName}">
-    </form>
+
     <footer class="">
 
     </footer>
