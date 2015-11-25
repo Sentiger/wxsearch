@@ -38,5 +38,6 @@
     $(function(){
         $('#frmb-0-save').remove();
         $('#frmb-0-export-xml').remove();
+//        $('#frmb-0').css({'overflow':'scroll'})
     })
 </script>

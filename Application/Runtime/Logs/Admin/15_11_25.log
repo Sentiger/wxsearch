@@ -1,0 +1,951 @@
+[ 2015-11-25T09:29:25+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000418s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005679s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005878s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010996s ]
+
+[ 2015-11-25T09:29:25+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000183s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+
+[ 2015-11-25T09:29:27+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000397s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001786s ]
+
+[ 2015-11-25T09:33:19+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001314s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000454s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001171s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001330s ]
+
+[ 2015-11-25T09:37:39+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001465s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003608s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004004s ]
+
+[ 2015-11-25T09:37:41+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?_=1448415459499
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0327s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0289s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0298s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001326s ]
+
+[ 2015-11-25T09:37:51+08:00 ] 127.0.0.1 /index.php/Admin/Form/del/id/6/table_name/wx_form_quanbudiaocha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001381s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0311s ]
+SQL: DELETE FROM `wx_tables` WHERE `id` = 6 [ RunTime:0.0277s ]
+SQL: SHOW TABLES LIKE 'wx_form_quanbudiaocha' [ RunTime:0.0271s ]
+SQL: drop table wx_form_quanbudiaocha [ RunTime:0.0332s ]
+NOTIC: [2] Missing argument 4 for Admin\Controller\CommonController::ajax(), called in D:\wamp\www\wxsearch\Application\Admin\Controller\FormController.class.php on line 141 and defined D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 14 行.
+NOTIC: [8] Undefined variable: callbackType D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 20 行.
+
+[ 2015-11-25T09:37:51+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?pageNum=1&numPerPage=20&orderField=id&orderDirection=desc&keywords=&_=1448415459500
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001689s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0399s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0322s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0332s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001387s ]
+
+[ 2015-11-25T09:37:54+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459501
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001307s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013787s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002993s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001460s ]
+
+[ 2015-11-25T09:37:58+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459505
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001222s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001786s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001924s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001221s ]
+
+[ 2015-11-25T09:38:13+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001393s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0321s ]
+SQL: create table wx_form_diaocha( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',select1448415481227 varchar(255) not null default '' COMMENT 'array("label"=>"Select","type"=>"select","option"=>array("0"=>"Option 1","1"=>"Option 2",))',textinput1448415482531 varchar(200) not null  COMMENT 'array("label"=>"Text Field","type"=>"text)"',radiogroup1448415484204 varchar(255) not null default '' COMMENT 'array("label"=>"Radio Group","type"=>"radio","option"=>array("0"=>"Option 1","1"=>"Option 2",))')ENGINE=MyISAM  CHARSET=utf8 COMMENT='调查' [ RunTime:0.0503s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0294s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_diaocha','调查','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_diaocha&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0288s ]
+
+[ 2015-11-25T09:38:13+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0281s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0276s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0326s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014903s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001298s ]
+
+[ 2015-11-25T09:56:20+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?_=1448415459509
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003968s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0374s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0374s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001165s ]
+
+[ 2015-11-25T09:56:24+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459510
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001157s ]
+
+[ 2015-11-25T09:57:57+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001340s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000470s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000688s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2015-11-25T12:29:10+08:00 ] 127.0.0.1 /index.php/Admin/Form/del/id/7/table_name/wx_form_diaocha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033143s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0277s ]
+SQL: DELETE FROM `wx_tables` WHERE `id` = 7 [ RunTime:0.0262s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0260s ]
+SQL: drop table wx_form_diaocha [ RunTime:0.0284s ]
+NOTIC: [2] Missing argument 4 for Admin\Controller\CommonController::ajax(), called in D:\wamp\www\wxsearch\Application\Admin\Controller\FormController.class.php on line 141 and defined D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 14 行.
+NOTIC: [8] Undefined variable: callbackType D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 20 行.
+
+[ 2015-11-25T12:29:11+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?pageNum=1&numPerPage=20&orderField=id&orderDirection=desc&keywords=&_=1448415459518
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007874s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0308s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0293s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0287s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001187s ]
+
+[ 2015-11-25T12:29:13+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459519
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001839s ]
+
+[ 2015-11-25T12:29:43+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0297s ]
+SQL: create table wx_form_diaocha( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',dateinput1448425755844 timestamp not null  COMMENT '{"label":"Date Field","type":"date}"',textinput1448425780606 varchar(200) not null  COMMENT '{"label":"Text Field","type":"text}"',radiogroup1448425757950 varchar(255) not null default '' COMMENT '{"label":"Radio Group","type":"radio","option":array("0"=>"Option 1","1"=>"Option 2",)}')ENGINE=MyISAM  CHARSET=utf8 COMMENT='调查' [ RunTime:0.0487s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0297s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_diaocha','调查','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_diaocha&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0290s ]
+
+[ 2015-11-25T12:29:43+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0265s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0279s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0260s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000383s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2015-11-25T12:31:22+08:00 ] 127.0.0.1 /index.php/Admin/Form/del/id/8/table_name/wx_form_diaocha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.2437s ]
+SQL: DELETE FROM `wx_tables` WHERE `id` = 8 [ RunTime:0.0250s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0272s ]
+SQL: drop table wx_form_diaocha [ RunTime:0.0267s ]
+NOTIC: [2] Missing argument 4 for Admin\Controller\CommonController::ajax(), called in D:\wamp\www\wxsearch\Application\Admin\Controller\FormController.class.php on line 142 and defined D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 14 行.
+NOTIC: [8] Undefined variable: callbackType D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 20 行.
+
+[ 2015-11-25T12:31:22+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?pageNum=1&numPerPage=20&orderField=id&orderDirection=desc&keywords=&_=1448415459523
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0389s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0378s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001184s ]
+
+[ 2015-11-25T12:31:24+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459524
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000393s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001723s ]
+
+[ 2015-11-25T12:31:36+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001527s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0262s ]
+SQL: create table wx_form_diaocha( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',autocomplete1448425886527 varchar(200) not null  COMMENT '{"label":"Autocomplete","type":"autocomplete}"',checkboxgroup1448425888359 varchar(255) not null default '' COMMENT '{"label":"Checkbox Group","type":"checkbox","option":｛"0":"Option 1","1":"Option 2"}}',textinput1448425890985 varchar(200) not null  COMMENT '{"label":"Text Field","type":"text}"',select1448425892251 varchar(255) not null default '' COMMENT '{"label":"Select","type":"select","option":｛"0":"Option 1","1":"Option 2"}}')ENGINE=MyISAM  CHARSET=utf8 COMMENT='调查' [ RunTime:0.0531s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0270s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_diaocha','调查','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_diaocha&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0256s ]
+
+[ 2015-11-25T12:31:36+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003294s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0303s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0301s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016976s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001255s ]
+
+[ 2015-11-25T12:34:58+08:00 ] 127.0.0.1 /index.php/Admin/Form/del/id/9/table_name/wx_form_diaocha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001603s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0313s ]
+SQL: DELETE FROM `wx_tables` WHERE `id` = 9 [ RunTime:0.0308s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0326s ]
+SQL: drop table wx_form_diaocha [ RunTime:0.0316s ]
+NOTIC: [2] Missing argument 4 for Admin\Controller\CommonController::ajax(), called in D:\wamp\www\wxsearch\Application\Admin\Controller\FormController.class.php on line 142 and defined D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 14 行.
+NOTIC: [8] Undefined variable: callbackType D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 20 行.
+
+[ 2015-11-25T12:34:59+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?pageNum=1&numPerPage=20&orderField=id&orderDirection=desc&keywords=&_=1448415459528
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001911s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0311s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0318s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001577s ]
+
+[ 2015-11-25T12:35:28+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459529
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001214s ]
+
+[ 2015-11-25T12:35:41+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001407s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0374s ]
+SQL: create table wx_form_diaocha( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',autocomplete1448426130045 varchar(200) not null  COMMENT '{"label":"Autocomplete","type":"autocomplete}"',dateinput1448426131142 timestamp not null  COMMENT '{"label":"Date Field","type":"date}"',checkboxgroup1448426132364 varchar(255) not null default '' COMMENT '{"label":"Checkbox Group","type":"checkbox","option":{"0":"Option 1","1":"Option 2"}}',textinput1448426134703 varchar(200) not null  COMMENT '{"label":"Text Field","type":"text}"',richtext1448426137678 text not null  COMMENT '{"label":"Rich Text Editor","type":"rich-text}"',select1448426136544 varchar(255) not null default '' COMMENT '{"label":"Select","type":"select","option":{"0":"Option 1","1":"Option 2"}}')ENGINE=MyISAM  CHARSET=utf8 COMMENT='调查' [ RunTime:0.0538s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0377s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_diaocha','调查','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_diaocha&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0452s ]
+
+[ 2015-11-25T12:35:42+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001297s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0297s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0309s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0299s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000328s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000888s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001177s ]
+
+[ 2015-11-25T12:40:25+08:00 ] 127.0.0.1 /index.php/Admin/Form/del/id/10/table_name/wx_form_diaocha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0315s ]
+SQL: DELETE FROM `wx_tables` WHERE `id` = 10 [ RunTime:0.0300s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0292s ]
+SQL: drop table wx_form_diaocha [ RunTime:0.0301s ]
+NOTIC: [2] Missing argument 4 for Admin\Controller\CommonController::ajax(), called in D:\wamp\www\wxsearch\Application\Admin\Controller\FormController.class.php on line 142 and defined D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 14 行.
+NOTIC: [8] Undefined variable: callbackType D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 20 行.
+
+[ 2015-11-25T12:40:25+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?pageNum=1&numPerPage=20&orderField=id&orderDirection=desc&keywords=&_=1448415459533
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005053s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0298s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0314s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0306s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001160s ]
+
+[ 2015-11-25T12:40:26+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459534
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2015-11-25T12:40:38+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0356s ]
+SQL: create table wx_form_diaocha( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',autocomplete1448426427839 varchar(200) not null  COMMENT '{"label":"Autocomplete","type":"autocomplete"}',dateinput1448426429380 timestamp not null  COMMENT '{"label":"Date Field","type":"date"}',checkboxgroup1448426430631 varchar(255) not null default '' COMMENT '{"label":"Checkbox Group","type":"checkbox","option":{"0":"Option 1","1":"Option 2"}}',textinput1448426433679 varchar(200) not null  COMMENT '{"label":"Text Field","type":"text"}',select1448426434727 varchar(255) not null default '' COMMENT '{"label":"Select","type":"select","option":{"0":"Option 1","1":"Option 2"}}',richtext1448426431882 text not null  COMMENT '{"label":"Rich Text Editor","type":"rich-text"}')ENGINE=MyISAM  CHARSET=utf8 COMMENT='调查' [ RunTime:0.0524s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0306s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_diaocha','调查','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_diaocha&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0301s ]
+
+[ 2015-11-25T12:40:38+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0313s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0297s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0299s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014819s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001226s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001433s ]
+
+[ 2015-11-25T13:30:39+08:00 ] 127.0.0.1 /Public/Home/ui/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+ERR: 无法加载控制器:Public
+
+[ 2015-11-25T13:34:14+08:00 ] 127.0.0.1 /index.php/Admin/Form/info/id/11.html?_=1448415459538
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001826s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0255s ]
+SQL: SELECT * FROM `wx_tables` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0253s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000515s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001111s ]
+
+[ 2015-11-25T14:05:13+08:00 ] 127.0.0.1 /index.php/Admin/Form/del/id/11/table_name/wx_form_diaocha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002146s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0313s ]
+SQL: DELETE FROM `wx_tables` WHERE `id` = 11 [ RunTime:0.0284s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0313s ]
+SQL: drop table wx_form_diaocha [ RunTime:0.0285s ]
+NOTIC: [2] Missing argument 4 for Admin\Controller\CommonController::ajax(), called in D:\wamp\www\wxsearch\Application\Admin\Controller\FormController.class.php on line 142 and defined D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 14 行.
+NOTIC: [8] Undefined variable: callbackType D:\wamp\www\wxsearch\Application\Admin\Controller\CommonController.class.php 第 20 行.
+
+[ 2015-11-25T14:05:14+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?pageNum=1&numPerPage=20&orderField=id&orderDirection=desc&keywords=&_=1448415459539
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008425s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0414s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000451s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001158s ]
+
+[ 2015-11-25T14:05:16+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459540
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000388s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001848s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002004s ]
+
+[ 2015-11-25T14:05:34+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001284s ]
+SQL: SHOW TABLES LIKE 'wx_form_diaocha' [ RunTime:0.0267s ]
+SQL: create table wx_form_diaocha( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',autocomplete1448431518261 varchar(200) not null  COMMENT '{"label":"Autocomplete","type":"autocomplete"}',dateinput1448431519558 timestamp not null  COMMENT '{"label":"Date Field","type":"date"}',checkboxgroup1448431520927 varchar(255) not null default '' COMMENT '{"label":"Checkbox Group","type":"checkbox","option":{"0":"Option 1","1":"Option 2"}}',radiogroup1448431522785 varchar(255) not null default '' COMMENT '{"label":"Radio Group","type":"radio","option":{"0":"Option 1","1":"Option 2"}}',richtext1448431524358 text not null  COMMENT '{"label":"Rich Text Editor","type":"rich-text"}',textinput1448431527946 varchar(200) not null  COMMENT '{"label":"Text Field","type":"text"}',select1448431526440 varchar(255) not null default '' COMMENT '{"label":"Select","type":"select","option":{"0":"Option 1","1":"Option 2"}}')ENGINE=MyISAM  CHARSET=utf8 COMMENT='调查' [ RunTime:0.0445s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0268s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_diaocha','调查','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_diaocha&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0275s ]
+
+[ 2015-11-25T14:05:34+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001499s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0394s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0408s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0393s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2015-11-25T14:13:07+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459544
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001263s ]
+
+[ 2015-11-25T14:16:17+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+SQL: SHOW TABLES LIKE 'wx_form_gongsidiaocha' [ RunTime:0.0370s ]
+SQL: create table wx_form_gongsidiaocha( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',textinput1448432050580 varchar(200) not null  COMMENT '{"label":"意见反馈","type":"text"}',checkboxgroup1448432066261 varchar(255) not null default '' COMMENT '{"label":"公司环境","type":"checkbox","option":{"0":"1","1":"2","2":"3"}}',radiogroup1448432138578 varchar(255) not null default '' COMMENT '{"label":"最近氛围","type":"radio","option":{"0":"1","1":"2"}}')ENGINE=MyISAM  CHARSET=utf8 COMMENT='公司调查' [ RunTime:0.0643s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0411s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_gongsidiaocha','公司调查','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_gongsidiaocha&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0374s ]
+
+[ 2015-11-25T14:16:17+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013896s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0382s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0378s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0385s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001199s ]
+
+[ 2015-11-25T14:16:20+08:00 ] 127.0.0.1 /index.php/Admin/Form/info/id/12.html?_=1448415459548
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000974s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0306s ]
+SQL: SELECT * FROM `wx_tables` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0298s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001142s ]
+
+[ 2015-11-25T14:16:24+08:00 ] 127.0.0.1 /index.php/Admin/Form/info/id/13.html?_=1448415459549
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0301s ]
+SQL: SELECT * FROM `wx_tables` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0283s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001231s ]
+
+[ 2015-11-25T14:18:04+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1448415459550
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001271s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000391s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000578s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001231s ]
+
+[ 2015-11-25T14:19:13+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+SQL: SHOW TABLES LIKE 'wx_form_toupiao' [ RunTime:0.0312s ]
+SQL: create table wx_form_toupiao( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',richtext1448432290588 text not null  COMMENT '{"label":"意见反馈","type":"rich-text"}',checkboxgroup1448432312902 varchar(255) not null default '' COMMENT '{"label":"环境","type":"checkbox","option":{"0":"不错","1":"很好"}}')ENGINE=MyISAM  CHARSET=utf8 COMMENT='投票' [ RunTime:0.0515s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0306s ]
+SQL: INSERT INTO `wx_tables` (`table_name`,`comment`,`url`) VALUES ('wx_form_toupiao','投票','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb383ceff8cdf7068&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index/table_name/wx_form_toupiao&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect') [ RunTime:0.0290s ]
+
+[ 2015-11-25T14:19:13+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0396s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0369s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0379s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017708s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2015-11-25T18:20:00+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?_=1448415459554
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+SQL: SHOW COLUMNS FROM `wx_tables` [ RunTime:0.0510s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_tables` WHERE `comment` LIKE '%%' LIMIT 1   [ RunTime:0.0898s ]
+SQL: SELECT * FROM `wx_tables` WHERE `comment` LIKE '%%' ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000305s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017759s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005727s ]
+

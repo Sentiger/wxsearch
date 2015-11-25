@@ -1,0 +1,333 @@
+[ 2015-11-19T14:08:20+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002529s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005687s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011759s ]
+
+[ 2015-11-19T14:08:21+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+
+[ 2015-11-19T14:08:23+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?_=1447913301145
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001219s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 3 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 4 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 5 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 13 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 53 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 54 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 65 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 66 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 76 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 77 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 78 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 80 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001005s ]
+
+[ 2015-11-19T14:08:24+08:00 ] 127.0.0.1 /?_=1447913301146
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000369s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000602s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2015-11-19T14:08:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000390s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014419s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000951s ]
+
+[ 2015-11-19T14:08:31+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?_=1447913310058
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 3 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 4 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 5 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 13 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 53 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 54 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 65 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 66 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 76 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 77 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 78 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 80 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001195s ]
+
+[ 2015-11-19T14:08:31+08:00 ] 127.0.0.1 /?_=1447913310059
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000364s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023046s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001524s ]
+
+[ 2015-11-19T14:08:35+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001303s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000371s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000990s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001122s ]
+
+[ 2015-11-19T14:08:37+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?_=1447913315622
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 3 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 4 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 5 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 13 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 53 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 54 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 65 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 66 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 76 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 77 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 78 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 80 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001150s ]
+
+[ 2015-11-19T14:08:38+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1447913315623
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000982s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001117s ]
+
+[ 2015-11-19T14:08:43+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+
+[ 2015-11-19T14:09:37+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1447913315627
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015888s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000957s ]
+
+[ 2015-11-19T14:11:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000369s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2015-11-19T14:11:31+08:00 ] 127.0.0.1 /index.php/Admin/Form/lst.html?_=1447913489570
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 3 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 4 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 5 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 13 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 53 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 54 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 65 行.
+NOTIC: [8] Undefined variable: v D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 66 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 76 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 77 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 78 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 80 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\wxsearch\Application\Runtime\Cache\Admin\c84e8f6e208995b1d4afc83297aabf9e.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031315s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001127s ]
+
+[ 2015-11-19T14:11:47+08:00 ] 127.0.0.1 /index.php/Admin/Form/add.html?_=1447913489571
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004251s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004428s ]
+
