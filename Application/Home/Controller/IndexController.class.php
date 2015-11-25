@@ -36,6 +36,10 @@ class IndexController extends CommonController {
      */
     public function addInfo() {
         $data = I('post.');
+
+        print_r($data);die;
+
+
         if($data['is_new']==0) {
             $uid = M('user')->add($data);
         } else {
