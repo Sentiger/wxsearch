@@ -1,11 +1,11 @@
-<form id="pagerForm" method="post" action="<{:U('Admin/Admin/lst')}>">
+<form id="pagerForm" method="post" action="<{:U('Admin/User/lst')}>">
 	<input type="hidden" name="pageNum" value="1" />
 	<input type="hidden" name="numPerPage" value="<?php echo $data['perpage'];?>" />
 	<input type="hidden" name="orderField" value="<?php echo $data['orderField'];?>" />
 	<input type="hidden" name="orderDirection" value="<?php echo $data['orderDirection'];?>" />
 </form>
 <div class="pageHeader">
-	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="<{:U('Admin/Admin/lst')}>" method="post">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="<{:U('Admin/User/lst')}>" method="post">
 	<div class="searchBar">
 		<ul class="searchContent">
 			<li>
