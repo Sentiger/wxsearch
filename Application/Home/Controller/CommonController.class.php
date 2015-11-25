@@ -105,7 +105,6 @@ class CommonController extends Controller {
         $string = "jsapi_ticket=$jsapiTicket&noncestr=$nonceStr&timestamp=$timestamp&url=$url";
 
         $signature = sha1($string);
-echo $url;die;
         $signPackage = array(
             "appId"     => C('APP_ID'),
             "nonceStr"  => $nonceStr,
