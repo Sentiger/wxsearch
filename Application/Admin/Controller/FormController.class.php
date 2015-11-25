@@ -66,11 +66,11 @@ class FormController extends CommonController {
                     $options .= ")";
 
                     if($v['@attributes']['type'] == 'checkbox-group') {
-                        $comment = "array(\"label\"=>\"{$label}\",\"type\"=>\"checkbox\",\"option\"=>{$options})";
+                        $comment = "{\"label\":\"{$label}\",\"type\":\"checkbox\",\"option\":{$options}}";
                     } elseif($v['@attributes']['type'] == 'radio-group'){
-                        $comment = "array(\"label\"=>\"{$label}\",\"type\"=>\"radio\",\"option\"=>{$options})";
+                        $comment = "{\"label\":\"{$label}\",\"type\":\"radio\",\"option\":{$options}}";
                     }elseif($v['@attributes']['type'] == 'select') {
-                        $comment = "array(\"label\"=>\"{$label}\",\"type\"=>\"select\",\"option\"=>{$options})";
+                        $comment = "{\"label\":\"{$label}\",\"type\":\"select\",\"option\":{$options}}";
                     }
 
                     if($v['@attributes']['required']){
@@ -81,7 +81,7 @@ class FormController extends CommonController {
 
 
                 } else {
-                    $comment = "array(\"label\"=>\"{$v['@attributes']['label']}\",\"type\"=>\"{$v['@attributes']['type']})\"";
+                    $comment = "{\"label\":\"{$v['@attributes']['label']}\",\"type\":\"{$v['@attributes']['type']}}\"";
 
                     if($v['@attributes']['required']){
                         $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null  COMMENT '{$comment}',";
