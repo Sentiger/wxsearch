@@ -39,7 +39,7 @@ Class UserController extends CommonController{
                 'password'=>I('password','','md5')
             );
 
-            $id = I('id',0,'intval');
+            $id = session('uid');
 
             if(M('admin')->where(array('id'=>$id))->save($data) !== false) {
                 $this->ajax(200,'修改成功','','closeCurrent');
