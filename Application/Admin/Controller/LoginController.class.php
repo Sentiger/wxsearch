@@ -17,6 +17,8 @@ class LoginController extends Controller {
         $username = I('username','');
 
         $info = M('admin')->where(array('username'=>$username))->find();
+        p($info);die;
+
         if($info){
             if($info['password'] == md5($password)){
                 session('uid', $info['id']);
