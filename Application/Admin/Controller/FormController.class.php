@@ -309,41 +309,31 @@ class FormController extends CommonController {
 
         if(!empty($data)) {
             foreach($data as $k=>$v) {
-                foreach($checkbox as $k1=>$v1) {
-                    $temp = $v[$k1];
-                    $temp = explode('|,|', $temp);
-                    $tempCheckbox = '';
-                    foreach($temp as $k3=>$v3) {
-                        $tempCheckbox .= $checkbox[$k1][$v3] . ',';
+
+                if(!empty($checkbox)) {
+                    foreach($checkbox as $k1=>$v1) {
+                        $temp = $v[$k1];
+                        $temp = explode('|,|', $temp);
+                        $tempCheckbox = '';
+                        foreach($temp as $k3=>$v3) {
+                            $tempCheckbox .= $checkbox[$k1][$v3] . ',';
+                        }
+                        $data[$k][$k1] = rtrim($tempCheckbox,',');
                     }
-                    $data[$k][$k1] = rtrim($tempCheckbox,',');
                 }
 
-                foreach($radio as $k4=>$v4) {
-                    $temp = $v[$k4];
-                    $data[$k][$k4] = $radio[$k4][$temp];
+                if(!empty($radio)) {
+                    foreach($radio as $k4=>$v4) {
+                        $temp = $v[$k4];
+                        $data[$k][$k4] = $radio[$k4][$temp];
+                    }
                 }
+
 
             }
         }
 
-
-
-        p($data);
-        p($fields);
-        p($th);
-        p($fie);
-        p($checkbox);
-        p($radio);
-die;
-
-
-
-
-        $user = M('User')->field(array('company_name','mobile','openid','address','nickname'))->select();
-        $title = array('公司名称','手机号','微信openid','详细地址','微信昵称');
-
-        exportexcel($user, $title, '用户列表');die;
+        exportexcel($data, $th, '用户列表');die;
     }
 
 
