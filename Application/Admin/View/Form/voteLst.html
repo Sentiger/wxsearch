@@ -78,7 +78,7 @@
 				
 				<?php endfor;?>
 				<td>
-					<a title="你确定要删除吗？" target="ajaxTodo" href="/index.php/Admin/Form/del/id/21/table_name/wx_form_.html" class="btnDel">删除</a>
+					<a title="你确定要删除吗？" target="ajaxTodo" href="<{:U('Admin/Form/delVote',array('id'=>$v1['id'],'table_name'=>$noPreTable))}>" class="btnDel">删除</a>
 				</td>
 			</tr>
 			<?php endforeach;?>
