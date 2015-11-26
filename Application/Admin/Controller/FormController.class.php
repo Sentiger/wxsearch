@@ -293,7 +293,7 @@ class FormController extends CommonController {
         foreach($checkbox as $k=>$v) {
             foreach($v as $k1=>$v1) {
 
-                $where = array($k1=>array('like', $v1."|,|%"));
+                $where = array("$k1"=>array('like', "$v1"."|,|%"));
                 $arr[] = $db->where($where)->count();
             }
         }
