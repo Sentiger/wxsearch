@@ -160,6 +160,35 @@ class FormController extends CommonController {
 
 
     /**
+     * 反馈详细信息
+     * @return [type] [description]
+     */
+    public function voteLst() {
+        $tableName = I('table_name');
+        if(empty($tableName)) die('非法操作');
+        $db = M();
+        if(!$db->query("SHOW TABLES LIKE '{$tableName}'")) die('非法操作');
+
+        $fields = $db->query('SHOW FULL FIELDS FROM '.$tableName);
+
+        foreach ($fields as $k => $v) {
+            $fields[$k]['comment'] = json_decode($v['comment'],true);
+        }
+
+        p($fields);die;
+
+
+
+
+
+
+
+    }
+
+
+
+
+    /**
      * 代码生成器
      * 控制器的名字：就是表名
      * 生成规则：sh_goods=>GoodsController.class.php
