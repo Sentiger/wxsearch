@@ -212,6 +212,8 @@ class FormController extends CommonController {
             }
         }
 
+        p($th);die;
+
         $model = D('Form');
         $res = $model->voteLst($noPreTable);
         $this->data = $res;
