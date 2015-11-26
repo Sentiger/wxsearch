@@ -49,6 +49,8 @@ Class UserController extends CommonController{
 
         }
 
+        $this->data = M('admin')->find(session('uid'));
+
         $this->display();
     }
 
