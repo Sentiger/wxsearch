@@ -291,12 +291,10 @@ class FormController extends CommonController {
         $db = M($noPreTable);
 
         foreach($checkbox as $k=>$v) {
-            p($checkbox);
             foreach($v as $k1=>$v1) {
 
-                $where = "$k like '{$k1}|,|'";
+                $where = "$k like '{$k1}|,|%'";
                 $arr[] = $db->where($where)->count();
-                echo $db->getLastSql() . '<br>';
 
             }
         }
