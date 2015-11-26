@@ -33,7 +33,7 @@
 	<table class="table" width="100%" layoutH="138">
 		<thead>
 			<tr>
-				<th width="22"><input type="checkbox" group="ids[]" class="checkboxCtrl"></th>
+				<!-- <th width="22"><input type="checkbox" group="ids[]" class="checkboxCtrl"></th> -->
 				<th width="120" orderField="id" <?php if($data['orderField']=='id'):?>class="<?php echo $data['orderDirection']?>"<?php endif; ?>>用户号</th>
 				<th>公司名</th>
 				<th>手机号</th>
@@ -48,7 +48,7 @@
 			<?php foreach($data['data'] as $v): ?>
 			<tr target="sid" rel="<?php echo $v['id'];?>">
 				
-				<td><input name="ids[]" value="<?php echo $v['id'];?>" type="checkbox"></td>
+				<!-- <td><input name="ids[]" value="<?php echo $v['id'];?>" type="checkbox"></td> -->
 				
 				<td><?php echo $v['id']; ?></td>
 				<td><?php echo $v['company_name']; ?></td>
