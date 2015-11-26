@@ -17,8 +17,10 @@ class LoginController extends Controller {
         $username = I('username','');
 
         $info = M('admin')->where(array('username'=>$username))->find();
-echo md5('admin');die;
         if($info){
+            echo $password;
+            p($info);die;
+
             if($info['password'] == md5($password)){
                 session('uid', $info['id']);
                 $this->redirect('/Admin/Index/index');
