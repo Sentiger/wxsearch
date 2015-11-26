@@ -20,13 +20,6 @@ class LoginController extends Controller {
         if($info){
             if($info['password'] == md5($password)){
                 session('uid', $info['id']);
-                $pri = explode(',', $info['privilege_list']);
-
-                $pri = array_merge($pri, C('NO_CONFIRM_LIST'));
-                session('privilege',$pri);
-                session('role_id', $info['role_id']);
-
-                session('username', $info['username']);
                 $this->redirect('/Admin/Index/index');
             } else {
                 $this->error('用户名或者密码错误');die;
