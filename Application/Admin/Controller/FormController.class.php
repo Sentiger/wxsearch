@@ -305,13 +305,22 @@ class FormController extends CommonController {
             }
         }
 
-
-
         $data = M($noPreTable)->field($fie)->select();
+
+        if(empty($data)) {
+            foreach($data as $k=>$v) {
+
+            }
+        }
+
+
+
         p($data);
         p($fields);
         p($th);
         p($fie);
+        p($checkbox);
+        p($radio);
 die;
 
 
