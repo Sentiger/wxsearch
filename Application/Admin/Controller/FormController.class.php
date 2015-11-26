@@ -301,10 +301,13 @@ class FormController extends CommonController {
         $arr2 = array();
 
         foreach($radio as $k=>$v) {
-
+            foreach($v as $k1=>$v1) {
+                $where = array($k=>$k1);
+                $arr2[$v1] = $db->where($where)->count();
+            }
         }
 
-
+        p($arr2);die;
 
         p($checkbox);
         p($radio);
