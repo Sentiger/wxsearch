@@ -276,12 +276,17 @@ class FormController extends CommonController {
 
             if($v['comment']['type'] == 'checkbox') {
                 $checkbox[$v['field']] = $v['comment']['option'];
-            }
-            if($v['comment']['type'] == 'radio') {
-                $radio[$v['field']] = $v['comment']['option'];
+                $th[] = $v['comment']['label'];
+                $fie[] = $v['field'];
             }
 
-            if($v['field'] == 'id') {
+            if($v['comment']['type'] == 'radio') {
+                $radio[$v['field']] = $v['comment']['option'];
+                $th[] = $v['comment']['label'];
+                $fie[] = $v['field'];
+            }
+
+            /*if($v['field'] == 'id') {
                 $th[] = 'id';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'uid') {
@@ -300,7 +305,7 @@ class FormController extends CommonController {
             }else {
                 $th[] = $v['comment']['label'];
                 $fie[] = $v['field'];
-            }
+            }*/
         }
 
 
