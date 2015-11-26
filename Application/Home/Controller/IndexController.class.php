@@ -48,6 +48,7 @@ class IndexController extends CommonController {
             foreach($data as $k=>$v) {
                 if(is_array($v)) {
                     $data[$k] = implode('|,|', $v);
+                    $data[$k] = $data[$k] . '|,|';
                 }
             }
         }
