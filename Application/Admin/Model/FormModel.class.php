@@ -71,7 +71,6 @@ class FormModel extends Model
         //总的条数
         $totalRecord = $model->where($where)->count();
 
-        echo 111;die;
 
         //点击表格动态排序
         $order = array('id'=>'desc');
