@@ -257,6 +257,7 @@ class FormController extends CommonController {
 
         $tableName = I('table_name');
         if(empty($tableName)) die('非法操作');
+        $noPreTable = substr($tableName, strlen(C('DB_PREFIX')));
         $db = M();
         if(!$db->query("SHOW TABLES LIKE '{$tableName}'")) die('非法操作');
 
