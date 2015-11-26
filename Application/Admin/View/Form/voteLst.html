@@ -53,6 +53,8 @@
 	<table class="table" width="100%" layoutH="138">
 		<thead>
 			<tr>
+				<th>微信昵称</th>
+				<th>公司名</th>
 				<?php foreach($th as $k=>$v):?>
 					<th><?php echo $v;?></th>
 				<?php endforeach;?>
@@ -62,6 +64,8 @@
 		<tbody>
 			<?php foreach($data['data'] as $k1=>$v1):?>
 			<tr target="sid_user" rel="1">
+				<td><?php echo $v1['nickname'];?></td>
+				<td><?php echo $v1['company_name'];?></td>
 				<?php  $length = count($th); for($j=0; $j<$length;$j++): ?>
 				<td><?php echo $v1[$fie[$j]]?></td>
 				<?php endfor;?>
