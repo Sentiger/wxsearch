@@ -211,8 +211,7 @@ class FormController extends CommonController {
                 $fie[] = $v['field'];
             }
         }
-        p($fie);
-p($fields);die;
+
         $model = D('Form');
         $res = $model->voteLst($noPreTable);
         $this->data = $res;
