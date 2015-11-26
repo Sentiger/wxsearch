@@ -51,6 +51,18 @@ class FormModel extends Model
         //查询条件
         // $where = array('comment'=>array('like',"%".I('post.keywords','')."%"));
         //每页显示条数，默认20
+
+        $where = array();
+
+        $start_time = I('post.start_time');
+        $end_time = I('post.end_time');
+
+        if(!empty($start_time))
+            $where = array('add_time',array('egt',$start_time));
+        if(!empty($end_time))
+            $where = array('end_time',array('elt',$end_time));
+
+
         $perpage = I('post.numPerPage',20,'intval');
         //绑定url参数中的页数
         $_GET[C('VAR_PAGE')?C('VAR_PAGE'):'p'] = I('post.pageNum',1,'intval');
