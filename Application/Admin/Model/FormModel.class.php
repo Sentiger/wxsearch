@@ -58,9 +58,9 @@ class FormModel extends Model
         $end_time = I('post.end_time');
 
         if(!empty($start_time))
-            $where = array('add_time',array('gt',$start_time));
+            $where = array('add_time'=>array('egt',$start_time));
         if(!empty($end_time))
-            $where = array('add_time',array('lt',$end_time));
+            $where = array('add_time'=>array('elt',$end_time));
 
 
         $perpage = I('post.numPerPage',20,'intval');
