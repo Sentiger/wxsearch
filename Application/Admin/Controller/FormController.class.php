@@ -314,6 +314,8 @@ class FormController extends CommonController {
                     $temp = explode('|,|', $temp);
                     $tempCheckbox = '';
                     foreach($temp as $k3=>$v3) {
+                        echo $v3;
+                        p($checkbox);
                         $tempCheckbox .= $checkbox[$v3] . ',';
 
                     }
