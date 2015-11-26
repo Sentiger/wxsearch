@@ -251,6 +251,49 @@ class FormController extends CommonController {
      * 表格统计
      */
     public function countData() {
+
+        $tableName = I('table_name');
+        $tableName = I('table_name');
+        if(empty($tableName)) die('非法操作');
+        $db = M();
+        $noPreTable = substr($tableName, strlen(C('DB_PREFIX')));
+        if(!$db->query("SHOW TABLES LIKE '{$tableName}'")) die('非法操作');
+
+        $fields = $db->query('SHOW FULL FIELDS FROM '.$tableName);
+
+        $th = array();
+        $fie = array();
+
+        $checkbox = array();
+        $radio = array();
+
+        foreach ($fields as $k => $v) {
+            $fields[$k]['comment'] = json_decode($v['comment'],true);
+        }
+
+
+        foreach ($fields as $k => $v) {
+
+            if($v['comment']['type'] == 'checkbox') {
+                $checkbox[$v['field']] = $v['comment']['option'];
+                $th[] = $v['comment']['label'];
+                $fie[] = $v['field'];
+            }
+            if($v['comment']['type'] == 'radio') {
+                $radio[$v['field']] = $v['comment']['option'];
+                $th[] = $v['comment']['label'];
+                $fie[] = $v['field'];
+            }
+
+        }
+
+
+        p($checkbox);
+        p($radio);
+        p($th);
+        p($fie);
+
+die;
         $this->display();
     }
 
