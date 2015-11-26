@@ -225,6 +225,7 @@ class FormController extends CommonController {
         $this->radio = $radio;
 
         $this->noPreTable = $noPreTable;
+        $this->tableName = $tableName;
         
 
 
