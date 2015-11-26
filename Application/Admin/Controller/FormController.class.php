@@ -317,12 +317,11 @@ class FormController extends CommonController {
                         $tempCheckbox .= $checkbox[$v3] . ',';
 
                     }
+
+                    echo 111;
                     p($tempCheckbox);die;
 
-
                 }
-
-
             }
         }
 
