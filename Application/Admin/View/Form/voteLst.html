@@ -73,8 +73,9 @@
 					<td>
 						<?php echo $str; ?>
 					</td>
+				<?php elseif(isset($radio[$fie[$j]])):?>
+					<td><?php echo $radio[$fie[$j]][$v1[$fie[$j]]];?></td>
 				<?php else:?>
-
 				<td><?php echo $v1[$fie[$j]]?></td>
 				<?php endif;?>
 				
