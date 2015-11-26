@@ -67,7 +67,17 @@
 				<td><?php echo $v1['nickname'];?></td>
 				<td><?php echo $v1['company_name'];?></td>
 				<?php  $length = count($th); for($j=0; $j<$length;$j++): ?>
+				
+				<?php if(isset($checkbox[$fie[$j]])):?>
+					<?php $op = explode('|,|', $v1[$fie[$j]]); $str = ''; foreach($op as $k2=>$v2) $str .= $checkbox[$fie[$j]][$v2] . ','; $str = rtrim($str,',');?>
+					<td>
+						<?php echo $str; ?>
+					</td>
+				<?php else:?>
+
 				<td><?php echo $v1[$fie[$j]]?></td>
+				<?php endif;?>
+				
 				<?php endfor;?>
 				<td>
 					<a title="你确定要删除吗？" target="ajaxTodo" href="/index.php/Admin/Form/del/id/21/table_name/wx_form_.html" class="btnDel">删除</a>
