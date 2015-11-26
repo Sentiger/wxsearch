@@ -180,6 +180,7 @@ class FormController extends CommonController {
             $fields[$k]['comment'] = json_decode($v['comment'],true);
         }
 
+        p($fields);
 
         foreach ($fields as $k => $v) {
 
