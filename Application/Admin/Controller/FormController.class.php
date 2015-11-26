@@ -218,12 +218,10 @@ class FormController extends CommonController {
 
         $this->checkbox = $checkbox;
         $this->radio = $radio;
-        
-        // p($checkbox);die;
+
+        $this->noPreTable = $noPreTable;
         
 
-        /*p($checkbox);
-        p($radio);die;*/
 
         $this->display();
     }
