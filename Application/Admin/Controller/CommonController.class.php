@@ -5,7 +5,7 @@ class CommonController extends Controller {
     
 
     Public function _initialize() {
-         if (!session('uid')) $this->redirect('/Admin/Login/index');
+        // if (!session('uid')) $this->redirect('/Admin/Login/index');
     }
     
 
