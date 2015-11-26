@@ -50,6 +50,7 @@
             <td>
                 <a title="你确定要删除吗？" target="ajaxTodo" href="<{:U('Admin/Form/del',array('id'=>$v['id'],'table_name'=>$v['table_name']))}>" class="btnDel">删除</a>
                 <a title="详细信息" target="dialog" href="<{:U('Admin/Form/info',array('id'=>$v['id']))}>" mask="true" class="btnEdit">详细信息</a>
+                <a title="反馈信息" target="dialog" href="<{:U('Admin/Form/vote',array('id'=>$v['id']))}>" mask="true" class="btnEdit">详细信息</a>
             </td>
         </tr>
         <?php endforeach;?>
