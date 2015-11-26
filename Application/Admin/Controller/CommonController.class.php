@@ -2,6 +2,12 @@
 namespace Admin\Controller;
 use Think\Controller;
 class CommonController extends Controller {
+    
+
+    Public function _initialize() {
+        if (!session('uid')) $this->redirect('/Admin/Login/index');
+    }
+    
 
     /**
      * @param string $statusCode	返回状态码 200ok 300失败 301会话超时
