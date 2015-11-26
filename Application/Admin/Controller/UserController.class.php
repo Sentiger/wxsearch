@@ -24,7 +24,7 @@ Class UserController extends CommonController{
      */
     public function doExportExcel() {
         $user = M('User')->select();
-        $title = array('公司名称,'手机号','微信openid','详细地址','微信昵称','经度','纬度');
+        // $title = array('公司名称,'手机号','微信openid','详细地址','微信昵称','经度','纬度');
         exportexcel($user, $title,'用户列表');
     }
 
