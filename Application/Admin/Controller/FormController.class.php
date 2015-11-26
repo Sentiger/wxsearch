@@ -248,6 +248,77 @@ class FormController extends CommonController {
     }
 
 
+    /**
+     * 导出excel
+     * @return [type] [description]
+     *   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',
+     */
+    public function doExportExcel() {
+
+        $tableName = I('table_name');
+        if(empty($tableName)) die('非法操作');
+        $db = M();
+        if(!$db->query("SHOW TABLES LIKE '{$tableName}'")) die('非法操作');
+
+        $fields = $db->query('SHOW FULL FIELDS FROM '.$tableName);
+
+        $th = array();
+        $fie = array();
+
+        $checkbox = array();
+        $radio = array();
+
+        foreach ($fields as $k => $v) {
+            $fields[$k]['comment'] = json_decode($v['comment'],true);
+        }
+
+
+        foreach ($fields as $k => $v) {
+
+            if($v['comment']['type'] == 'checkbox') {
+                $checkbox[$v['field']] = $v['comment']['option'];
+            }
+            if($v['comment']['type'] == 'radio') {
+                $radio[$v['field']] = $v['comment']['option'];
+            }
+
+            if($v['field'] == 'id') {
+                $th[] = 'id';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'uid') {
+                continue;
+                $th[] = '用户id';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'latitude') {
+                $th[] = '经度';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'longitude') {
+                $th[] = '纬度';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'add_time'){
+                $th[] = '反馈时间';
+                $fie[] = $v['field'];
+            }else {
+                $th[] = $v['comment']['label'];
+                $fie[] = $v['field'];
+            }
+        }
+
+        p($fields);
+        p($th);
+        p($fie);
+die;
+
+
+
+
+        $user = M('User')->field(array('company_name','mobile','openid','address','nickname'))->select();
+        $title = array('公司名称','手机号','微信openid','详细地址','微信昵称');
+
+        exportexcel($user, $title, '用户列表');die;
+    }
+
+
 
 
 }
