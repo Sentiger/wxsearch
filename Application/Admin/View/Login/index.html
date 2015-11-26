@@ -121,7 +121,7 @@ function choose_bg() {
         -->
         <div class="login_form">
             <input type="hidden" value="${randomKey }" id="j_randomKey" />
-    		<form action="index.html" id="login_form" method="post">
+    		<form action="<{:U('Admin/Login/doLogin')}>" id="login_form" method="post">
                 <input type="hidden" name="jfinal_token" value="${jfinal_token }" />
     			<div class="form-group">
     				<label for="j_username" class="t">用户名：</label> <input id="j_username" value="" name="username" type="text" class="form-control x319 in" autocomplete="off">
