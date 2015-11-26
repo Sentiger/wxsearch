@@ -276,24 +276,40 @@ class FormController extends CommonController {
 
             if($v['comment']['type'] == 'checkbox') {
                 $checkbox[$v['field']] = $v['comment']['option'];
-                $th[] = $v['comment']['label'];
-                $fie[] = $v['field'];
             }
             if($v['comment']['type'] == 'radio') {
                 $radio[$v['field']] = $v['comment']['option'];
+            }
+
+            if($v['field'] == 'id') {
+                $th[] = 'id';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'uid') {
+                continue;
+                $th[] = '用户id';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'latitude') {
+                $th[] = '经度';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'longitude') {
+                $th[] = '纬度';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'add_time'){
+                $th[] = '反馈时间';
+                $fie[] = $v['field'];
+            }else {
                 $th[] = $v['comment']['label'];
                 $fie[] = $v['field'];
             }
-
         }
 
 
         p($checkbox);
         p($radio);
         p($th);
-        p($fie);
+        p($fie);die;
 
-die;
+
         $this->display();
     }
 
