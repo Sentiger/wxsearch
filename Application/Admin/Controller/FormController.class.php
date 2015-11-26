@@ -184,6 +184,7 @@ class FormController extends CommonController {
                 $th[] = 'id';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'uid') {
+                continue;
                 $th[] = '用户id';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'latitude') {
