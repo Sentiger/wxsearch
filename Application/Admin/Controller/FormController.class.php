@@ -314,16 +314,21 @@ class FormController extends CommonController {
                     $temp = explode('|,|', $temp);
                     $tempCheckbox = '';
                     foreach($temp as $k3=>$v3) {
-                        echo $v3;
-                        p($checkbox);
                         $tempCheckbox .= $checkbox[$k1][$v3] . ',';
-
                     }
-
-                    echo 111;
-                    p($tempCheckbox);die;
-
+                    $data[$k][$k1] = rtrim($tempCheckbox,',');
                 }
+
+                /*foreach($radio as $k1=>$v1) {
+                    $temp = $v[$k1];
+                    $temp = explode('|,|', $temp);
+                    $tempCheckbox = '';
+                    foreach($temp as $k3=>$v3) {
+                        $tempCheckbox .= $checkbox[$k1][$v3] . ',';
+                    }
+                    $data[$k][$k1] = rtrim($tempCheckbox,',');
+                }*/
+
             }
         }
 
