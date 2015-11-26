@@ -23,6 +23,7 @@ Class UserController extends CommonController{
      *   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',
      */
     public function doExportExcel() {
+        $user = M('User')->select();
         
     }
 
