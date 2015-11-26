@@ -70,6 +70,9 @@ class FormModel extends Model
         $currentPage = $_GET[C('VAR_PAGE')?C('VAR_PAGE'):'p'];
         //总的条数
         $totalRecord = $model->where($where)->count();
+
+        echo 111;die;
+
         //点击表格动态排序
         $order = array('id'=>'desc');
         if(IS_POST && I('post.orderField')){
