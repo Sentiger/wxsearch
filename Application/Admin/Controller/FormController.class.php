@@ -305,6 +305,10 @@ class FormController extends CommonController {
             }
         }
 
+
+
+        $data = M($noPreTable)->field($fie)->select();
+        p($data);
         p($fields);
         p($th);
         p($fie);
