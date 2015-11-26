@@ -248,6 +248,11 @@ class FormController extends CommonController {
     }
 
 
+    public function countData() {
+        echo 111;die;
+    }
+
+
     /**
      * 导出excel
      * @return [type] [description]
