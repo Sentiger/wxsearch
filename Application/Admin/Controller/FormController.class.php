@@ -307,7 +307,7 @@ class FormController extends CommonController {
 
         $data = M($noPreTable)->field($fie)->select();
 
-        if(empty($data)) {
+        if(!empty($data)) {
             foreach($data as $k=>$v) {
                 foreach($checkbox as $k1=>$v1) {
                     $temp = $v[$k1];
