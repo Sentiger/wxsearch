@@ -294,7 +294,7 @@ class FormController extends CommonController {
         foreach($checkbox as $k=>$v) {
             foreach($v as $k1=>$v1) {
                 $where = "$k like '{$k1}|,|%'";
-                $arr[$v1] = $db->where($where)->count();
+                $arr[$k][$v1] = $db->where($where)->count();
             }
         }
 
@@ -303,10 +303,10 @@ class FormController extends CommonController {
         foreach($radio as $k=>$v) {
             foreach($v as $k1=>$v1) {
                 $where = array($k=>$k1);
-                $arr2[$v1] = $db->where($where)->count();
+                $arr2[$k][$v1] = $db->where($where)->count();
             }
         }
-
+        p($arr);
         p($arr2);die;
 
         p($checkbox);
