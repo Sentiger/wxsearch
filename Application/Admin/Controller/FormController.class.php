@@ -29,9 +29,6 @@ class FormController extends CommonController {
             $arr = $arr['fields']['field'];
 
 
-            p($arr);die;
-
-
             $noPreTable = Pinyin($_POST['table_name']);
             $noPreTable = empty($noPreTable) ? $_POST['table_name'] : Pinyin($_POST['table_name']);
 
@@ -183,7 +180,6 @@ class FormController extends CommonController {
         }
 
 
-
         foreach ($fields as $k => $v) {
 
             if($v['comment']['type'] == 'checkbox') {
@@ -219,8 +215,15 @@ class FormController extends CommonController {
 
         $this->fie = $fie;
         $this->th = $th;
-        /*p($res);die;
-        p($fields);die;*/
+
+        $this->checkbox = $checkbox;
+        $this->radio = $radio;
+        
+        // p($checkbox);die;
+        
+
+        /*p($checkbox);
+        p($radio);die;*/
 
         $this->display();
     }
