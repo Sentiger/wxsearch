@@ -321,9 +321,7 @@ class FormController extends CommonController {
 
                 foreach($radio as $k4=>$v4) {
                     $temp = $v[$k4];
-
-                    echo $temp;die;
-                    $data[$k][$k4] = $radio[$temp];
+                    $data[$k][$k4] = $radio[$k4][$temp];
                 }
 
             }
