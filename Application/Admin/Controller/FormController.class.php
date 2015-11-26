@@ -247,10 +247,13 @@ class FormController extends CommonController {
 
     }
 
-
+    /**
+     * 表格统计
+     */
     public function countData() {
-        echo 111;die;
+        $this->display();
     }
+
 
 
     /**
