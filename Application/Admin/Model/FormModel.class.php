@@ -87,7 +87,8 @@ class FormModel extends Model
             'perpage' => $perpage,
             'orderField' => I('post.orderField','id'),
             'orderDirection' => I('post.orderDirection','desc'),
-            'keywords' => I('post.keywords',''),
+            'start_time'=>I('post.start_time'),
+            'end_time'=>I('post.end_time')
         );
 
     }
