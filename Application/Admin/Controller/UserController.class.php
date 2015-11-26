@@ -57,6 +57,6 @@ Class UserController extends CommonController{
 
     Public function loginOut() {
         session_destroy();
-        $this->redirect('/Admin/Login/login');
+        $this->redirect('/Admin/Login/index');
     }
 }
