@@ -47,7 +47,7 @@ class FormModel extends Model
      * @return Ambigous <\Think\mixed, string, boolean, NULL, multitype:, unknown, mixed, void, object>
      */
     Public function voteLst($tableName) {
-        $this->tableName = $tableName;
+        $model = M($tableName);
         //查询条件
         // $where = array('comment'=>array('like',"%".I('post.keywords','')."%"));
         //每页显示条数，默认20
@@ -57,7 +57,7 @@ class FormModel extends Model
         //当前的页数
         $currentPage = $_GET[C('VAR_PAGE')?C('VAR_PAGE'):'p'];
         //总的条数
-        $totalRecord = $this->where($where)->count();
+        $totalRecord = $model->where($where)->count();
         //点击表格动态排序
         $order = array('id'=>'desc');
         if(IS_POST && I('post.orderField')){
@@ -66,7 +66,7 @@ class FormModel extends Model
 
         $page = new \Think\Page($totalRecord, $perpage);
         return  array(
-            'data' => $this->field('*')->where($where)->limit($page->firstRow, $page->listRows)->order($order)->select(),
+            'data' => $model->field('*')->where($where)->limit($page->firstRow, $page->listRows)->order($order)->select(),
             'page' => $page->show(), // 翻页的字符串
             'currentPage' => $currentPage,
             'total' => $totalRecord,
