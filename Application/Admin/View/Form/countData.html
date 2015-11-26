@@ -1,92 +1,82 @@
-
-<script type="text/javascript" charset="utf-8">
-/* Title settings */		
-title = "这是标题";
-titleXpos = 390;
-titleYpos = 85;
-
-/* Pie Data */
-pieRadius = 130;
-pieXpos = 150;
-pieYpos = 180;
-pieData = [3, 3, 3];
-pieLegend = [
-"%%.%% – Firefox",
-"%%.%% – Internet Explorer", 
-"%%.%% – Chrome"
-];
-
-pieLegendPos = "east";
-
-$(function () {
-//	var r = Raphael("chartHolder");
-//
-//	r.text(titleXpos, titleYpos, title).attr({"font-size": 20});
-//
-//	var pie = r.piechart(pieXpos, pieYpos, pieRadius, pieData, {legend: pieLegend, legendpos: pieLegendPos});
-//	pie.hover(function () {
-//		this.sector.stop();
-//		this.sector.scale(1.1, 1.1, this.cx, this.cy);
-//		if (this.label) {
-//			this.label[0].stop();
-//			this.label[0].attr({ r: 7.5 });
-//			this.label[1].attr({"font-weight": 800});
-//		}
-//	}, function () {
-//		this.sector.animate({ transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, "bounce");
-//		if (this.label) {
-//			this.label[0].animate({ r: 5 }, 500, "bounce");
-//			this.label[1].attr({"font-weight": 400});
-//		}
-//	});
-
-//    var r1 = Raphael("chartHolder1");
-//
-//    r1.text(titleXpos, titleYpos, title).attr({"font-size": 20});
-//
-//    var pie = r1.piechart(pieXpos, pieYpos, pieRadius, pieData, {legend: pieLegend, legendpos: pieLegendPos});
-//    pie.hover(function () {
-//        this.sector.stop();
-//        this.sector.scale(1.1, 1.1, this.cx, this.cy);
-//        if (this.label) {
-//            this.label[0].stop();
-//            this.label[0].attr({ r1: 7.5 });
-//            this.label[1].attr({"font-weight": 800});
-//        }
-//    }, function () {
-//        this.sector.animate({ transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, "bounce");
-//        if (this.label) {
-//            this.label[0].animate({ r1: 5 }, 500, "bounce");
-//            this.label[1].attr({"font-weight": 400});
-//        }
-//    });
-
-
-    var r2 = Raphael("chartHolder2");
-
-    r2.text(titleXpos, titleYpos, title).attr({"font-size": 20});
-
-    var pie = r2.piechart(pieXpos, pieYpos, pieRadius, pieData, {legend: pieLegend, legendpos: pieLegendPos});
-    pie.hover(function () {
-        this.sector.stop();
-        this.sector.scale(1.1, 1.1, this.cx, this.cy);
-        if (this.label) {
-            this.label[0].stop();
-            this.label[0].attr({ r2: 7.5 });
-            this.label[1].attr({"font-weight": 800});
-        }
-    }, function () {
-        this.sector.animate({ transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, "bounce");
-        if (this.label) {
-            this.label[0].animate({ r2: 5 }, 500, "bounce");
-            this.label[1].attr({"font-weight": 400});
+<div id="main1" style="height:400px;"></div>
+<div id="main2" style="height:400px;"></div>
+<div id="main3" style="height:400px;"></div>
+<script src="__PUBLIC__/Admin/echarts/build/dist/echarts-all.js"></script>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: '__PUBLIC__/Admin/echarts/build/dist/'
         }
     });
-
-	
-});
 </script>
-
-<div id="chartHolder"></div>
-<div id="chartHolder1"></div>
-<div id="chartHolder2"></div>
+<script>
+    var myChart = echarts.init(document.getElementById('main1'));
+    var option = {
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient : 'vertical',
+            x : 'left',
+            data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {
+                    show: true,
+                    type: ['pie', 'funnel'],
+                    option: {
+                        funnel: {
+                            x: '25%',
+                            width: '50%',
+                            funnelAlign: 'center',
+                            max: 1548
+                        }
+                    }
+                },
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        series : [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius : ['50%', '70%'],
+                itemStyle : {
+                    normal : {
+                        label : {
+                            show : false
+                        },
+                        labelLine : {
+                            show : false
+                        }
+                    },
+                    emphasis : {
+                        label : {
+                            show : true,
+                            position : 'center',
+                            textStyle : {
+                                fontSize : '30',
+                                fontWeight : 'bold'
+                            }
+                        }
+                    }
+                },
+                data:[
+                    {value:335, name:'直接访问'},
+                    {value:310, name:'邮件营销'},
+                    {value:234, name:'联盟广告'},
+                    {value:135, name:'视频广告'},
+                    {value:1548, name:'搜索引擎'}
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
