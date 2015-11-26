@@ -204,7 +204,7 @@ class FormController extends CommonController {
             }elseif($v['field'] == 'longitude') {
                 $th[] = '纬度';
                 $fie[] = $v['field'];
-            }elseif($v['field'] == 'longitude'){
+            }elseif($v['field'] == 'add_time'){
                 $th[] = '反馈时间';
                 $fie[] = $v['field'];
             }else {
