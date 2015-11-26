@@ -40,6 +40,7 @@ class FormController extends CommonController {
             $sql .= "uid int(10) unsigned ,";
             $sql .= "latitude varchar(100) NOT NULL DEFAULT '' ,";
             $sql .= "longitude varchar(100) NOT NULL DEFAULT '' ,";
+            $sql .= "add_time timestamp ,";
 
             if(empty($_POST['table_name'])) {
                 $this->ajax(300, '表单名称不能为空', 'Admin_Form_lst', 'closeCurrent');
