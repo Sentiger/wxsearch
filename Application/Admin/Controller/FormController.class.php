@@ -235,7 +235,7 @@ class FormController extends CommonController {
         $noPreTable = I('get.table_name');
 
         if(M($noPreTable)->delete($id)) {
-         $this->ajax(200, '删除成功！', '','closeCurrent');
+         $this->ajax(200, '删除成功！');
         } else {
              $this->ajax(300, '删除失败！');
         }
