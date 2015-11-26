@@ -167,6 +167,7 @@ class FormController extends CommonController {
         $tableName = I('table_name');
         if(empty($tableName)) die('非法操作');
         $db = M();
+        $noPreTable = substr($tableName, strlen(C('DB_PREFIX')));
         if(!$db->query("SHOW TABLES LIKE '{$tableName}'")) die('非法操作');
 
         $fields = $db->query('SHOW FULL FIELDS FROM '.$tableName);
@@ -174,15 +175,11 @@ class FormController extends CommonController {
         foreach ($fields as $k => $v) {
             $fields[$k]['comment'] = json_decode($v['comment'],true);
         }
+        $model = D('Form');
+        $res = $model->voteLst($noPreTable);
+        $this->data = $res;
 
-        p($fields);die;
-
-
-
-
-
-
-
+        $this->display();
     }
 
 
