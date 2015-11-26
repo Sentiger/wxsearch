@@ -31,7 +31,8 @@ class FormController extends CommonController {
             $tableName = C('DB_PREFIX') . 'form_' . Pinyin($_POST['table_name']);
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
             $sql .= "uid int(10) unsigned ,";
-
+            $sql .= "latitude varchar(100) NOT NULL DEFAULT '' ,";
+            $sql .= "longitude varchar(100) NOT NULL DEFAULT '' ,";
 
             if(empty($_POST['table_name'])) {
                 $this->ajax(300, '表单名称不能为空', 'Admin_Form_lst', 'closeCurrent');
