@@ -16,6 +16,8 @@ class LoginController extends Controller {
         $password = I('password','');
         $username = I('username','');
 
+        p($_POST);die;
+
         $info = M('admin')->where(array('username'=>$username))->find();
         if($info){
             echo $password;
