@@ -28,7 +28,15 @@ class FormController extends CommonController {
             $arr = simplest_xml_to_array($xml);
             $arr = $arr['fields']['field'];
 
-            $tableName = C('DB_PREFIX') . 'form_' . Pinyin($_POST['table_name']);
+            if(empty(Pinyin($_POST['table_name'])) $_POST['table_name'] = $
+
+            $noPreTable = Pinyin($_POST['table_name']);
+            $noPreTable = empty($noPreTable) ? $_POST['table_name'] : Pinyin($_POST['table_name']);
+
+            $tableName = C('DB_PREFIX') . 'form_' . $noPreTable;
+
+
+
             $sql = "create table " . $tableName . "( id int(10) unsigned NOT NULL primary key AUTO_INCREMENT COMMENT '自增id',";
             $sql .= "uid int(10) unsigned ,";
             $sql .= "latitude varchar(100) NOT NULL DEFAULT '' ,";
