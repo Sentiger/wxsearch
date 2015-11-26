@@ -294,7 +294,7 @@ class FormController extends CommonController {
             foreach($v as $k1=>$v1) {
 
                 $where = "$k like '{$k1}|,|%'";
-                $arr[] = $db->where($where)->count();
+                $arr[$v1] = $db->where($where)->count();
 
             }
         }
