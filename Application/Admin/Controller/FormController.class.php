@@ -180,6 +180,7 @@ class FormController extends CommonController {
         }
         foreach ($fields as $k => $v) {
             if($v['field'] == 'id') {
+                continue;
                 $th[] = 'id';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'uid') {
