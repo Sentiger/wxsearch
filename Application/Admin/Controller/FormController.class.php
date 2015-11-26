@@ -295,6 +295,8 @@ class FormController extends CommonController {
 
                 $where = "$k1 like '{$v1}|,|'";
                 $arr[] = $db->where($where)->count();
+                echo $db->getLastSql() . '<br>';
+
             }
         }
 
