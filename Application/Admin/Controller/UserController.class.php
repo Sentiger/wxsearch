@@ -29,6 +29,30 @@ Class UserController extends CommonController{
         exportexcel($user, $title, '用户列表');die; 
     }
 
+    /**
+     * 修改用户名或密码
+     */
+    public function setPassword() {
+        if(IS_POST) {
+            $data = array(
+                'username'=>I('username'),
+                'password'=>I('password','','md5')
+            );
+
+            $id = I('id',0,'intval');
+
+            if(M('admin')->where(array('id'=>$id))->save($data) !== false) {
+                $this->ajax(200,'修改成功','','closeCurrent');
+            } else {
+                $this->ajax(300,'修改失败');
+            }
+
+        }
+
+        $this->display();
+    }
+
+
     Public function loginOut() {
         session_destroy();
         $this->redirect('/Admin/Login/login');
