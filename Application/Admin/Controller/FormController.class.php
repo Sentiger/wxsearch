@@ -172,12 +172,40 @@ class FormController extends CommonController {
 
         $fields = $db->query('SHOW FULL FIELDS FROM '.$tableName);
 
+        $th = array();
+        $fie = array();
+
         foreach ($fields as $k => $v) {
             $fields[$k]['comment'] = json_decode($v['comment'],true);
         }
+        foreach ($fields as $k => $v) {
+            if($v['field'] == 'id') {
+                $th[] = 'id';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'uid') {
+                $th[] = '用户id';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'latitude') {
+                $th[] = '经度';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'longitude') {
+                $th[] = '纬度';
+                $fie[] = $v['field'];
+            }else {
+                $th[] = $v['comment']['label'];
+                $fie[] = $v['field'];
+            }
+        }
+
         $model = D('Form');
         $res = $model->voteLst($noPreTable);
         $this->data = $res;
+        $this->fields = $fields;
+
+        $this->fie = $fie;
+        $this->th = $th;
+        /*p($res);die;
+        p($fields);die;*/
 
         $this->display();
     }
