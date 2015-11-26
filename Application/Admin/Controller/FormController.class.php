@@ -305,14 +305,14 @@ class FormController extends CommonController {
                 $where = array($k=>$k1);
                 $arr2[$k][$v1] = $db->where($where)->count();
             }
-        }
+        }/*
         p($arr);
         p($arr2);die;
 
         p($checkbox);
         p($radio);
         p($th);
-        p($fie);die;
+        p($fie);die;*/
 
 
         $this->display();
