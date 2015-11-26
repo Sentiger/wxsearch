@@ -226,6 +226,21 @@ class FormController extends CommonController {
         $this->display();
     }
 
+    /**
+     * 删除
+     * @return [type] [description]
+     */
+    public function delVote() {
+        $id = I('get.id',0,'intval');
+        $noPreTable = I('get.table_name');
+
+        if(M($noPreTable)->delete($id)) {
+         $this->ajax(200, '删除成功！', 'Admin_Form_voteLst');
+        } else {
+             $this->ajax(300, '删除失败！');
+        }
+
+    }
 
 
 
