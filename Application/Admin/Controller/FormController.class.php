@@ -286,28 +286,19 @@ class FormController extends CommonController {
                 $fie[] = $v['field'];
             }
 
-            /*if($v['field'] == 'id') {
-                $th[] = 'id';
-                $fie[] = $v['field'];
-            }elseif($v['field'] == 'uid') {
-                continue;
-                $th[] = '用户id';
-                $fie[] = $v['field'];
-            }elseif($v['field'] == 'latitude') {
-                $th[] = '经度';
-                $fie[] = $v['field'];
-            }elseif($v['field'] == 'longitude') {
-                $th[] = '纬度';
-                $fie[] = $v['field'];
-            }elseif($v['field'] == 'add_time'){
-                $th[] = '反馈时间';
-                $fie[] = $v['field'];
-            }else {
-                $th[] = $v['comment']['label'];
-                $fie[] = $v['field'];
-            }*/
         }
 
+        $db = M($noPreTable);
+
+        foreach($checkbox as $k=>$v) {
+            foreach($v as $k1=>$v1) {
+
+                $where = array($k1=>array('like', $v1."|,|%"));
+                $arr[] = $db->where($where)->count();
+            }
+        }
+
+        p($arr);die;
 
         p($checkbox);
         p($radio);
