@@ -309,6 +309,19 @@ class FormController extends CommonController {
 
         if(empty($data)) {
             foreach($data as $k=>$v) {
+                foreach($checkbox as k1=>$v1) {
+                    $temp = $v[$k1];
+                    $temp = explode('|,|', $temp);
+                    $tempCheckbox = '';
+                    foreach($temp as $k3=>$v3) {
+                        $tempCheckbox .= $checkbox[$v3] . ',';
+
+                    }
+                    p($tempCheckbox);die;
+
+
+                }
+
 
             }
         }
