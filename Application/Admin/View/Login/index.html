@@ -77,7 +77,7 @@ $(function() {
 			$.cookie(COOKIE_NAME, null, { path: '/' });  //删除cookie
 		}
 		$("#login_ok").attr("disabled", true).val('登陆中..');
-		var password = HMAC_SHA256_MAC($("#j_username").val(), $("#j_password").val());
+//		var password = HMAC_SHA256_MAC($("#j_username").val(), $("#j_password").val());
 //		$("#j_password").val(HMAC_SHA256_MAC($("#j_randomKey").val(), password));
 //        window.location.href = 'index.html'; /*注意：生产环境时请删除此行*/
 //        return false;
