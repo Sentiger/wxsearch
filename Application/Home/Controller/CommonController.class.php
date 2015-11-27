@@ -13,6 +13,7 @@ class CommonController extends Controller {
     const R_ACCESS_CODE_TOKEN_URL = 'https://api.weixin.qq.com/sns/oauth2/refresh_token';   //用户用户授权时获取的用户信息，重新刷新access_token
     const GET_USER_INFO_URL = 'https://api.weixin.qq.com/sns/userinfo'; //拉取用户的详细信息
     const JS_TICK_URL = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket';
+    const LATLNG_TO_ADDR_URL = 'http://apis.map.qq.com/ws/geocoder/v1'; //腾讯将坐标转换为地址
 
     /**
      * 获取微信token
@@ -144,6 +145,20 @@ class CommonController extends Controller {
         S('access_token',$ticket,7000);
 
         return $ticket;
+    }
+
+
+    /**
+     * lat：经度
+     * long：纬度
+     * 将经纬度转换为地址
+     */
+    public function latLongToAddr($lat,$long) {
+        $location = $lat . ',' . $long;
+        $url = self::LATLNG_TO_ADDR_URL;
+        $options = array('location',$location);
+        $res = cUrl($url,$options);
+        return json_decode($res);
     }
 
 }
