@@ -7,8 +7,8 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
 
+        p($_SERVER);die;
         if(!is_weixin()) die('请在微信中打开');
-
         $code = I('code');
         $tableName = I('table_name');   
         
