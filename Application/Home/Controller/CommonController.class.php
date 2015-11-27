@@ -156,7 +156,10 @@ class CommonController extends Controller {
     public function latLongToAddr($lat,$long) {
         $location = $lat . ',' . $long;
         $url = self::LATLNG_TO_ADDR_URL;
-        $options = array('location',$location);
+        $options = array(
+            'key' => C('ADDR_KEY'),
+            'location'=>$location
+        );
         $res = cUrl($url,$options);
         return json_decode($res);
     }
