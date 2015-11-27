@@ -306,7 +306,7 @@ class FormController extends CommonController {
 
         $tempWhere = '';
         if(!empty($start_time) && !empty($end_time)) {
-            $tempWhere = "add_time >= '{$start_time}' and add_time <= '{$end_time} 23:59:59' ";
+            $tempWhere = "add_time >= '{$start_time}' and add_time <= '{$end_time} 23:59:59' and ";
         } else {
             if(!empty($start_time))
                 $tempWhere = "add_time >= '{$start_time}' and ";
