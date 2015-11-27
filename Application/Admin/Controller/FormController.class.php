@@ -202,10 +202,15 @@ class FormController extends CommonController {
                 $th[] = '用户id';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'latitude') {
+                continue;
                 $th[] = '经度';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'longitude') {
+                continue;
                 $th[] = '纬度';
+                $fie[] = $v['field'];
+            }elseif($v['field'] == 'lat_log_to_addr'){
+                $th[] = '用户所在地';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'add_time'){
                 $th[] = '反馈时间';
