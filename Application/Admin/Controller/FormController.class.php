@@ -341,6 +341,10 @@ class FormController extends CommonController {
             $temp .= ']';
             $data[$k]['data'] = $temp;
         }
+
+        $this->startTime = $start_time;
+        $this->endTime = $end_time;
+
         $this->tableName = $tableName;
         $this->data = $data;
         $this->title = $th;
