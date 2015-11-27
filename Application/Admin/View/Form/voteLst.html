@@ -56,7 +56,7 @@
 				<?php  $length = count($th); for($j=0; $j<$length;$j++): ?>
 				
 				<?php if(isset($checkbox[$fie[$j]])):?>
-					<?php $op = explode('|,|', $v1[$fie[$j]]); $str = ''; foreach($op as $k2=>$v2) $str .= $checkbox[$fie[$j]][$v2] . ','; $str = rtrim($str,',');?>
+					<?php $op = explode(',', $v1[$fie[$j]]); $str = ''; foreach($op as $k2=>$v2) $str .= $checkbox[$fie[$j]][$v2] . ','; $str = rtrim($str,',');?>
 					<td>
 						<?php echo $str; ?>
 					</td>
