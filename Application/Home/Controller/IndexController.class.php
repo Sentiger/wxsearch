@@ -6,13 +6,12 @@ use Think\Controller;
  */
 class IndexController extends CommonController {
     public function index(){
-        var_dump($_SERVER['HTTP_REFERER']);
-        p($_SERVER);die;
+
         if(!is_weixin()) die('请在微信中打开');
         $code = I('code');
         $tableName = I('table_name');   
         
-        if(empty($tableName)) die('非法操作！');
+        if(empty($tableName) || empty($code)) die('非法操作！');
 
         $tableInfo = M('tables')->where(array('table_name'=>$tableName))->find();
 
