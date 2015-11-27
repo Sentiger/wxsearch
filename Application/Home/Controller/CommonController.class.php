@@ -161,7 +161,7 @@ class CommonController extends Controller {
             'location'=>$location
         );
         $res = cUrl($url,$options);
-        return json_decode($res);
+        return json_decode($res,true);
     }
 
 }
