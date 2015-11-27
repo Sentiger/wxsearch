@@ -18,7 +18,7 @@ class CommonController extends Controller {
      * 获取微信token
      * @return mixed|string
      */
-    public function getAccessToken() {
+    protected function getAccessToken() {
         if(S('access_token')) return S('access_token');
         $appId = C('APP_ID');
         $appSecret = C('APP_SECRET');
@@ -60,7 +60,7 @@ class CommonController extends Controller {
      * @param $res array
      * @return array|bool|\mix|mixed|\stdClass|string
      */
-    public function getRefreshCodeAccessToken($res) {
+    protected  function getRefreshCodeAccessToken($res) {
         $url = self::R_ACCESS_CODE_TOKEN_URL;
         $options = array(
             'appid'=> C('APP_ID'),
