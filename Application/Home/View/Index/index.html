@@ -288,10 +288,23 @@
             var company_name = $('#company_name').val();
             var mobile = $('#mobile').val();
             var address = $('#address').val();
+            var real_name = $('#real_name').val();
+            var job = $('#job').val();
 
             if(company_name == '') {
                 $('#info_box').show();
                 $('#info_text').text('公司名称不能为空');
+                return false;
+            }
+
+            if(real_name == '') {
+                $('#info_box').show();
+                $('#info_text').text('姓名不能为空');
+                return false;
+            }
+            if(job == '') {
+                $('#info_box').show();
+                $('#info_text').text('职务不能为空');
                 return false;
             }
 
