@@ -323,7 +323,8 @@ class FormController extends CommonController {
         $arr2 = array();
         foreach($radio as $k=>$v) {
             foreach($v as $k1=>$v1) {
-                $where = array($k=>$k1);
+//                $where = array($k=>$k1);
+                $where = $tempWhere . " {$k}=${$k1}";
                 $arr2[$k][$v1] = $db->where($where)->count();
             }
         }
