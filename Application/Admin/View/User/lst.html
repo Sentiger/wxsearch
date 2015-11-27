@@ -34,16 +34,18 @@
 		<thead>
 			<tr>
 				<!-- <th width="22"><input type="checkbox" group="ids[]" class="checkboxCtrl"></th> -->
-				<th width="120" orderField="id" <?php if($data['orderField']=='id'):?>class="<?php echo $data['orderDirection']?>"<?php endif; ?>>用户号</th>
+				<th width="120" orderField="id" <?php if($data['orderField']=='id'):?>class="<?php echo $data['orderDirection']?>"<?php endif; ?>>用户ID</th>
 				<th>公司名</th>
 				<th>手机号</th>
-				<th>openid</th>
 				<th>地址</th>
 				<th>微信昵称</th>
+				<th>性别</th>
+				<th>省份</th>
+				<th>城市</th>
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach($data['data'] as $v): ?>
+			<?php $sex = array(0=>'男',1=>'女','2'=>'保密'); foreach($data['data'] as $v): ?>
 			<tr target="sid" rel="<?php echo $v['id'];?>">
 				
 				<!-- <td><input name="ids[]" value="<?php echo $v['id'];?>" type="checkbox"></td> -->
@@ -51,9 +53,11 @@
 				<td><?php echo $v['id']; ?></td>
 				<td><?php echo $v['company_name']; ?></td>
 				<td><?php echo $v['mobile']; ?></td>
-				<td><?php echo $v['openid']; ?></td>
 				<td><?php echo $v['address']; ?></td>
 				<td><?php echo $v['nickname']; ?></td>
+                <td><?php echo $sex[$v['sex']]; ?></td>
+                <td><?php echo $v['province']; ?></td>
+                <td><?php echo $v['city']; ?></td>
 
 			</tr>
 			<?php endforeach;?>
