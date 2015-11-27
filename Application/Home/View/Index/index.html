@@ -231,9 +231,9 @@
         });
 
         wx.onMenuShareTimeline({
-            title: '你妹....', // 分享标题
-            link: 'http://www.bing.com', // 分享链接
-            imgUrl: '__PUBLIC__/Admin/ico/favicon.ico', // 分享图标
+            title: '{$table.share_title}', // 分享标题
+            link: '{$table.url}', // 分享链接
+            imgUrl: '{$table.share_ico}', // 分享图标
             success: function () {
                 alert("sssss")
             },
