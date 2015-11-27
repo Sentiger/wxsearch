@@ -29,7 +29,8 @@ return array(
     'REDIRECT_URI'=>'http://wxsearch.sentiger.com',
 
     //地址转换key
-    'ADDR_KEY'=>'WCHBZ-FIRKU-7MDV3-4ECK3-I7QX5-LXBLU',
+//    'ADDR_KEY'=>'WCHBZ-FIRKU-7MDV3-4ECK3-I7QX5-LXBLU',
+    'ADDR_KEY'=>'TAGBZ-RAW3U-RMKVP-4YR7X-CLOX6-HHF2Y',
 
 
 
