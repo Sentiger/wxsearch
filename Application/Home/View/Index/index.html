@@ -238,7 +238,7 @@
         wx.onMenuShareTimeline({
             title: '{$table.share_title}', // 分享标题
             link: '{$table.url}', // 分享链接
-            imgUrl: '{$table.share_ico}', // 分享图标
+            imgUrl: '{:C('WEB_URL')}{$table.share_ico}', // 分享图标
             success: function () {
                 alert("分享成功")
             },
