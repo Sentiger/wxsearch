@@ -37,11 +37,11 @@
 				<th width="120" orderField="id" <?php if($data['orderField']=='id'):?>class="<?php echo $data['orderDirection']?>"<?php endif; ?>>用户ID</th>
 				<th>公司名</th>
 				<th>手机号</th>
-				<th>地址</th>
 				<th>微信昵称</th>
 				<th>性别</th>
 				<th>省份</th>
 				<th>城市</th>
+                <th>地址</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -53,11 +53,11 @@
 				<td><?php echo $v['id']; ?></td>
 				<td><?php echo $v['company_name']; ?></td>
 				<td><?php echo $v['mobile']; ?></td>
-				<td><?php echo $v['address']; ?></td>
 				<td><?php echo $v['nickname']; ?></td>
                 <td><?php echo $sex[$v['sex']]; ?></td>
                 <td><?php echo $v['province']; ?></td>
                 <td><?php echo $v['city']; ?></td>
+                <td><?php echo $v['address']; ?></td>
 
 			</tr>
 			<?php endforeach;?>
