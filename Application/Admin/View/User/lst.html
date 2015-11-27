@@ -36,6 +36,8 @@
 				<!-- <th width="22"><input type="checkbox" group="ids[]" class="checkboxCtrl"></th> -->
 				<th width="120" orderField="id" <?php if($data['orderField']=='id'):?>class="<?php echo $data['orderDirection']?>"<?php endif; ?>>用户ID</th>
 				<th>公司名</th>
+				<th>用户名</th>
+				<th>职务</th>
 				<th>手机号</th>
 				<th>微信昵称</th>
 				<th>性别</th>
@@ -52,6 +54,8 @@
 				
 				<td><?php echo $v['id']; ?></td>
 				<td><?php echo $v['company_name']; ?></td>
+				<td><?php echo $v['real_name']; ?></td>
+				<td><?php echo $v['job']; ?></td>
 				<td><?php echo $v['mobile']; ?></td>
 				<td><?php echo $v['nickname']; ?></td>
                 <td><?php echo $sex[$v['sex']]; ?></td>
