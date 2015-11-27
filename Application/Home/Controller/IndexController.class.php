@@ -6,7 +6,7 @@ use Think\Controller;
  */
 class IndexController extends CommonController {
     public function index(){
-
+        var_dump($_SERVER['HTTP_REFERER']);
         p($_SERVER);die;
         if(!is_weixin()) die('请在微信中打开');
         $code = I('code');
