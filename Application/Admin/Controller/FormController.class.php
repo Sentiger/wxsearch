@@ -318,7 +318,7 @@ class FormController extends CommonController {
 
         foreach($checkbox as $k=>$v) {
             foreach($v as $k1=>$v1) {
-                $where .= " FIND_IN_SET('{$k1}',{$k})";
+                $where = " FIND_IN_SET('{$k1}',{$k})";
                 $arr[$k][$v1] = $db->where($where)->count();
             }
         }
