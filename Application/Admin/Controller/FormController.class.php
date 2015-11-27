@@ -167,7 +167,7 @@ class FormController extends CommonController {
      */
     public function voteLst() {
 
-        if(!empty(I('start_time')) && !empty(I('start_time')) && I('start_time')<I('start_time')) {
+        if(!empty(I('start_time')) && !empty(I('end_time')) && I('end_time')<I('start_time')) {
             $this->ajax(300,'开始时间不能小于结束时间');
         }
 
