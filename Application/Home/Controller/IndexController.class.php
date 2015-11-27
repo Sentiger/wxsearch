@@ -66,6 +66,16 @@ class IndexController extends CommonController {
         }
         $data['uid'] = $uid;
 
+        $lat = I('latitude');
+        $log = I('longitude');
+
+        if(!empty($lat) && !empty($log)) {
+            $res = $this->latLongToAddr($lat,$log);
+            if($res['status'] == 0) {
+                $_POST['lat_log_to_addr'] = $res['result']['formatted_addresses']['recommend'];
+            }
+        }
+
         $infoid = M($tableName)->add($data);
         if($infoid && $uid)
             $data = array(
