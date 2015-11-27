@@ -3,11 +3,11 @@
 
 <form method="post" action="<{:U('Admin/Form/add')}>" class="pageForm " onsubmit="return validateCallback(this,dialogAjaxDone)">
     <textarea name="form-builder-template" id="form-builder-template" cols="30" rows="10"></textarea>
-    <div>
+    <div class="unit">
         <label>表单名称：</label>
         <input type="text" name="table_name" size="35">
     </div>
-    <div>
+    <div class="unit">
         <label>分享标题：</label>
         <input type="text" name="share_title" size="35">
     </div>
@@ -16,7 +16,7 @@
         <input type="text" name="share_url" size="35">
     </div>
     <div class="unit">
-        <label>品牌logo：</label>
+        <label>分享ico：</label>
         <input type="file" name="file" id="uploadAvartar1"  onchange="UploadAvartar(1);" /><span id="promptText" style="color:#666;"></span><span id="avatarmsg1"></span>
         <input name="share_ico" id="img1" value="" class="required" type="hidden"/>
     </div>
