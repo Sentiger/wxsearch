@@ -55,8 +55,8 @@
 				<td><?php echo $v['mobile']; ?></td>
 				<td><?php echo $v['nickname']; ?></td>
                 <td><?php echo $sex[$v['sex']]; ?></td>
-                <td><?php echo $v['province']; ?></td>
-                <td><?php echo $v['city']; ?></td>
+                <td><?php echo empty($v['province']) ? '保密' : $v['province']; ?></td>
+                <td><?php echo empty($v['city']) ? '保密' : $v['city']; ?></td>
                 <td><?php echo $v['address']; ?></td>
 
 			</tr>
