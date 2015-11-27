@@ -328,6 +328,7 @@ class FormController extends CommonController {
             $temp .= ']';
             $data[$k]['data'] = $temp;
         }
+        $this->tableName = $tableName;
         $this->data = $data;
         $this->title = $th;
         $this->display();
