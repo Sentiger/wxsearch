@@ -41,6 +41,7 @@ class FormController extends CommonController {
             $sql .= "uid int(10) unsigned ,";
             $sql .= "latitude varchar(100) NOT NULL DEFAULT '' ,";
             $sql .= "longitude varchar(100) NOT NULL DEFAULT '' ,";
+            $sql .= "lat_log_to_addr varchar(300) NOT NULL DEFAULT '' ,";
             $sql .= "add_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ,";
 
             if(empty($_POST['table_name'])) {
