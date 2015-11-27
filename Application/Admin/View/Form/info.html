@@ -1,5 +1,5 @@
+<script src="__PUBLIC__/Admin/js/qrcode.js" type="text/javascript"></script>
 <div class="pageContent">
-
 	<form method="post" action="" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone)">
 
 		<div class="pageFormContent" layoutH="58">
@@ -19,14 +19,17 @@
             <div class="unit">
                 <label>二维码</label>
                 <div id="wxurl-qrcode" style="width: 200px;height: 200px; float: left"></div>
-                <script type="text/javascript">
-                	var wxurl = document.getElementById("wxurl").innerHTML
-                	console.log(wxurl)
-                	$('#wxurl-qrcode').qrcode({width: 200,height: 200,text: wxurl});
+                <script>
+                    var wxurl = document.getElementById("wxurl").innerHTML
+                    console.log(wxurl)
+                    var qrnode = new AraleQRCode({
+                        text: wxurl,
+                        pdground: '#00aaee',
+                        image : 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png'
+                    });
+                    document.getElementById('wxurl-qrcode').appendChild(qrnode);
                 </script>
             </div>
-
-		
 
 		</div>
 		
