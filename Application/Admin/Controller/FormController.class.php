@@ -442,13 +442,6 @@ class FormController extends CommonController {
             $info['status'] = 200;
             $info['message'] = '上传成功';
         }
-        $logo = '.'.$info['src'];
-        // 生成缩略图
-
-        $image = new \Think\Image();
-        $image->open($logo);
-        // 生成缩略图并覆盖原图
-        $image->thumb(C('BRAND_IMG_WIDTH'), C('BRAND_IMG_HEIGHT'))->save($logo);
 
         echo json_encode($info);
     }
