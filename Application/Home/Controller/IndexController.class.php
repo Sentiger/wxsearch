@@ -7,6 +7,10 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
 
+        $res = $this->latLongToAddr(31.181442,121.39328);
+
+        p($res);die;
+
         if(!is_weixin()) die('请在微信中打开');
 
         $code = I('code');
