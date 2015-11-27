@@ -29,6 +29,8 @@ class FormController extends CommonController {
             $arr = $arr['fields']['field'];
 
 
+            p($arr);die;
+
             $noPreTable = Pinyin($_POST['table_name']);
             $noPreTable = empty($noPreTable) ? $_POST['table_name'] : Pinyin($_POST['table_name']);
 
@@ -276,17 +278,19 @@ class FormController extends CommonController {
 
             if($v['comment']['type'] == 'checkbox') {
                 $checkbox[$v['field']] = $v['comment']['option'];
-                $th[] = $v['comment']['label'];
-                $fie[] = $v['field'];
+                $th[$v['field']] = $v['comment']['label'];
             }
 
             if($v['comment']['type'] == 'radio') {
                 $radio[$v['field']] = $v['comment']['option'];
-                $th[] = $v['comment']['label'];
-                $fie[] = $v['field'];
+                $th[$v['field']] = $v['comment']['label'];
             }
 
+            
+
         }
+
+
 
         $db = M($noPreTable);
 
@@ -305,16 +309,23 @@ class FormController extends CommonController {
                 $where = array($k=>$k1);
                 $arr2[$k][$v1] = $db->where($where)->count();
             }
-        }/*
-        p($arr);
-        p($arr2);die;
+        }
 
-        p($checkbox);
-        p($radio);
-        p($th);
-        p($fie);die;*/
+        $data = array_merge($arr2,$arr);
 
 
+        foreach ($data as $k => $v) {
+            $data[$k]['title'] = json_encode(array_keys($v));
+            $temp = '[';
+            foreach ($v as $k2 => $v2) {
+                $temp .= '{value:' . $v2 . ',' . 'name:' . '"'.$k2.'"' . '},';
+            }
+            $temp = rtrim($temp,',');
+            $temp .= ']';
+            $data[$k]['data'] = $temp;
+        }
+        $this->data = $data;
+        $this->title = $th;
         $this->display();
     }
 
