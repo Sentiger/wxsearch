@@ -264,6 +264,11 @@ class FormController extends CommonController {
         $tableName = I('table_name');
         $start_time = I('start_time','');
         $end_time = I('end_time','');
+
+        if(!empty($start_time) && !empty($end_time) && $end_time<$start_time) {
+            $this->ajax(300,'开始时间不能小于结束时间');
+        }
+
         if(empty($tableName)) die('非法操作');
         $db = M();
         $noPreTable = substr($tableName, strlen(C('DB_PREFIX')));
