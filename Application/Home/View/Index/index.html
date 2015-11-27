@@ -240,9 +240,10 @@
             link: '{$table.url}', // 分享链接
             imgUrl: '{$table.share_ico}', // 分享图标
             success: function () {
-                alert("sssss")
+                alert("分享成功")
             },
             cancel: function () {
+                alert('分享失败');
                 // 用户取消分享后执行的回调函数
             }
         });
