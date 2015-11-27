@@ -418,6 +418,41 @@ class FormController extends CommonController {
     }
 
 
+    /**
+     * 图片上传
+     */
+    public function upload() {
+        $config = array(
+            'maxSize'    =>     10 * 1024 * 1024, // 设置附件上传大小
+            'rootPath'   =>    './Upload/',
+            'savePath'   =>    'ico/',
+            'saveName'   =>    array('uniqid',''),
+            'exts'       =>    'jpg,png,jpeg,gif,ico',
+            'autoSub'    =>    true,
+            'subName'    =>    array('date','Ymd'),
+        );
+        $upload = new \Think\Upload($config);// 实例化上传类
+        // 上传文件
+        $infos   =   $upload->upload();
+        $info = array('status' => 100, 'message' => '上传失败');
+        if(!$infos) {// 上传错误提示错误信息
+            $info['message'] = $upload->getError();
+        }else{// 上传成功 获取上传文件信息
+            $info['src'] = "/Upload/".$infos['file']['savepath'].$infos['file']['savename'];
+            $info['status'] = 200;
+            $info['message'] = '上传成功';
+        }
+        $logo = '.'.$info['src'];
+        // 生成缩略图
+
+        $image = new \Think\Image();
+        $image->open($logo);
+        // 生成缩略图并覆盖原图
+        $image->thumb(C('BRAND_IMG_WIDTH'), C('BRAND_IMG_HEIGHT'))->save($logo);
+
+        echo json_encode($info);
+    }
+
 
 
 }
