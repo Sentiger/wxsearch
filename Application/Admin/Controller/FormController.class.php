@@ -262,7 +262,6 @@ class FormController extends CommonController {
     public function countData() {
 
         $tableName = I('table_name');
-        $tableName = I('table_name');
         if(empty($tableName)) die('非法操作');
         $db = M();
         $noPreTable = substr($tableName, strlen(C('DB_PREFIX')));
