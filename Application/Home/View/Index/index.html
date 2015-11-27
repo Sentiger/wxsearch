@@ -230,11 +230,6 @@
             }
         });
 
-
-    });
-
-
-    $(function(){
         wx.onMenuShareTimeline({
             title: '你妹....', // 分享标题
             link: 'http://www.bing.com', // 分享链接
@@ -246,6 +241,12 @@
                 // 用户取消分享后执行的回调函数
             }
         });
+
+
+    });
+
+
+    $(function(){
         function sub_success(text){
             a ="<div class=\"ui-tips ui-tips-success\">" + "<i></i><span>" + text +"</span></span>"
             return (a)
