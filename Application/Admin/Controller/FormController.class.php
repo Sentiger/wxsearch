@@ -116,7 +116,9 @@ class FormController extends CommonController {
                    $data = array(
                        'table_name'=>$tableName,
                        'comment'=>$_POST['table_name'],
-                       'url'=> $uri
+                       'url'=> $uri,
+                       'share_title'=>I('share_title'),
+                       'share_ico'=>I('share_ico')
                    );
                     M('tables')->add($data);
 
