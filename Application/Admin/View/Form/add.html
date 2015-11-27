@@ -69,7 +69,7 @@
             success:function(result) {
                 if(result.status == 200) {
                     $("#img"+v).attr('value', result.src);
-                    $("#avatarmsg"+v).html('上传成功'+"<img src='"+result.src+"' >");
+                    $("#avatarmsg"+v).html('上传成功'+"<img width='100' height='100' src='"+result.src+"' >");
                 } else {
                     $("#avatarmsg"+v).html("<span>上传失败"+result.message+"</span>");
                 }
