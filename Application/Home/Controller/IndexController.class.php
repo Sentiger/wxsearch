@@ -22,7 +22,6 @@ class IndexController extends CommonController {
         $userInfo = $this->getUserInfo($res);
         $info = M('user')->where(array('openid'=>$userInfo['openid'],'table_name'=>$tableName))->find();
 
-        p($info);die;
 
         //获取jssdk信息
         $this->signPackage = $this->getSignPackage();
