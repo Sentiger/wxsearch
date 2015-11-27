@@ -57,10 +57,15 @@ class FormModel extends Model
         $start_time = I('post.start_time');
         $end_time = I('post.end_time');
 
-        if(!empty($start_time))
-            $where = array('add_time'=>array('egt',$start_time));
-        if(!empty($end_time))
-            $where = array('add_time'=>array('elt',$end_time . ' 23:59:59'));
+        if(!empty($start_time) && !empty($end_time)) {
+            $where = "add_time >= '{$start_time}' and add_time <= '{$end_time} 23:59:59'";
+        } else {
+            if(!empty($start_time))
+                $where = array('add_time'=>array('egt',$start_time));
+            if(!empty($end_time))
+                $where = array('add_time'=>array('elt',$end_time . ' 23:59:59'));
+        }
+
 
 
         $perpage = I('post.numPerPage',20,'intval');
