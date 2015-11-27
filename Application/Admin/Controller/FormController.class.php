@@ -166,6 +166,11 @@ class FormController extends CommonController {
      * @return [type] [description]
      */
     public function voteLst() {
+
+        if(!empty(I('start_time')) && !empty(I('start_time')) && I('start_time')<I('start_time')) {
+            $this->ajax(300,'开始时间不能小于结束时间');
+        }
+
         $tableName = I('table_name');
         if(empty($tableName)) die('非法操作');
         $db = M();
