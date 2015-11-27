@@ -294,15 +294,14 @@ class FormController extends CommonController {
         $db = M($noPreTable);
 
         $arr = array();
+
         foreach($checkbox as $k=>$v) {
             foreach($v as $k1=>$v1) {
-                $where = "$k like '{$k1}|,|%'";
+                $where = "FIND_IN_SET('{$k1}',{$k})";
                 $arr[$k][$v1] = $db->where($where)->count();
             }
         }
-
         $arr2 = array();
-
         foreach($radio as $k=>$v) {
             foreach($v as $k1=>$v1) {
                 $where = array($k=>$k1);
@@ -311,7 +310,6 @@ class FormController extends CommonController {
         }
 
         $data = array_merge($arr2,$arr);
-
 
         foreach ($data as $k => $v) {
             $data[$k]['title'] = json_encode(array_keys($v));
@@ -396,7 +394,7 @@ class FormController extends CommonController {
                 if(!empty($checkbox)) {
                     foreach($checkbox as $k1=>$v1) {
                         $temp = $v[$k1];
-                        $temp = explode('|,|', $temp);
+                        $temp = explode(',', $temp);
                         $tempCheckbox = '';
                         foreach($temp as $k3=>$v3) {
                             $tempCheckbox .= $checkbox[$k1][$v3] . ',';
