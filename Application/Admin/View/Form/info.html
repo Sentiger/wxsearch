@@ -14,16 +14,15 @@
             </div>
             <div class="unit" >
                 <label>微信调查url：</label>
-                <textarea id="wxurl" style="width: 270px;height: 150px;"><?php echo $data['url'];?></textarea>
+                <textarea id="wxurl" style="width: 270px;height: 150px;" readonly="true"><?php echo $data['url'];?></textarea>
             </div>
             <div class="unit">
                 <label>二维码</label>
                 <div id="wxurl-qrcode" style="width: 200px;height: 200px; float: left"></div>
                 <script>
-                    var wxurl = document.getElementById("wxurl").innerHTML
-                    console.log(wxurl)
                     var qrnode = new AraleQRCode({
-                        text: wxurl,
+                        text: '<?php echo $data['url'];?>',
+                        correctLevel: 0,
                         pdground: '#00aaee',
                         image : '__PUBLIC__/Admin/ico/favicon.ico',
                         imageSize:'60'
