@@ -1,3 +1,28 @@
+
+
+<form onsubmit="return dialogSearch(this);" action="" method="post">
+    <div class="searchBar">
+
+        <table class="searchContent">
+            <tr>
+                <td>
+                    开始日期：<input type="text" class="date" name="start_time" readonly="true" value="<{$data.start_time}>" />
+                </td>
+                <td>
+                    结束日期：<input type="text" class="date" name="end_time" readonly="true" value="<{$data.end_time}>" />
+                </td>
+                <input type="hidden" name="table_name" value="<{$tableName}>">
+            </tr>
+        </table>
+        <div class="subBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div></li>
+            </ul>
+        </div>
+    </div>
+</form>
+
+
 <script type="text/javascript" src="__PUBLIC__/Admin/echarts/build/dist/echarts.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Admin/echarts/build/dist/chart/pie.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Admin/echarts/build/dist/chart/funnel.js"></script>
