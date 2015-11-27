@@ -60,7 +60,7 @@ class FormModel extends Model
         if(!empty($start_time))
             $where = array('add_time'=>array('egt',$start_time));
         if(!empty($end_time))
-            $where = array('add_time'=>array('elt',$end_time));
+            $where = array('add_time'=>array('elt',$end_time . ' 23:59:59'));
 
 
         $perpage = I('post.numPerPage',20,'intval');
