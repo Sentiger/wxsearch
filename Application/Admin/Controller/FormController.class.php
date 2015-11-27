@@ -304,10 +304,19 @@ class FormController extends CommonController {
 
         $arr = array();
 
-        $where = '';
+        $tempWhere = '';
+        if(!empty($start_time) && !empty($end_time)) {
+            $tempWhere = "add_time >= '{$start_time}' and add_time <= '{$end_time} 23:59:59' ";
+        } else {
+            if(!empty($start_time))
+                $tempWhere = "add_time >= '{$start_time}' and ";
+            if(!empty($end_time))
+                $tempWhere = "add_time <= '{$start_time}' and ";
+        }
+
         foreach($checkbox as $k=>$v) {
             foreach($v as $k1=>$v1) {
-                $where = "FIND_IN_SET('{$k1}',{$k})";
+                $where = $tempWhere ." FIND_IN_SET('{$k1}',{$k})";
                 $arr[$k][$v1] = $db->where($where)->count();
             }
         }
