@@ -7,10 +7,6 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
 
-        $res = $this->latLongToAddr(31.181442,121.39328);
-
-        p($res);die;
-
         if(!is_weixin()) die('请在微信中打开');
 
         $code = I('code');
@@ -72,7 +68,7 @@ class IndexController extends CommonController {
         if(!empty($lat) && !empty($log)) {
             $res = $this->latLongToAddr($lat,$log);
             if($res['status'] == 0) {
-                $_POST['lat_log_to_addr'] = $res['result']['formatted_addresses']['recommend'];
+                $data['lat_log_to_addr'] = $res['result']['formatted_addresses']['recommend'];
             }
         }
 
