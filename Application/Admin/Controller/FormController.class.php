@@ -264,7 +264,6 @@ class FormController extends CommonController {
         $tableName = I('table_name');
         $start_time = I('start_time','');
         $end_time = I('end_time','');
-
         if(empty($tableName)) die('非法操作');
         $db = M();
         $noPreTable = substr($tableName, strlen(C('DB_PREFIX')));
@@ -306,26 +305,16 @@ class FormController extends CommonController {
         $arr = array();
 
 
-        $where = '';
-        if(!empty($start_time) && !empty($end_time)) {
-            $where = "add_time >= '{$start_time}' and add_time <= '{$end_time} 23:59:59' ";
-        } else {
-            if(!empty($start_time))
-                $where = "add_time >= '{$start_time}' and ";
-            if(!empty($end_time))
-                $where = "add_time <= '{$start_time}' and ";
-        }
-
         foreach($checkbox as $k=>$v) {
             foreach($v as $k1=>$v1) {
-                $where = " FIND_IN_SET('{$k1}',{$k})";
+                $where = "FIND_IN_SET('{$k1}',{$k})";
                 $arr[$k][$v1] = $db->where($where)->count();
             }
         }
         $arr2 = array();
         foreach($radio as $k=>$v) {
             foreach($v as $k1=>$v1) {
-                $where .= " {$k} = {$k1}";
+                $where = array($k=>$k1);
                 $arr2[$k][$v1] = $db->where($where)->count();
             }
         }
