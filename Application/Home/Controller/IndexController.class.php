@@ -21,7 +21,8 @@ class IndexController extends CommonController {
         // p($fields);die;
         $res = $this->getCodeAccessToken($code);
         $userInfo = $this->getUserInfo($res);
-        $info = M('user')->where(array('openid'=>$userInfo['openid'],'table_name'=>$tableName))->find();
+//        $info = M('user')->where(array('openid'=>$userInfo['openid'],'table_name'=>$tableName))->find();
+        $info = M('user')->where(array('openid'=>$userInfo['openid']))->find();
 
 
         //获取jssdk信息
