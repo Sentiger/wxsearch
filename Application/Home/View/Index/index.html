@@ -24,7 +24,7 @@
 <div id="conts" style="display: none">
 
     <header class="ui-header ui-header-positive ui-border-b">
-        <h1>{$table.comment}</h1>
+        <h1>{$table.comment}调查表</h1>
     </header>
 
     <div class="ui-container"><!-- cont -->
@@ -48,22 +48,6 @@
                         </label>
                         <textarea placeholder="街道等详细地址" id="address" name="address">{$info.address}</textarea>
                     </div>
-                    <div class="ui-form-item ui-border-b">
-                        <label>
-                            姓名
-                        </label>
-                        <input type="text" name="real_name" id="real_name" value="{$info.real_name}"  placeholder="姓名">
-                        <a class="ui-icon-close" href="#">
-                        </a>
-                    </div>
-                    <div class="ui-form-item ui-border-b">
-                        <label>
-                            职务
-                        </label>
-                        <input type="text" name="job" id="job" value="{$info.job}"  placeholder="职务">
-                        <a class="ui-icon-close" href="#">
-                        </a>
-                    </div>
                     <div class="ui-form-item ui-form-item-l ui-border-b">
                         <label class="ui-border-r">
                             中国 +86
@@ -72,7 +56,6 @@
                         <a class="ui-icon-close" href="#">
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -93,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-            <?php endif;?>  
+            <?php endif;?>
             <!-- 文本框结束 -->
 
 
@@ -112,7 +95,7 @@
                 </div>
             <?php endif;?>
             <!-- 文本域结束 -->
-            
+
             <!-- 多选框开始 -->
             <?php if($v['comment']['type']=='checkbox'): ?>
                 <div class="page-item">
@@ -133,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-            <?php endif;?>  
+            <?php endif;?>
             <!-- 多选框结束 -->
 
             <!-- 单选框开始 -->
@@ -154,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-            <?php endif;?>  
+            <?php endif;?>
             <!-- 单选框结束 -->
 
         <?php endforeach;?>
@@ -288,23 +271,10 @@
             var company_name = $('#company_name').val();
             var mobile = $('#mobile').val();
             var address = $('#address').val();
-            var real_name = $('#real_name').val();
-            var job = $('#job').val();
 
             if(company_name == '') {
                 $('#info_box').show();
                 $('#info_text').text('公司名称不能为空');
-                return false;
-            }
-
-            if(real_name == '') {
-                $('#info_box').show();
-                $('#info_text').text('姓名不能为空');
-                return false;
-            }
-            if(job == '') {
-                $('#info_box').show();
-                $('#info_text').text('职务不能为空');
                 return false;
             }
 
@@ -360,7 +330,7 @@
         document.getElementById("onloading").style.display = "none"
     }
     window.onload = function () {
-        t = setTimeout("hideonload()", 1000)
+        hideonload()
     }
 </script>
 </body>
