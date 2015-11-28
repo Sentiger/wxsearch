@@ -207,16 +207,16 @@ class FormController extends CommonController {
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'uid') {
                 continue;
-                $th[] = '用户id';
-                $fie[] = $v['field'];
+               /* $th[] = '用户id';
+                $fie[] = $v['field'];*/
             }elseif($v['field'] == 'latitude') {
                 continue;
                 $th[] = '经度';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'longitude') {
                 continue;
-                $th[] = '纬度';
-                $fie[] = $v['field'];
+                /*$th[] = '纬度';
+                $fie[] = $v['field'];*/
             }elseif($v['field'] == 'lat_log_to_addr'){
                 $th[] = '登记表格时所在位置';
                 $fie[] = $v['field'];
