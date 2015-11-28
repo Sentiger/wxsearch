@@ -59,6 +59,7 @@ Class UserController extends CommonController{
         $id = I('get.id',0,'intval');
         $tables = M('user')->where(array('id'=>$id))->getField('table_name');
         $tables = explode(',',$tables);
+        p($tables);die;
         foreach($tables as $k=>$v) {
             M($v)->where(array('uid'=>$id))->delete();
         }
