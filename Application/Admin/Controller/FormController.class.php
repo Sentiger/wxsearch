@@ -131,6 +131,7 @@ class FormController extends CommonController {
                        'share_title'=>I('share_title'),
                        'share_ico'=>I('share_ico'),
                        'share_url'=>I('share_url'),
+                       'success_img'=>I('success_img'),
                    );
                     M('tables')->add($data);
 
