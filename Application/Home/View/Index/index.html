@@ -24,136 +24,153 @@
 <div id="conts" style="display: none">
 
     <header class="ui-header ui-header-positive ui-border-b">
-        <h1>{$table.comment}调查表</h1>
+        <h1>{$table.comment}</h1>
     </header>
 
     <div class="ui-container"><!-- cont -->
         <form  id="form">
-        <div class="page-item">
-            <p class="page-desc">基本信息</p>
+            <div class="page-item">
+                <p class="page-desc">基本信息</p>
 
-            <div class="page-block">
-                <div class="ui-form ui-border-t">
-                    <div class="ui-form-item ui-border-b">
-                        <label>
-                            公司名称
-                        </label>
-                        <input type="text" name="company_name" id="company_name" value="{$info.company_name}"  placeholder="公司名字">
-                        <a class="ui-icon-close" href="#">
-                        </a>
-                    </div>
-                    <div class="ui-form-item ui-form-item-textarea ui-border-b">
-                        <label>
-                            详细地址
-                        </label>
-                        <textarea placeholder="街道等详细地址" id="address" name="address">{$info.address}</textarea>
-                    </div>
-                    <div class="ui-form-item ui-form-item-l ui-border-b">
-                        <label class="ui-border-r">
-                            中国 +86
-                        </label>
-                        <input  type="text" name="mobile" id="mobile" value="{$info.mobile}" placeholder="请输入手机号码">
-                        <a class="ui-icon-close" href="#">
-                        </a>
+                <div class="page-block">
+                    <div class="ui-form ui-border-t">
+                        <div class="ui-form-item ui-border-b">
+                            <label>
+                                公司名称
+                            </label>
+                            <input type="text" name="company_name" id="company_name" value="{$info.company_name}"  placeholder="公司名字">
+                            <a class="ui-icon-close" href="#">
+                            </a>
+                        </div>
+                        <div class="ui-form-item ui-form-item-textarea ui-border-b">
+                            <label>
+                                详细地址
+                            </label>
+                            <textarea placeholder="街道等详细地址" id="address" name="address">{$info.address}</textarea>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>
+                                姓名
+                            </label>
+                            <input type="text" name="real_name" id="real_name" value="{$info.real_name}"  placeholder="姓名">
+                            <a class="ui-icon-close" href="#">
+                            </a>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>
+                                职务
+                            </label>
+                            <input type="text" name="job" id="job" value="{$info.job}"  placeholder="职务">
+                            <a class="ui-icon-close" href="#">
+                            </a>
+                        </div>
+                        <div class="ui-form-item ui-form-item-l ui-border-b">
+                            <label class="ui-border-r">
+                                中国 +86
+                            </label>
+                            <input  type="text" name="mobile" id="mobile" value="{$info.mobile}" placeholder="请输入手机号码">
+                            <a class="ui-icon-close" href="#">
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <?php foreach($fields as $k=>$v):?>
+            <?php foreach($fields as $k=>$v):?>
             <?php if(empty($v['comment'])) continue;?>
             <!-- 文本框开始 -->
             <?php if($v['comment']['type']=='autocomplete' || $v['comment']['type']=='text'  || $v['comment']['type']=='date') : ?>
-                <div class="page-item">
-                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
-                    <div class="page-block">
-                        <div class="ui-form ui-border-t">
-                            <div class="ui-form-item ui-form-item-pure ui-border-b ">
-                                <input type="text" name="<?php echo $v['field'];?>" required="required"  placeholder="<?php echo $v['comment']['label'];?>">
-                                <a class="ui-icon-close" href="#"></a>
-                            </div>
+            <div class="page-item">
+                <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+                <div class="page-block">
+                    <div class="ui-form ui-border-t">
+                        <div class="ui-form-item ui-form-item-pure ui-border-b ">
+                            <input type="text" name="<?php echo $v['field'];?>" required="required"  placeholder="<?php echo $v['comment']['label'];?>">
+                            <a class="ui-icon-close" href="#"></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <?php endif;?>
             <!-- 文本框结束 -->
 
 
             <!-- 文本域开始 -->
             <?php if($v['comment']['type']=='rich-text'): ?>
-               <div class="page-item">
-                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
-                    <div class="page-block">
-                        <div class="ui-form ui-border-t">
-                            <div class="ui-form-item ui-form-item-pure ui-border-b ui-form-item-textarea">
-                                <textarea name="<?php echo $v['field'];?>" required="required"  placeholder="<?php echo $v['comment']['label'];?>"></textarea>
-                                <a class="ui-icon-close" href="#"></a>
-                            </div>
+            <div class="page-item">
+                <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+                <div class="page-block">
+                    <div class="ui-form ui-border-t">
+                        <div class="ui-form-item ui-form-item-pure ui-border-b ui-form-item-textarea">
+                            <textarea name="<?php echo $v['field'];?>" required="required"  placeholder="<?php echo $v['comment']['label'];?>"></textarea>
+                            <a class="ui-icon-close" href="#"></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <?php endif;?>
             <!-- 文本域结束 -->
 
             <!-- 多选框开始 -->
             <?php if($v['comment']['type']=='checkbox'): ?>
-                <div class="page-item">
-                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+            <div class="page-item">
+                <p class="page-desc"><?php echo $v['comment']['label'];?></p>
 
-                    <div class="page-block">
-                        <div class="ui-form ui-border-t">
-                            <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b">
-                                <?php foreach($v['comment']['option'] as $k1=>$v1):?>
-                                <li class="ui-border-t">
-                                    <label class="ui-checkbox">
-                                        <input type="checkbox" required="required"  name="<?php echo $v['field'];?>[]" value="<?php echo $k1;?>">
-                                    </label>
-                                    <p><?php echo $v1;?></p>
-                                </li>
-                                <?php endforeach;?>
-                            </ul>
-                        </div>
+                <div class="page-block">
+                    <div class="ui-form ui-border-t">
+                        <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b">
+                            <?php foreach($v['comment']['option'] as $k1=>$v1):?>
+                            <li class="ui-border-t">
+                                <label class="ui-checkbox">
+                                    <input type="checkbox" required="required"  name="<?php echo $v['field'];?>[]" value="<?php echo $k1;?>">
+                                </label>
+                                <p><?php echo $v1;?></p>
+                            </li>
+                            <?php endforeach;?>
+                        </ul>
                     </div>
                 </div>
+            </div>
             <?php endif;?>
             <!-- 多选框结束 -->
 
             <!-- 单选框开始 -->
             <?php if($v['comment']['type']=='radio'): ?>
-                <div class="page-item">
-                    <p class="page-desc"><?php echo $v['comment']['label'];?></p>
+            <div class="page-item">
+                <p class="page-desc"><?php echo $v['comment']['label'];?></p>
 
-                    <div class="page-block">
-                        <div class="ui-form ui-border-t">
-                            <?php foreach($v['comment']['option'] as $k2=>$v2):?>
-                            <div class="ui-form-item ui-form-item-radio ui-border-b">
-                                <label class="ui-radio" for="">
-                                    <input type="radio" required="required"  value="<?php echo $k2;?>" name="<?php echo $v['field'];?>">
-                                </label>
-                                <p><?php echo $v2;?></p>
-                            </div>
-                            <?php endforeach;?>
+                <div class="page-block">
+                    <div class="ui-form ui-border-t">
+                        <?php foreach($v['comment']['option'] as $k2=>$v2):?>
+                        <div class="ui-form-item ui-form-item-radio ui-border-b">
+                            <label class="ui-radio" for="">
+                                <input type="radio" required="required"  value="<?php echo $k2;?>" name="<?php echo $v['field'];?>">
+                            </label>
+                            <p><?php echo $v2;?></p>
                         </div>
+                        <?php endforeach;?>
                     </div>
                 </div>
+            </div>
             <?php endif;?>
             <!-- 单选框结束 -->
 
-        <?php endforeach;?>
+            <?php endforeach;?>
 
-        <input type="hidden" name="uid" value="{$info.id}">
-        <input type="hidden" name="nickname" value="{$userInfo.nickname}">
-        <input type="hidden" name="openid" value="{$userInfo.openid}">
-        <input type="hidden" name="table_name" value="{$tableName}">
-        <input type="hidden" name="latitude" value="" id="latitude">
-        <input type="hidden" name="longitude" value="" id="longitude">
+            <input type="hidden" name="uid" value="{$info.id}">
+            <input type="hidden" name="nickname" value="{$userInfo.nickname}">
+            <input type="hidden" name="openid" value="{$userInfo.openid}">
+            <input type="hidden" name="table_name" value="{$tableName}">
+            <input type="hidden" name="latitude" value="" id="latitude">
+            <input type="hidden" name="longitude" value="" id="longitude">
 
-        <input type="hidden" name="sex" value="{$userInfo.sex}">
-        <input type="hidden" name="province" value="{$userInfo.province}">
-        <input type="hidden" name="city" value="{$userInfo.city}" >
+            <input type="hidden" name="sex" value="{$userInfo.sex}">
+            <input type="hidden" name="province" value="{$userInfo.province}">
+            <input type="hidden" name="city" value="{$userInfo.city}" >
 
-    </form>
+        </form>
         <!--下面的用于提交后的提示页面-->
         <div id="info_box" class="ui-tips ui-tips-info" style="display: none;">
             <i></i><span id="info_text">一般提示</span>
@@ -170,11 +187,11 @@
                 确定
             </button>
         </div>
-        <!--<div class="ui-btn-wrap">-暂时用不到->
-            <!--<button class="ui-btn-lg ui-btn-primary" disabled>-->
-                <!--取消-->
-            <!--</button>-->
-        <!--</div>-->
+        <div class="ui-btn-wrap">
+            <button class="ui-btn-lg ui-btn-primary" disabled>
+                取消
+            </button>
+        </div>
 
 
 
@@ -191,7 +208,7 @@
         debug: false,
         appId: '<?php echo $signPackage["appId"];?>',
         timestamp: <?php echo $signPackage["timestamp"];?>,
-        nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
             signature: '<?php echo $signPackage["signature"];?>',
             jsApiList: [
         // 所有要调用的 API 都要加到这个列表中
@@ -199,7 +216,7 @@
         'openLocation',
         'getLocation',
         'onMenuShareTimeline'
-        ]
+    ]
     });
 
     wx.ready(function () {
@@ -271,10 +288,23 @@
             var company_name = $('#company_name').val();
             var mobile = $('#mobile').val();
             var address = $('#address').val();
+            var real_name = $('#real_name').val();
+            var job = $('#job').val();
 
             if(company_name == '') {
                 $('#info_box').show();
                 $('#info_text').text('公司名称不能为空');
+                return false;
+            }
+
+            if(real_name == '') {
+                $('#info_box').show();
+                $('#info_text').text('姓名不能为空');
+                return false;
+            }
+            if(job == '') {
+                $('#info_box').show();
+                $('#info_text').text('职务不能为空');
                 return false;
             }
 
@@ -302,19 +332,19 @@
 
 
             $.ajax({
-                 type : 'POST',
-                 url : url,
-                 data : $("#form").serialize(),
-                 dataType : 'json',
-                 success : function(data) {
+                type : 'POST',
+                url : url,
+                data : $("#form").serialize(),
+                dataType : 'json',
+                success : function(data) {
                     if(data.status==1) {
                         $('body').replaceWith(sub_success("反馈成功"))
                     }
-                     if(data.status==0) {
-                         $('#info_box').show();
-                         $('#info_text').text('错误');
-                     }
-                 },
+                    if(data.status==0) {
+                        $('#info_box').show();
+                        $('#info_text').text('错误');
+                    }
+                },
                 error: function(){
                     $('body').replaceWith(sub_error("网络错误"));
                 }
@@ -330,7 +360,7 @@
         document.getElementById("onloading").style.display = "none"
     }
     window.onload = function () {
-        hideonload()
+        t = setTimeout("hideonload()", 1000)
     }
 </script>
 </body>
