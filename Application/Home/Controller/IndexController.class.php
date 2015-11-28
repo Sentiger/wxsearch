@@ -70,6 +70,20 @@ class IndexController extends CommonController {
             $uid = M('user')->add($data);
         } else {
             $uid = $data['uid'];
+            $userInfo = M('user')->find($uid);
+            $userData = $data;
+            if(!empty($userInfo)) {
+                $tables = $userInfo['table_name'];
+                $tables = implode(',', $tables);
+                if(!in_array($tableName, $tables)) {
+                    $tables[] = $tableName;
+                    $userData[] = explode(',', $tables);
+                    M('user')->where(array('id'=>$uid))->save($userData);
+                }
+            }
+
+
+            M('user')->where(array('id'=>$))->save();
         }
         $data['uid'] = $uid;
 
