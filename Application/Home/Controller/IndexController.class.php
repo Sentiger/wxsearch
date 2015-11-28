@@ -7,9 +7,15 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
         $code = I('code');
-        $tableName = I('table_name');   
-        
-        if(empty($tableName) || empty($code)) die('非法操作！');
+        $tableName = I('table_name');
+
+        // p($fields);die;
+        $res = $this->getCodeAccessToken($code);
+        $userInfo = $this->getUserInfo($res);
+
+        $tableIsSet = M()->query("SHOW TABLES LIKE '{$tableName}'");
+
+        if(empty($tableName) || empty($code) || !isset($userInfo['openid']) || empty($userInfo['openid']) || !$tableIsSet) die('非法操作！');
 
         $tableInfo = M('tables')->where(array('table_name'=>$tableName))->find();
 
@@ -17,9 +23,7 @@ class IndexController extends CommonController {
         foreach ($fields as $k => $v) {
             $fields[$k]['comment'] = json_decode($v['comment'],true);
         }
-        // p($fields);die;
-        $res = $this->getCodeAccessToken($code);
-        $userInfo = $this->getUserInfo($res);
+
 //        $info = M('user')->where(array('openid'=>$userInfo['openid'],'table_name'=>$tableName))->find();
         $info = M('user')->where(array('openid'=>$userInfo['openid']))->find();
 
@@ -43,6 +47,15 @@ class IndexController extends CommonController {
      */
     public function addInfo() {
         $data = I('post.');
+
+        if(empty($data['openid']) || !isset($data['openid'])) {
+            $data = array(
+                'status' => 0,
+                'msg' => '您来自非法渠道'
+            );
+            die(json_encode($data));
+        }
+
         $tableName = substr($data['table_name'],3);
 
         if(!empty($data)) {
