@@ -67,6 +67,7 @@ class IndexController extends CommonController {
             }
         }
         if(empty($data['uid'])) {
+            $data['table_name'] = $tableName;
             $uid = M('user')->add($data);
         } else {
             $uid = $data['uid'];
