@@ -63,7 +63,7 @@
 				<?php elseif(isset($radio[$fie[$j]])):?>
 					<td><?php echo $radio[$fie[$j]][$v1[$fie[$j]]];?></td>
 				<?php else:?>
-					<td><?php echo (($v1[$fie[$j]]=='') && ($v1['fie'] == 'lat_log_to_addr')) ? ' 用户拒绝提供提供位置' :  $v1[$fie[$j]]; ?></td>
+					<td><?php echo (($v1[$fie[$j]]=='') && ($fie[$j] == 'lat_log_to_addr')) ? ' 用户拒绝提供提供位置' :  $v1[$fie[$j]]; ?></td>
 				<?php endif;?>
 				
 				<?php endfor;?>
