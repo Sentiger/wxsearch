@@ -77,7 +77,7 @@ class IndexController extends CommonController {
                 $tables = $userInfo['table_name'];
                 $tables = implode(',', $tables);
                 p($userInfo);
-                p($tableName);
+                var_dump($tableName);
                 p($tables);die;
                 if(!in_array($tableName, $tables)) {
                     $tables[] = $tableName;
