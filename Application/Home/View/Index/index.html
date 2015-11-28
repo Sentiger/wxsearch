@@ -270,6 +270,10 @@
 
 
     $(function(){
+        var dong_info = "
+                 </br>
+                <img src='http://tse1.mm.bing.net/th?id=OIP.Mc231e38603150c83ce1880b6791668c1o2&w=272&h=272&c=7&rs=1&qlt=90&o=4&pid=1.9'  width='100%'>
+                "
         function sub_success(text){
             a ="<div class=\"ui-tips ui-tips-success\">" + "<i></i><span>" + text +"</span></span>"
             return (a)
@@ -338,7 +342,7 @@
                 dataType : 'json',
                 success : function(data) {
                     if(data.status==1) {
-                        $('body').replaceWith(sub_success("反馈成功"))
+                        $('body').replaceWith(sub_success("反馈成功") + dong_info)
                     }
                     if(data.status==0) {
                         $('#info_box').show();
@@ -346,7 +350,7 @@
                     }
                 },
                 error: function(){
-                    $('body').replaceWith(sub_error("网络错误"));
+                    $('body').replaceWith(sub_error("网络错误") + dong_info);
                 }
             });
 
@@ -360,7 +364,7 @@
         document.getElementById("onloading").style.display = "none"
     }
     window.onload = function () {
-        t = setTimeout("hideonload()", 1000)
+        t = setTimeout("hideonload()", 500)
     }
 </script>
 </body>
