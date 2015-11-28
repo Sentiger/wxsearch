@@ -520,7 +520,7 @@ ol.sortable-options {
     margin-right: 2%
 }
 .hideinputbox {
-    border: none ;
+    border: none !important;
     color: #ffffff;
 }
 .form-elements input[type=text] {
