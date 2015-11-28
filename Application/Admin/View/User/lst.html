@@ -44,6 +44,7 @@
 				<th>省份</th>
 				<th>城市</th>
                 <th>地址</th>
+                <th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -62,6 +63,7 @@
                 <td><?php echo empty($v['province']) ? '保密' : $v['province']; ?></td>
                 <td><?php echo empty($v['city']) ? '保密' : $v['city']; ?></td>
                 <td><?php echo $v['address']; ?></td>
+                <td><<a title="将会删除用户和用户填写的资料，你确定要删除吗？" target="ajaxTodo" href="<{:U('Admin/User/del',array('id'=>$v['id']))}>" class="btnDel">删除</a>></td>
 
 			</tr>
 			<?php endforeach;?>
