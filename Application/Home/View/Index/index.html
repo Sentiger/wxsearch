@@ -237,7 +237,7 @@
         });
 
         wx.hideMenuItems({
-            menuList: ["menuItem:copyUrl","menuItem:originPage","menuItem:openWithQQBrowser","menuItem:openWithSafari","menuItem:share:email"] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+            menuList: ["menuItem:copyUrl","menuItem:originPage","menuItem:openWithQQBrowser","menuItem:openWithSafari","menuItem:share:email","menuItem:share:appMessage"] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
         });
 
 
@@ -290,6 +290,7 @@
         }
         var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
+            document.getElementById("submit_bth").id=""
 
 //            $('#form').submit();return false;
 
