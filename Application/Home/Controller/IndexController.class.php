@@ -81,9 +81,6 @@ class IndexController extends CommonController {
                     M('user')->where(array('id'=>$uid))->save($userData);
                 }
             }
-
-
-            M('user')->where(array('id'=>$))->save();
         }
         $data['uid'] = $uid;
 
