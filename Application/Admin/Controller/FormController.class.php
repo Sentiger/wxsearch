@@ -218,7 +218,7 @@ class FormController extends CommonController {
                 $th[] = '纬度';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'lat_log_to_addr'){
-                $th[] = '用户所在地';
+                $th[] = '登记表格时所在位置';
                 $fie[] = $v['field'];
             }elseif($v['field'] == 'add_time'){
                 $th[] = '反馈时间';
