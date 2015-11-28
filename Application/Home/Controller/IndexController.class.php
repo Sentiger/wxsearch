@@ -75,6 +75,7 @@ class IndexController extends CommonController {
             $userData = $data;
             if(!empty($userInfo)) {
                 $tables = $userInfo['table_name'];
+                var_dump($tables);
                 $tables = implode(',', $tables);
                 var_dump($userInfo);
                 var_dump($tableName);
