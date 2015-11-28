@@ -519,7 +519,7 @@ ol.sortable-options {
     width: 39%;
     margin-right: 2%
 }
-
+.hideinputbox {border: 0 !important ; color: #ffffff !important; ;}
 .form-elements input[type=text] {
     width: 70%;
     -webkit-transition: background 250ms ease-in-out;
@@ -528,7 +528,6 @@ ol.sortable-options {
     border: 1px solid #AFAFAB;
     background-color: #fff
 }
-.hideinputbox {border: 0 ; color: #ffffff;}
 
 .form-elements input[type=text].error {
     border-radius: 0;
