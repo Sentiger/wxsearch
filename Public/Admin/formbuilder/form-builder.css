@@ -516,13 +516,14 @@ ol.sortable-options {
 }
 
 .form-elements .fields input[type=text] {
-    width: 39%;
+    width: 60%;
     margin-right: 2%
 }
 .hideinputbox {
     border: none !important;
     color: #ffffff;
     height: 1px !important ;
+    width: 5%;
 }
 .form-elements input[type=text] {
     width: 70%;
