@@ -291,7 +291,7 @@
         var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
 
-            $('#form').submit();return false;
+//            $('#form').submit();return false;
 
             var company_name = $('#company_name').val();
             var mobile = $('#mobile').val();
@@ -337,6 +337,8 @@
 
 
             $('#info_box').hide();
+            $('#submit_btn').text('正在提交...');
+            $('#submit_btn').attr("disabled","disabled");
 
 
             $.ajax({
@@ -350,6 +352,7 @@
                     }
                     if(data.status==0) {
                         $('#info_box').show();
+                        $('#submit_btn').removeAttr("disabled");
                         $('#info_text').text('错误');
                     }
                 },
