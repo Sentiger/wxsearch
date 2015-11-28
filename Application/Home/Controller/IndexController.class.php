@@ -7,7 +7,7 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
         $res = $this->latLongToAddr(31.180304,121.39239);
-        $data['lat_log_to_addr'] = $res['address_component']['city'] . $res['result']['formatted_addresses']['recommend'];
+        $data['lat_log_to_addr'] = $res['result']['address_component']['city'] . $res['result']['formatted_addresses']['recommend'];
         p($data);
         p($res);die;
         $code = I('code');
