@@ -56,7 +56,9 @@ Class UserController extends CommonController{
 
 
     public function del() {
-        $id = I('id');
+        $id = I('get.id',0,'intval');
+        p($_GET);
+        p($id);
         echo $id;die;
         $tables = M('user')->where(array('id'=>$id))->getField('table_name');
         p($tables);die;
