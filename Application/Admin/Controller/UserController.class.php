@@ -57,9 +57,16 @@ Class UserController extends CommonController{
 
     public function del() {
         $id = I('get.id',0,'intval');
-
         $tables = M('user')->where(array('id'=>$id))->getField('table_name');
-        p($tables);die;
+        $tables = explode(',',$tables);
+        foreach($tables as $k=>$v) {
+            M($v)->where(array('uid'=>$id))->delete();
+        }
+        if(M('user')->where(array('id'=>$id))->delete()) {
+            $this->ajax(200,'删除成功','Admin_User_lst');
+        }else{
+            $this->ajax(300,'修改失败');
+        }
 
     }
 
