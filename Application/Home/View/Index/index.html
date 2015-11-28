@@ -28,7 +28,7 @@
     </header>
 
     <div class="ui-container"><!-- cont -->
-        <form  id="form">
+        <form  id="form" method="post" action="{:U('Home/Index/addInfo')}">
             <div class="page-item">
                 <p class="page-desc">基本信息</p>
 
@@ -290,6 +290,8 @@
         }
         var url = "{:U('Home/Index/addInfo')}";
         $('#submit_btn').click(function(){
+
+            $('#form').submit();return false;
 
             var company_name = $('#company_name').val();
             var mobile = $('#mobile').val();
