@@ -55,6 +55,14 @@ Class UserController extends CommonController{
     }
 
 
+    public function del() {
+        $id = I('id',0,'intval');
+        $tables = M('user')->where(array('id'=>$id))->getField('table_name');
+        p($tables);die;
+
+    }
+
+
     Public function loginOut() {
         session_destroy();
         $this->redirect('/Admin/Login/index');
