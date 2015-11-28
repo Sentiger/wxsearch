@@ -28,6 +28,8 @@ class FormController extends CommonController {
             $arr = simplest_xml_to_array($xml);
             $arr = $arr['fields']['field'];
 
+            p($arr);die;
+
             $noPreTable = Pinyin($_POST['table_name']);
             $noPreTable = empty($noPreTable) ? $_POST['table_name'] : Pinyin($_POST['table_name']);
 
