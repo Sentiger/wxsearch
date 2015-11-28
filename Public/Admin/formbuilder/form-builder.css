@@ -528,6 +528,7 @@ ol.sortable-options {
     border: 1px solid #AFAFAB;
     background-color: #fff
 }
+.hideinputbox {border: 0 ; color: #ffffff;}
 
 .form-elements input[type=text].error {
     border-radius: 0;
