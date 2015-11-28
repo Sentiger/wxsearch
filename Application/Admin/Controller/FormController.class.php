@@ -17,6 +17,18 @@ class FormController extends CommonController {
     }
     public function add() {
         if(IS_POST) {
+
+            $share_ico = I('share_ico');
+            $share_url = I('share_url');
+            $share_title = I('share_title');
+            $table_name = I('table_name');
+
+            if(empty($share_ico)) $this->ajax(300,'分享ico不能为空');
+            if(empty($share_url)) $this->ajax(300,'分享地址不能为空');
+            if(empty($share_title)) $this->ajax(300,'分享标题不能为空');
+            if(empty($table_name)) $this->ajax(300,'表单名不能为空');
+
+
             $type = array(
                 'autocomplete'=>'varchar(200)',
                 'date' => 'timestamp',
@@ -42,12 +54,12 @@ class FormController extends CommonController {
             $sql .= "lat_log_to_addr varchar(300) NOT NULL DEFAULT '' ,";
             $sql .= "add_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ,";
 
-            if(empty($_POST['table_name'])) {
+            /*if(empty($_POST['table_name'])) {
                 $this->ajax(300, '表单名称不能为空', 'Admin_Form_lst', 'closeCurrent');
-            }
+            }*/
 
             if(count($arr) < 1) {
-                $this->ajax(300, '至少选择一个表单组件', 'Admin_Form_lst', 'closeCurrent');
+                $this->ajax(300, '至少选择一个表单组件');
             }
 
             if(count($arr) == 1) {
