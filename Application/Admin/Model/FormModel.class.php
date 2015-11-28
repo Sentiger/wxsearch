@@ -85,7 +85,7 @@ class FormModel extends Model
 
         $page = new \Think\Page($totalRecord, $perpage);
         return  array(
-            'data' => $model->field('a.*,b.nickname,b.company_name,b.mobile,b.address,b.openid')->alias('a')->join('LEFT JOIN wx_user b ON a.uid=b.id')->where($where)->limit($page->firstRow, $page->listRows)->order($order)->select(),
+            'data' => $model->field('a.*,b.nickname,b.company_name,b.mobile,b.address,b.openid,b.real_name,b.job')->alias('a')->join('LEFT JOIN wx_user b ON a.uid=b.id')->where($where)->limit($page->firstRow, $page->listRows)->order($order)->select(),
             'page' => $page->show(), // 翻页的字符串
             'currentPage' => $currentPage,
             'total' => $totalRecord,
