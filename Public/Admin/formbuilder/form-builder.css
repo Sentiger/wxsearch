@@ -522,6 +522,7 @@ ol.sortable-options {
 .hideinputbox {
     border: none !important;
     color: #ffffff;
+    height: 1px !important ;
 }
 .form-elements input[type=text] {
     width: 70%;
