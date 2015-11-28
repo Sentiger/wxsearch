@@ -77,7 +77,6 @@ class IndexController extends CommonController {
                 $tables = $userInfo['table_name'];
                 $tables = implode(',', $tables);
                 if(!in_array($tableName, $tables)) {
-
                     $tables[] = $tableName;
                     $userData['table_name'] = explode(',', $tables);
                     M('user')->where(array('id'=>$uid))->save($userData);
