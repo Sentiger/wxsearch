@@ -67,7 +67,10 @@ class IndexController extends CommonController {
         if(!empty($lat) && !empty($log)) {
             $res = $this->latLongToAddr($lat,$log);
             if($res['status'] == 0) {
+
                 $data['lat_log_to_addr'] = $res['address_component']['city'] . $res['result']['formatted_addresses']['recommend'];
+                p($data['lat_log_to_addr']);
+                p($res);die;
             }
         }
 
