@@ -6,7 +6,10 @@ use Think\Controller;
  */
 class IndexController extends CommonController {
     public function index(){
-
+        $res = $this->latLongToAddr(31.180304,121.39239);
+        $data['lat_log_to_addr'] = $res['address_component']['city'] . $res['result']['formatted_addresses']['recommend'];
+        p($data);
+        p($res);die;
         $code = I('code');
         $tableName = I('table_name');   
         
@@ -67,10 +70,7 @@ class IndexController extends CommonController {
         if(!empty($lat) && !empty($log)) {
             $res = $this->latLongToAddr($lat,$log);
             if($res['status'] == 0) {
-
                 $data['lat_log_to_addr'] = $res['address_component']['city'] . $res['result']['formatted_addresses']['recommend'];
-                p($data['lat_log_to_addr']);
-                p($res);die;
             }
         }
 
