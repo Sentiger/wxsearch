@@ -1,9 +1,8 @@
-<form id="pagerForm" method="post" action="demo_page1.html">
-	<input type="hidden" name="status" value="${param.status}">
-	<input type="hidden" name="keywords" value="${param.keywords}" />
+<form id="pagerForm" method="post" action="<{:U('Admin/Form/VoteLst')}>">
 	<input type="hidden" name="pageNum" value="1" />
-	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
-	<input type="hidden" name="orderField" value="${param.orderField}" />
+	<input type="hidden" name="numPerPage" value="<?php echo $data['perpage'];?>" />
+	<input type="hidden" name="orderField" value="<?php echo $data['orderField'];?>" />
+	<input type="hidden" name="orderDirection" value="<?php echo $data['orderDirection'];?>" />
 </form>
 
 
