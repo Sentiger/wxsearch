@@ -1,4 +1,4 @@
-<form id="pagerForm" method="post" action="<{:U('Admin/Form/VoteLst')}>">
+<form id="pagerForm" method="post" action="<{:U('Admin/Form/voteLst')}>">
 	<input type="hidden" name="pageNum" value="1" />
 	<input type="hidden" name="numPerPage" value="<?php echo $data['perpage'];?>" />
 	<input type="hidden" name="orderField" value="<?php echo $data['orderField'];?>" />
@@ -16,7 +16,7 @@
  -->
 
 <div class="pageHeader">
-	<form onsubmit="return dialogSearch(this);" action="<{:U('Admin/Form/VoteLst')}>" method="post">
+	<form onsubmit="return dialogSearch(this);" action="<{:U('Admin/Form/voteLst')}>" method="post">
 	<div class="searchBar">
 		
 		<table class="searchContent">
