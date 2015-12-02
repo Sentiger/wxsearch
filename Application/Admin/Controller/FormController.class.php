@@ -259,7 +259,7 @@ class FormController extends CommonController {
         $this->noPreTable = $noPreTable;
         $this->tableName = $tableName;
 
-        $this->display();
+        $this->display('voteLst');
     }
 
     /**
