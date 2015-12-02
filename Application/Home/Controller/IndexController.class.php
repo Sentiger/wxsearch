@@ -57,6 +57,7 @@ class IndexController extends CommonController {
         }
 
         $tableName = substr($data['table_name'],3);
+        $data['table_name'] = $table_name;
 
         if(!empty($data)) {
             foreach($data as $k=>$v) {
