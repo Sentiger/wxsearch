@@ -3,8 +3,17 @@
 	<input type="hidden" name="numPerPage" value="<?php echo $data['perpage'];?>" />
 	<input type="hidden" name="orderField" value="<?php echo $data['orderField'];?>" />
 	<input type="hidden" name="orderDirection" value="<?php echo $data['orderDirection'];?>" />
+	<input type="hidden" name="table_name" value="<{$tableName}>">
 </form>
 
+<!-- <form id="pagerForm" action="demo/database/dwzOrgLookup.html">
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="<?php echo $data['perpage'];?>" />
+	<input type="hidden" name="orderField" value="<?php echo $data['orderField'];?>" />
+	<input type="hidden" name="orderDirection" value="<?php echo $data['orderDirection'];?>" />
+	<input type="hidden" name="table_name" value="<{$tableName}>">
+</form>
+ -->
 
 <div class="pageHeader">
 	<form onsubmit="return dialogSearch(this);" action="<{:U('Admin/Form/VoteLst')}>" method="post">
@@ -80,17 +89,17 @@
 	</table>
 	<div class="panelBar">
 		<div class="pages">
-			<span>显示</span>
-			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
-                <option  value="20">20</option>
-                <option <?php if($data['perpage'] == 30):?>selected="selected"<?php endif;?> value="30">30</option>
-                <option <?php if($data['perpage'] == 40):?>selected="selected"<?php endif;?> value="40">40</option>
-                <option <?php if($data['perpage'] == 50):?>selected="selected"<?php endif;?> value="50">50</option>
-            </select>
+			<!-- <span>显示</span>
+			<select class="combox" name="numPerPage" onchange="dwzPageBreak({targetType:'dialog', numPerPage:25})">
+			                <option  value="20">20</option>
+			                <option <?php if($data['perpage'] == 30):?>selected="selected"<?php endif;?> value="30">30</option>
+			                <option <?php if($data['perpage'] == 40):?>selected="selected"<?php endif;?> value="40">40</option>
+			                <option <?php if($data['perpage'] == 50):?>selected="selected"<?php endif;?> value="50">50</option>
+			            </select> -->
             <span>共<?php echo $data['total']; ?>条</span>
 		</div>
 		
-		<div class="pagination" targetType="navTab" totalCount="<?php echo $data['total']; ?>" numPerPage="<?php echo $data['perpage'];?>" pageNumShown="10" currentPage="<?php echo $data['currentPage']; ?>"></div>
+		<div class="pagination" targetType="dialog" totalCount="<?php echo $data['total']; ?>" numPerPage="<?php echo $data['perpage'];?>" pageNumShown="10" currentPage="<?php echo $data['currentPage']; ?>"></div>
 
 	</div>
 </div>
