@@ -12,7 +12,7 @@ class UserModel extends Model
      */
     Public function lst() {
         //查询条件
-        $where = array('username'=>array('like',"%".I('post.keywords','')."%"));
+        $where = array('real_name'=>array('like',"%".I('post.keywords','')."%"));
         //每页显示条数，默认20
         $perpage = I('post.numPerPage',20,'intval');
         //绑定url参数中的页数
