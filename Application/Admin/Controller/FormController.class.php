@@ -259,7 +259,7 @@ class FormController extends CommonController {
         $this->tableName = $tableName;
 
 
-        $this->display('voteLst');
+        $this->display();
     }
 
     /**
