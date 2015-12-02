@@ -206,7 +206,6 @@ class FormController extends CommonController {
             $fields[$k]['comment'] = json_decode($v['comment'],true);
         }
 
-
         foreach ($fields as $k => $v) {
 
             if($v['comment']['type'] == 'checkbox') {
@@ -246,6 +245,8 @@ class FormController extends CommonController {
 
         $model = D('Form');
         $res = $model->voteLst($noPreTable);
+
+
         $this->data = $res;
         $this->fields = $fields;
 
@@ -257,7 +258,6 @@ class FormController extends CommonController {
 
         $this->noPreTable = $noPreTable;
         $this->tableName = $tableName;
-
 
         $this->display();
     }
