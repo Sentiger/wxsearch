@@ -410,10 +410,10 @@ class FormController extends CommonController {
         foreach ($fields as $k => $v) {
 
             if($v['comment']['type'] == 'checkbox') {
-                $checkbox[$v['field']] = 'a.'.$v['comment']['option'];
+                $checkbox[$v['field']] = $v['comment']['option'];
             }
             if($v['comment']['type'] == 'radio') {
-                $radio[$v['field']] = 'a.'.$v['comment']['option'];
+                $radio[$v['field']] = $v['comment']['option'];
             }
 
             if($v['field'] == 'id') {
@@ -444,7 +444,9 @@ class FormController extends CommonController {
         $th[] = '公司名称';
         $fie[] = 'b.company_name';
 
+
         $data = M($noPreTable)->field($fie)->alias('a')->join('LEFT JOIN wx_user b ON a.uid=b.id')->select();
+
 
         if(!empty($data)) {
             foreach($data as $k=>$v) {
