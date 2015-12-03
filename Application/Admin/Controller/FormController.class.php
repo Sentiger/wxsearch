@@ -446,7 +446,6 @@ class FormController extends CommonController {
 
         $data = M($noPreTable)->field($fie)->alias('a')->join('LEFT JOIN wx_user b ON a.uid=b.id')->select();
 
-        p($data);die;
         if(!empty($data)) {
             foreach($data as $k=>$v) {
 
