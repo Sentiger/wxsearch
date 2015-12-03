@@ -410,36 +410,43 @@ class FormController extends CommonController {
         foreach ($fields as $k => $v) {
 
             if($v['comment']['type'] == 'checkbox') {
-                $checkbox[$v['field']] = $v['comment']['option'];
+                $checkbox[$v['field']] = 'a.'.$v['comment']['option'];
             }
             if($v['comment']['type'] == 'radio') {
-                $radio[$v['field']] = $v['comment']['option'];
+                $radio[$v['field']] = 'a.'.$v['comment']['option'];
             }
 
             if($v['field'] == 'id') {
                 $th[] = 'id';
-                $fie[] = $v['field'];
+                $fie[] = 'a.'.$v['field'];
             }elseif($v['field'] == 'uid') {
                 continue;
                 $th[] = '用户id';
-                $fie[] = $v['field'];
+                $fie[] = 'a.'.$v['field'];
             }elseif($v['field'] == 'latitude') {
                 $th[] = '经度';
-                $fie[] = $v['field'];
+                $fie[] = 'a.'.$v['field'];
             }elseif($v['field'] == 'longitude') {
                 $th[] = '纬度';
-                $fie[] = $v['field'];
+                $fie[] = 'a.'.$v['field'];
             }elseif($v['field'] == 'add_time'){
                 $th[] = '反馈时间';
-                $fie[] = $v['field'];
+                $fie[] = 'a.'.$v['field'];
+            }elseif($v['field'] == 'lat_log_to_addr'){
+                $th[] = '登记表格时所在位置';
+                $fie[] = 'a.'.$v['field'];
             }else {
                 $th[] = $v['comment']['label'];
-                $fie[] = $v['field'];
+                $fie[] = 'a.'.$v['field'];
             }
         }
 
-        $data = M($noPreTable)->field($fie)->select();
+        $th[] = '公司名称';
+        $fie[] = 'b.company_name';
 
+        $data = M($noPreTable)->field($fie)->alias('a')->join('LEFT JOIN wx_user b ON a.uid=b.id')->select();
+
+        p($data);die;
         if(!empty($data)) {
             foreach($data as $k=>$v) {
 
