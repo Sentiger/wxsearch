@@ -106,9 +106,10 @@ class FormController extends CommonController {
                     $comment = "{\"label\":\"{$v['@attributes']['label']}\",\"type\":\"{$v['@attributes']['type']}\"}";
 
                     if($v['@attributes']['required']){
-                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null  COMMENTs '{$comment}',";
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null  COMMENT '{$comment}',";
                     } else {
-                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENTss '{$comment}',";
+                        print_r($v);
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENT '{$comment}',";
                     }
 
                 }
