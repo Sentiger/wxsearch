@@ -21,8 +21,8 @@ return array(
     'APP_SECRET' => '219f2567cc628f344a37812957aee96a',*/
 
     // 自己的
-    'APP_ID' => 'wxb36df14c977c5218',
-    'APP_SECRET' => 'a7aad3f65ffc1b67c5c47c45e47d23fb',
+    'APP_ID' => 'wxc06b15459e80a402',
+    'APP_SECRET' => '6e867496857fd3166378320ee4fa427d',
 
     //商家的
     /*//获取用户基本信息code的url
@@ -32,9 +32,9 @@ return array(
 
     // 自己的
     //获取用户基本信息code的url
-    'ACCESS_USER_INFO_URL' => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb36df14c977c5218&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index&response_type=code&scope=snsapi_base &state=STATE#wechat_redirect',
+    'ACCESS_USER_INFO_URL' => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxc06b15459e80a402&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index&response_type=code&scope=snsapi_base &state=STATE#wechat_redirect',
     //获取网页授权确认code
-    'ACCESS_FULL_USER_INFO_URL' => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb36df14c977c5218&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect',
+    'ACCESS_FULL_USER_INFO_URL' => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxc06b15459e80a402&redirect_uri=http://wxsearch.sentiger.com/index.php/Home/Index/index&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect',
     //
     'REDIRECT_URI'=>'http://wxsearch.sentiger.com',
 
