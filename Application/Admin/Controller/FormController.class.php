@@ -64,6 +64,7 @@ print_r($arr);
             if(count($arr) == 1) {
                 $temp_arr[] = $arr;
                 $arr = $temp_arr;
+                echo 222;
             }
 echo '1111111111';
 print_r($arr);
