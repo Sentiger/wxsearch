@@ -108,7 +108,7 @@ class FormController extends CommonController {
                     if($v['@attributes']['required']){
                         $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null  COMMENTs '{$comment}',";
                     } else {
-                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENTs '{$comment}',";
+                        $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENTss '{$comment}',";
                     }
 
                 }
