@@ -60,6 +60,7 @@ class FormController extends CommonController {
             if(count($arr) < 1) {
                 $this->ajax(300, '至少选择一个表单组件');
             }
+print_r($arr);die;
             if(count($arr) == 1) {
                 $temp_arr[] = $arr;
                 $arr = $temp_arr;
@@ -106,7 +107,6 @@ class FormController extends CommonController {
                     if($v['@attributes']['required']){
                         $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} not null  COMMENT '{$comment}',";
                     } else {
-                        print_r($v);
                         $sql .= "{$v['@attributes']['name']} {$type[$v['@attributes']['type']]} COMMENT '{$comment}',";
                     }
 
