@@ -60,11 +60,20 @@ class FormController extends CommonController {
             if(count($arr) < 1) {
                 $this->ajax(300, '至少选择一个表单组件');
             }
-print_r($arr);die;
-            if(count($arr) == 1) {
+
+            /*if(count($arr) == 1) {
+                $temp_arr[] = $arr;
+                $arr = $temp_arr;
+            }*/
+
+            if($arr['@attributes'] && $arr['option'] && count($arr)==2) {
                 $temp_arr[] = $arr;
                 $arr = $temp_arr;
             }
+
+            print_r($arr);die;
+
+
 
             foreach($arr as $k=>$v) {
 
