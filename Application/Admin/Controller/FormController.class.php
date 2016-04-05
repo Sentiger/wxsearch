@@ -66,7 +66,7 @@ class FormController extends CommonController {
                 $arr = $temp_arr;
             }
 
-
+print_r($arr);
             foreach($arr as $k=>$v) {
 
                 if($v['@attributes']['type'] == 'checkbox' ) continue;
