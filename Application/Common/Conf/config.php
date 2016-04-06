@@ -3,7 +3,7 @@ return array(
 	//'配置项'=>'配置值'
     /* 数据库配置 */
     'DB_TYPE' => 'mysql', // 数据库类型
-    'DB_HOST' => 'www.sentiger.com',
+    'DB_HOST' => 'localhost',
     'DB_NAME' => 'wxsearch',
     'DB_USER' => 'wxsearch',
     'DB_PWD' => 'wxsearch',
@@ -17,12 +17,12 @@ return array(
 
     'WEB_URL' => 'http://wxsearch.sentiger.com/',
     //微信配置 商家的
-    /*'APP_ID' => 'wxb383ceff8cdf7068',
-    'APP_SECRET' => '219f2567cc628f344a37812957aee96a',*/
+    /*'APP_ID' => 'xxxxxxxxxxxxx',
+    'APP_SECRET' => 'xxxxxxxxxxxxxxx',*/
 
     // 自己的
     'APP_ID' => 'wxc06b15459e80a402',
-    'APP_SECRET' => '6e867496857fd3166378320ee4fa427d',
+    'APP_SECRET' => 'xxxxxxxxxxxx',
 
     //商家的
     /*//获取用户基本信息code的url
